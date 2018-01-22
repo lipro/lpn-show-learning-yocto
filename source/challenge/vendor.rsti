@@ -1,0 +1,35 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Vendor and Contractor
+---------------------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
+|CRT| all participants and partners:
+
+.. revealjs_fragments::
+
+   * Engineers, Business Owners and Compliance Offices
+
+|CRT| have to ensure results with:
+
+.. revealjs_fragments::
+
+   * protected release base line: |SCMP_|
+   * build and test: |CI_|
+   * **DISTRIBUTION**: |CD_|
+
+.. TBD: write down your "Vendor and Contractor" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

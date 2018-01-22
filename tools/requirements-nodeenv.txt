@@ -1,0 +1,21 @@
+# https://www.npmjs.com/package/decktape
+#
+# A high-quality PDF exporter for HTML presentation frameworks.
+#
+# DeckTape is built on top of Puppeteer which relies on Google Chrome
+# for laying out and rendering Web pages and provides a headless Chrome
+# instance scriptable with a JavaScript API. DeckTape currently supports
+# several presentation frameworks out of the box. DeckTape also provides
+# a generic command that works by emulating the end-user interaction,
+# allowing it to be used to convert presentations from virtually any
+# kind of framework. The generic mode is particularly useful for
+# supporting HTML presentation frameworks that don’t expose an API or
+# accessible state.
+#
+# Complete documentation, see:
+#   https://github.com/astefanutti/decktape#decktape
+#
+# Ongoing development, see:
+#   https://github.com/astefanutti/decktape
+#
+decktape@3.1.0

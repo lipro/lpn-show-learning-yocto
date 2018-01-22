@@ -1,0 +1,35 @@
+.. Never add or change more than structure, instead edit content in files:
+   *.rsti
+
+Build System
+============
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+
+.. image:: /_images/todo.jpg
+
+:raw-html:`<small>`
+https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#bitbake-dev-environment
+:raw-html:`</small>`
+
+.. TBD: write down your "Build System" notes here ...
+
+.. include:: /build-system/fetching.rsti
+.. include:: /build-system/patching.rsti
+.. include:: /build-system/compilation.rsti
+.. include:: /build-system/packaging.rsti
+.. include:: /build-system/image-generation.rsti
+.. include:: /build-system/sdk-generation.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

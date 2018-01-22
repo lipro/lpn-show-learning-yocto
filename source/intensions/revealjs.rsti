@@ -1,0 +1,24 @@
+.. Never add or change more than structure, instead edit content in files:
+   *.rsti
+
+Intensions
+==========
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+
+.. image:: /_images/todo.jpg
+
+.. TBD: write down your "Intensions" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,8 @@
+{
+  "name": "slides",
+  "version": "0.0.0",
+  "description": "Dummy package for the slides to make npm happy.",
+  "repository": "github:rexut/slides",
+  "author": "Stephan Linz",
+  "license": "CC-BY-SA-3.0"
+}

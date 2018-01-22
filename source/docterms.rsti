@@ -1,0 +1,27 @@
+.. Don't change this file, instead edit content in files:
+   glossary/*.rsti
+
+.. include:: /_glossary/common-terms.rsti
+.. include:: /_glossary/programming-languages.rsti
+.. include:: /_glossary/technologies.rsti
+.. include:: /_glossary/abbreviations.rsti
+
+.. Local Abbreviations:
+
+.. generally
+
+.. |CD|         replace:: :abbr:`CD (Continuous Deployment / Delivery)`
+.. |CD_|        replace:: :abbr:`Continuous Deployment / Delivery (CD)`
+.. |CI|         replace:: :abbr:`CI (Continuous Integration)`
+.. |CI_|        replace:: :abbr:`Continuous Integration (CI)`
+.. |SCMP|       replace:: :abbr:`SCMP (Software Configuration Management Plan)`
+.. |SCMP_|      replace:: :abbr:`Software Configuration Management Plan (SCMP)`
+
+.. specifically
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

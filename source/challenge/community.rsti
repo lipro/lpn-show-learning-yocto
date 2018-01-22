@@ -1,0 +1,32 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Community
+---------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
+|CRT| what is their role |?|
+
+.. revealjs_fragments::
+
+   * best efforts to **COOPERATE** with and **MUTUAL ASSISTANCE** the business
+   * |free of charge| *free of charge*: **SCALE**, **BE FAST**, pay later
+   * |open for business| *open for business*: **SHARE WITH ALL**,
+     no protection, survival of the fittest
+   * |passing grade| *passing grade*: **BEST FOR ALL**, acceptance
+   * |secret| *secret*: kick out the Troll
+
+.. TBD: write down your "Community" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

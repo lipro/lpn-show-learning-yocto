@@ -1,0 +1,7 @@
+https://upload.wikimedia.org/wikipedia/commons/4/42/Opensource.svg
+https://upload.wikimedia.org/wikipedia/commons/7/7b/Free_and_open-source-software_display_servers_and_UI_toolkits.svg
+https://upload.wikimedia.org/wikipedia/commons/e/e7/Linux_kernel_unified_hierarchy_cgroups_and_systemd.svg
+https://upload.wikimedia.org/wikipedia/commons/4/43/Linux_API.svg
+https://upload.wikimedia.org/wikipedia/commons/9/99/Linux_kernel_and_OpenGL_video_games.svg
+https://upload.wikimedia.org/wikipedia/commons/f/ff/Linux_AMD_graphics_stack.svg
+https://upload.wikimedia.org/wikipedia/commons/2/2d/The_Linux_Graphics_Stack_and_glamor.svg

@@ -1,0 +1,36 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Business
+--------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
+|CRT| where and who am I |?|
+
+.. revealjs_fragments::
+
+   * mostly I am a tiny candle in front of the biggest star of all
+   * leads to: relation of |candle| *candle* / |star| *star*
+   * ask you: what is **MY BUSINESS** |candle| *candle*
+   * ask you: what is **THE COMMUNITY** |star| *star*
+
+my experience of the last 20 years:
+
+.. revealjs_fragments::
+
+   * **10** |--| **40 %** |candle| *candle* / **90** |--| **60 %** |star| *star*
+
+.. TBD: write down your "Business" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

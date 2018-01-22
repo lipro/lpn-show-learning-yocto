@@ -1,0 +1,36 @@
+.. Don't change this file, instead edit content in files:
+   docmeta.rsti, docaudience.rsti, and docinvolcomps.rsti
+
+:Abstract:      |dm_abstract|
+
+                .. rubric:: Involved Components
+
+                .. include:: /docinvolcomps.rsti
+
+:Audience:      .. include:: /docaudience.rsti
+:Status:        |dm_status|
+:Version:       |version|
+:Release:       |release|
+:Date:          |today|
+:Authors:       |dm_authors|
+
+                * |slz_contact|
+
+:Copyright:     |dm_copyright|
+:License:       |dm_license|
+                |dm_licbmpil|
+:Credits:       |dm_credits|
+:Organization:  |dm_organization|
+:Contact:       |dm_contact|
+:Address:       |dm_address|
+
+.. image:: /_images/lpn.*
+   :alt: The Li-Pro.Net logo.
+   :align: right
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

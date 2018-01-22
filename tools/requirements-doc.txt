@@ -1,0 +1,11 @@
+docutils==0.16
+sphinx==3.4.3
+sphinx_rtd_theme==0.5.1
+sphinx-revealjs==1.0.1
+sphinx-csv-filter==0.3.0
+sphinxcontrib-bibtex==2.1.4
+sphinxcontrib-spelling==7.1.0
+sphinxcontrib-svg2pdfconverter==1.1.1
+
+# The LinuxDoc library contains sphinx-doc extensions (v20210110).
+git+https://github.com/return42/linuxdoc.git/@master#sha1=7d68c76&egg=linuxdoc

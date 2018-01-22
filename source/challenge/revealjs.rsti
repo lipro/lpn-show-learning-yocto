@@ -1,0 +1,57 @@
+.. Never add or change more than structure, instead edit content in files:
+   *.rsti
+
+Challenge
+=========
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+.. image:: /challenge/challenge.*
+
+.. TBD: write down your "Challenge" notes here ...
+
+Example: UI Toolkits
+--------------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+   :data-transition: slide
+
+.. image:: /challenge/collaboration/wikipedia/Free_and_open-source-software_display_servers_and_UI_toolkits.*
+
+:raw-html:`<small>` :wikien:`Linux#Desktop` :raw-html:`</small>`
+
+.. TBD: write down your "UI Toolkits" notes here ...
+
+Collaboration
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+.. image:: /challenge/collaboration.*
+
+.. TBD: write down your "Collaboration" notes here ...
+
+.. include:: /challenge/market.rsti
+.. include:: /challenge/vendor.rsti
+.. include:: /challenge/community.rsti
+.. include:: /challenge/business.rsti
+.. include:: /challenge/domain.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

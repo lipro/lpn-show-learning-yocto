@@ -1,0 +1,87 @@
+# .travis.yml
+# Travis CI configuration file
+# See https://docs.travis-ci.com/ and https://config.travis-ci.com/ for details
+# Inspired by https://sphinxtechnicalwriting.readthedocs.io/
+
+# Do not shallow clone when cloning git repos.
+# See https://docs.travis-ci.com/user/customizing-the-build#git-clone-depth
+#
+# remove the --depth flag entirely with:
+#
+git:
+  depth: false
+
+# Python 3.8 on Ubuntu Linux 18.04 "Bionic" (amd64) for Sphinx/DOC
+os: Linux
+dist: bionic
+arch: amd64
+
+addons:
+  apt:
+    update: true
+    packages:
+    - librsvg2-bin
+    - pdf2svg
+    - unifont
+    - fonts-dejavu
+    - fonts-wqy-microhei
+    - fonts-font-awesome
+    - latexmk
+    - xindy
+    - texlive-latex-extra
+    - texlive-pictures
+    - texlive-science
+    - texlive-xetex
+    - texlive-fonts-recommended
+    - texlive-fonts-extra
+    - texlive-lang-european
+    - texlive-lang-english
+    - enchant
+    - aspell
+    - aspell-en
+    - aspell-de
+    - wamerican-huge
+    - wngerman
+    - wgerman-medical
+
+branches:
+  only:
+  - master
+
+language: python
+python: "3.8"
+cache:
+  directories:
+  - $HOME/.cache/pip
+  - ./docs/_static/fonts
+before_cache:
+- rm -f $HOME/.cache/pip/log/debug.log
+
+install:
+- pip install -U pip
+- pip install -U pipenv
+- pipenv install --no-site-packages -r tools/requirements.txt
+
+script:
+- skip # Travis requires a `script` property, but we do not need it
+
+stages:
+- build and test
+- deploy
+
+jobs:
+  include:
+  - stage: build and test # This stage builds and lints in parallel
+    script: pipenv run make revealjs html latexpdf # build the docs
+    name: Build
+  - script: pipenv run make linkcheck spelling # run checks
+    name: Test
+  - stage: deploy
+    if: (NOT type IN (pull_request)) AND (branch = master) # only deploy if merging on master
+    script: pipenv run make revealjs html latexpdf && ./tools/post-gh-pages.sh build
+    name: Deploy to GitHub Pages
+    deploy:
+      provider: pages # deploy on github pages
+      skip_cleanup: true
+      github_token: "$GHT" # defined via the Travis interface
+      local_dir: build

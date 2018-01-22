@@ -1,0 +1,12 @@
+[submodule "lpn-sphinx_static"]
+	path = source/_static
+	url = https://github.com/lipro/lpn-sphinx_static.git
+[submodule "lpn-sphinx_templates"]
+	path = source/_templates
+	url = https://github.com/lipro/lpn-sphinx_templates.git
+[submodule "lpn-sphinx_glossary"]
+	path = source/_glossary
+	url = https://github.com/lipro/lpn-sphinx_glossary.git
+[submodule "lpn-bibtex_bibliography"]
+	path = source/_bibliography
+	url = https://github.com/lipro/lpn-bibtex_bibliography.git

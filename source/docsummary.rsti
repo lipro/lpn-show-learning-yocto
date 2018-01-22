@@ -1,0 +1,58 @@
+.. Don't change this file, instead edit content in files:
+   docsumtxt.rsti, docaudience.rsti, and docinvolcomps.rsti
+
+:raw-latex:`\cleardoublepage\phantomsection`
+
+.. only:: revealjs and not latex
+
+   |version|
+
+   :raw-html:`<small>` |dm_status| :raw-html:`</small>`
+
+   -----
+
+   :Content: .. include:: /docshow.rsti
+
+   .. -----
+
+   .. *build with Sphinx, presented with Reveal.js*
+
+   -----
+
+   :raw-html:`<small>`
+   |dm_copyright|
+   |nbsp| |---| |nbsp| `CC-BY-SA-3.0`_
+   |nbsp| |---| |nbsp| Release: |release|
+   :raw-html:`</small>`
+   |dm_licbmp|
+
+   What for who?
+   =============
+
+   .. revealjs_section::
+      :data-background-image: _static/lpn.svg
+      :data-background-position: top 52px left 86px
+      :data-background-size: 128px 128px
+      :data-background-opacity: 0.33
+
+   :Involved Components: .. include:: /docinvolcomps.rsti
+   :Audience: .. include:: /docaudience.rsti
+
+.. only:: html and not revealjs and not latex
+
+   .. sidebar:: SUMMARY
+
+      .. include:: /docsumtxt.rsti
+
+.. only:: latex and not html and not revealjs
+
+   .. rubric:: SUMMARY
+
+   .. include:: /docsumtxt.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
