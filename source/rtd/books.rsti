@@ -1,0 +1,126 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+
+Books
+-----
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+* https://www.yoctoproject.org/learn/books/
+* https://old.yoctoproject.org/blogs/jefro/2016/yocto-project-books
+
+-----
+
+.. tabularcolumns:: C{38mm}C{38mm}C{38mm}C{38mm}
+.. list-table:: Books about and with Yocto
+   :class: longtable
+   :align: center
+   :widths: 38 38 38 38
+   :header-rows: 0
+   :stub-columns: 0
+
+   * - :raw-html:`<small>` |9780133443240| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781788470469| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781787283282| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781788399210| :raw-html:`</small>`
+   * - :raw-html:`<small>` |9781787124455| :raw-html:`</small>`
+     - :raw-html:`<small>` |spare_book| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781785281952| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781785289736| :raw-html:`</small>`
+
+:raw-html:`</small>`
+
+.. |spare_book| replace:: :emphasis:`missing one?` :raw-html:`<br />` |question_mark|
+.. |question_mark| image:: /_images/qm.*
+   :alt: Question Mark
+   :width: 115
+   :height: 150
+
+.. |978-0-13344-324-0| replace:: :emphasis:`978-0-13344-324-0`
+.. _`978-0-13344-324-0`: http://book.yoctoprojectbook.com/
+.. |9780133443240| replace:: :strong:`2016` (480 pages)
+   :raw-html:`<br />` |9780133443240_cover|
+   :raw-html:`<br />` |978-0-13344-324-0|_
+.. |9780133443240_cover| image:: https://www.pearson.ch/images/big/9780133443240
+   :alt: Embedded Linux Systems with the Yocto Project (ISBN: 978-0-13344-324-0)
+   :width: 115
+   :height: 150
+
+.. |978-1-78847-046-9| replace:: :emphasis:`978-1-78847-046-9`
+.. _`978-1-78847-046-9`: https://www.packtpub.com/product/embedded-linux-development-using-yocto-projects-second-edition/9781788470469
+.. |9781788470469| replace:: :strong:`2017` (162 pages)
+   :raw-html:`<br />` |9781788470469_cover|
+   :raw-html:`<br />` |978-1-78847-046-9|_
+.. |9781788470469_cover| image:: https://static.packt-cdn.com/products/9781788470469/cover/normal
+   :alt: Embedded Linux Development using Yocto Projects - Second Edition (ISBN: 978-1-78847-046-9)
+   :width: 115
+   :height: 150
+
+.. |978-1-78728-328-2| replace:: :emphasis:`978-1-78728-328-2`
+.. _`978-1-78728-328-2`: https://www.packtpub.com/product/mastering-embedded-linux-programming-second-edition/9781787283282
+.. |9781787283282| replace:: :strong:`2017` (478 pages)
+   :raw-html:`<br />` |9781787283282_cover|
+   :raw-html:`<br />` |978-1-78728-328-2|_
+.. |9781787283282_cover| image:: https://static.packt-cdn.com/products/9781787283282/cover/normal
+   :alt: Mastering Embedded Linux Programming - Second Edition (ISBN: 978-1-78728-328-2)
+   :width: 115
+   :height: 150
+
+.. |978-1-78839-921-0| replace:: :emphasis:`978-1-78839-921-0`
+.. _`978-1-78839-921-0`: https://www.packtpub.com/product/embedded-linux-development-using-yocto-project-cookbook-second-edition/9781788399210
+.. |9781788399210| replace:: :strong:`2018` (456 pages)
+   :raw-html:`<br />` |9781788399210_cover|
+   :raw-html:`<br />` |978-1-78839-921-0|_
+.. |9781788399210_cover| image:: https://static.packt-cdn.com/products/9781788399210/cover/normal
+   :alt: Embedded Linux Development Using Yocto Project Cookbook - Second Edition (ISBN: 978-1-78839-921-0)
+   :width: 115
+   :height: 150
+
+.. |978-1-78712-445-5| replace:: :emphasis:`978-1-78712-445-5`
+.. _`978-1-78712-445-5`: https://www.packtpub.com/eu/application-development/linux-embedded-development
+.. |9781787124455| replace:: :strong:`2016` (989 pages)
+   :raw-html:`<br />` |9781787124455_cover|
+   :raw-html:`<br />` |978-1-78712-445-5|_
+.. |9781787124455_cover| image:: https://www.packtpub.com/media/catalog/product/cache/c2dd93b9130e9fabaf187d1326a880fc/c/0/c06108_low_0.jpg
+   :alt: Linux: Embedded Development - Learning Path (ISBN: 978-1-78712-445-5)
+   :width: 115
+   :height: 150
+
+.. |978-1-78528-195-2| replace:: :emphasis:`978-1-78528-195-2`
+.. _`978-1-78528-195-2`: https://www.packtpub.com/product/yocto-for-raspberry-pi/9781785281952
+.. |9781785281952| replace:: :strong:`2016` (214 pages)
+   :raw-html:`<br />` |9781785281952_cover|
+   :raw-html:`<br />` |978-1-78528-195-2|_
+.. |9781785281952_cover| image:: https://static.packt-cdn.com/products/9781785281952/cover/normal
+   :alt: Yocto for Raspberry Pi (ISBN: 978-1-78528-195-2)
+   :width: 115
+   :height: 150
+
+.. |978-1-78528-973-6| replace:: :emphasis:`978-1-78528-973-6`
+.. _`978-1-78528-973-6`: https://www.packtpub.com/product/using-yocto-project-with-beaglebone-black/9781785289736
+.. |9781785289736| replace:: :strong:`2015` (144 pages)
+   :raw-html:`<br />` |9781785289736_cover|
+   :raw-html:`<br />` |978-1-78528-973-6|_
+.. |9781785289736_cover| image:: https://static.packt-cdn.com/products/9781785289736/cover/normal
+   :alt: Using Yocto Project with BeagleBone Black (ISBN: 978-1-78528-973-6)
+   :width: 115
+   :height: 150
+
+.. spelling::
+
+   Yocto
+
+.. TBD: write down your "Books" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

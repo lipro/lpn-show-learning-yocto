@@ -553,6 +553,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://return42.github.io/linuxdoc/objects.inv'
     'lxdoc': ('https://return42.github.io/linuxdoc/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://docs.yoctoproject.org/objects.inv'
+    'ypdoc': ('https://docs.yoctoproject.org/', None),
+
     #
     # Drawing the Docutils objects.inv from a RTD server,
     # but referring to the 0.16 web docs
@@ -583,6 +586,7 @@ intersphinx_mapping = {
 extlinks = {
     'wikide':       ('https://de.wikipedia.org/wiki/%s', 'German Wikipedia: '),
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
+    'wikiyp':       ('https://wiki.yoctoproject.org/wiki/%s', 'Yocto Project Wiki: '),
     'lpn.ghp.dir': (
         ghp_base + ghp_slug + '/%s',
         ghp_name + ': '

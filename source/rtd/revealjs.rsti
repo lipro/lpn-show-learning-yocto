@@ -10,11 +10,15 @@ Read-The-Docs
    :data-background-size: 128px 128px
    :data-background-opacity: 0.33
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+* Documentations
+* Presentations
+* Books
 
 .. TBD: write down your "Read-The-Docs" notes here ...
+
+.. include:: /rtd/documentations.rsti
+.. include:: /rtd/presentations.rsti
+.. include:: /rtd/books.rsti
 
 .. Local variables:
    coding: utf-8

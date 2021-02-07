@@ -4,12 +4,9 @@
 Read-The-Docs
 =============
 
-.. only:: not revealjs
-
-   .. todo:: complete chapter
-
-.. image:: /_images/todo.jpg
-   :align: center
+.. include:: /rtd/documentations.rsti
+.. include:: /rtd/presentations.rsti
+.. include:: /rtd/books.rsti
 
 .. Local variables:
    coding: utf-8

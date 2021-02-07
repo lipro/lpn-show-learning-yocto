@@ -1,0 +1,55 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+
+Documentations
+--------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+* The original documents: https://www.yoctoproject.org/documentation
+
+  * :doc:`ypdoc:brief-yoctoprojectqs/index`
+  * :doc:`ypdoc:overview-manual/index`
+  * :doc:`ypdoc:ref-manual/index`
+  * :doc:`ypdoc:dev-manual/index`
+  * :doc:`ypdoc:bsp-guide/index`
+  * :doc:`ypdoc:kernel-dev/index`
+  * :doc:`ypdoc:profile-manual/index`
+  * :doc:`ypdoc:test-manual/index`
+  * :doc:`ypdoc:sdk-manual/index`
+
+* The original classroom: https://www.yoctoproject.org/learn
+* The original Wiki-pages: https://wiki.yoctoproject.org/
+
+  * :wikiyp:`YP DevDay Austin 2020`
+  * :wikiyp:`DevDay San Diego 2019`
+  * :wikiyp:`DevDay Portland 2018` and
+    :wikiyp:`Edinburgh 2018 <DevDay Edinburgh 2018>`
+  * :wikiyp:`DevDay US 2017` and
+    :wikiyp:`Prague 2017 <DevDay Prague 2017>`
+
+* Bootlin (former Free Electrons) Material: https://bootlin.com/docs/
+
+  * Training Materials: https://bootlin.com/doc/training/yocto/
+  * Conference Materials: https://bootlin.com/pub/conferences/
+
+:raw-html:`</small>`
+
+.. spelling::
+
+   Bootlin
+
+.. TBD: write down your "Documentations" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

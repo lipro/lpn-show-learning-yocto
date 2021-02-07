@@ -1,0 +1,55 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+
+Presentations
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+* *Rudolf J. Streif*: |Introduction to the Yocto Project|_
+* *Jeffrey Osier-Mixon*, *Kevin McGrath*: |Yocto Project and Embedded OS|_
+* *Yi-Hsiu Hsu*: |Yocto Project Introduction|_
+* *Marcelo Sanz*: |Yocto Project Open Source Build System and Collaboration Initiative|_
+* *Yen-Chin Lee*: |Build your own embedded linux distributions by yocto project|_
+
+:raw-html:`</small>`
+
+.. |Introduction to the Yocto Project|
+   replace:: :strong:`Introduction to the Yocto Project`
+.. _`Introduction to the Yocto Project`:
+   https://elinux.org/images/a/a8/Getting_Started_with_Embedded_Linux-_Using_the_Yocto_Project_to_Build_your_Own_Custom_Embedded_Linux_Distribution.pdf
+
+.. |Yocto Project and Embedded OS|
+   replace:: :strong:`Yocto Project and Embedded OS`
+.. _`Yocto Project and Embedded OS`:
+   https://www.intel.com/content/dam/www/public/us/en/documents/education/University/yocto-project-and-embedded-os-curriculum.pdf
+
+.. |Yocto Project Introduction|
+   replace:: :strong:`Yocto Project Introduction`
+.. _`Yocto Project Introduction`:
+   https://www.slideshare.net/YiHsiuHsu/yocto-project-introduction
+
+.. |Yocto Project Open Source Build System and Collaboration Initiative|
+   replace:: :strong:`Yocto Project Open Source Build System and Collaboration Initiative`
+.. _`Yocto Project Open Source Build System and Collaboration Initiative`:
+   https://www.slideshare.net/marcelolorenzati/yocto-iua-2012
+
+.. |Build your own embedded linux distributions by yocto project|
+   replace:: :strong:`Build your own embedded linux distributions by yocto project`
+.. _`Build your own embedded linux distributions by yocto project`:
+   https://www.slideshare.net/coldnew/build-your-own-embedded-linux-distributions-by-yocto-project
+
+.. TBD: write down your "Presentations" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
