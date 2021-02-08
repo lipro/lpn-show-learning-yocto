@@ -13,9 +13,10 @@ Metadata Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/metadata-layers.*
+   .. image:: /build-system/concepts/metadata-layers.*
 
-   :ref:`Metadata Layers <ypdoc:overview-manual/concepts:metadata, machine configuration, and policy configuration>`
+   :ref:`Metadata Layers <ypdoc:overview-manual/concepts:metadata,
+   machine configuration, and policy configuration>`
 
    :raw-html:`<small>`
    Various layers that provide software, machine and distro metadata.
@@ -23,12 +24,13 @@ Metadata Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/metadata-layers.*
+   .. figure:: /build-system/concepts/metadata-layers.*
       :figclass: align-center
       :align: center
 
-      :ref:`Metadata Layers <ypdoc:overview-manual/concepts:metadata, machine configuration, and policy configuration>`
-      as part of Yocto Workflow
+      :ref:`Metadata Layers <ypdoc:overview-manual/concepts:metadata,
+      machine configuration, and policy configuration>`
+      as part of Yocto Build System Workflow
 
    The previous area will be used to define BitBake’s global behavior. This
    area takes a closer look at the layers the build system uses to further

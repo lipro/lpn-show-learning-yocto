@@ -13,7 +13,7 @@ Configuration Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/user-configuration.*
+   .. image:: /build-system/concepts/user-configuration.*
 
    :ref:`ypdoc:overview-manual/concepts:user configuration`
 
@@ -23,12 +23,12 @@ Configuration Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/user-configuration.*
+   .. figure:: /build-system/concepts/user-configuration.*
       :figclass: align-center
       :align: center
 
       :ref:`ypdoc:overview-manual/concepts:user configuration`
-      as part of Yocto Workflow
+      as part of Yocto Build System Workflow
 
    User configuration helps define the build. Through user configuration,
    you can tell BitBake the target architecture for which you are building

@@ -13,7 +13,7 @@ BitBake Tool Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/bitbake-tool.*
+   .. image:: /build-system/concepts/bitbake-tool.*
 
    :ref:`ypdoc:overview-manual/concepts:bitbake tool`
 
@@ -26,12 +26,12 @@ BitBake Tool Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/bitbake-tool.*
+   .. figure:: /build-system/concepts/bitbake-tool.*
       :figclass: align-center
       :align: center
 
       :ref:`ypdoc:overview-manual/concepts:bitbake tool`
-      as part of Yocto Workflow
+      as part of Yocto WBuild System orkflow
 
    The OpenEmbedded build system uses BitBake to produce images and |SDK_|.
    You can see from the general workflow figure, the BitBake area consists

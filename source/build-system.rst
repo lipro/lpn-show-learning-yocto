@@ -1,15 +1,15 @@
 .. Never add or change more than structure, instead edit content in files:
    *.rsti
 
-Workflow
-========
+Build System
+============
 
-.. figure:: /workflow/build-system-concepts/areas.*
+.. figure:: /build-system/concepts/areas.*
    :figclass: align-center
    :align: center
 
    :ref:`ypdoc:overview-manual/concepts:openembedded build system concepts`
-   as part of Yocto Workflow
+   as part of Yocto Build System Workflow
 
 In general, the build’s workflow consists of several functional areas:
 
@@ -32,17 +32,17 @@ In general, the build’s workflow consists of several functional areas:
                               output for package generation, creates and tests
                               packages, generates images, and generates
                               cross-development tools.
-:Images:                      Images produced by the workflow.
+:Images:                      Images produced by the build system workflow.
 :Application Development SDK: Cross-development tools that are produced along
                               with an image or separately with BitBake.
 
-.. include:: /workflow/user-configuration.rsti
-.. include:: /workflow/metadata-layers.rsti
-.. include:: /workflow/source-files.rsti
-.. include:: /workflow/package-feeds.rsti
-.. include:: /workflow/bitbake-tool.rsti
-.. include:: /workflow/images.rsti
-.. include:: /workflow/sdk.rsti
+.. include:: /build-system/user-configuration.rsti
+.. include:: /build-system/metadata-layers.rsti
+.. include:: /build-system/source-files.rsti
+.. include:: /build-system/package-feeds.rsti
+.. include:: /build-system/bitbake-tool.rsti
+.. include:: /build-system/images.rsti
+.. include:: /build-system/sdk.rsti
 
 .. Local variables:
    coding: utf-8

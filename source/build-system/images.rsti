@@ -13,7 +13,7 @@ Images Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/images.*
+   .. image:: /build-system/concepts/images.*
 
    :ref:`ypdoc:overview-manual/concepts:images`
 
@@ -23,12 +23,12 @@ Images Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/images.*
+   .. figure:: /build-system/concepts/images.*
       :figclass: align-center
       :align: center
 
       :ref:`ypdoc:overview-manual/concepts:images`
-      as part of Yocto Workflow
+      as part of Yocto Build System Workflow
 
    The images produced by the build system are compressed forms of the root
    filesystem and are ready to boot on a target device. You can see from the

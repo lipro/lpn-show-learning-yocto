@@ -13,7 +13,7 @@ Source Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/source-files.*
+   .. image:: /build-system/concepts/source-files.*
 
    :ref:`ypdoc:overview-manual/concepts:sources`
 
@@ -23,12 +23,12 @@ Source Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/source-files.*
+   .. figure:: /build-system/concepts/source-files.*
       :figclass: align-center
       :align: center
 
       :ref:`ypdoc:overview-manual/concepts:sources`
-      as part of Yocto Workflow
+      as part of Yocto Build System Workflow
 
    In order for the OpenEmbedded build system to create an image or any
    target, it must be able to access source files. The general workflow

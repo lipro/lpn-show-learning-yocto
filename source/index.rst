@@ -23,7 +23,7 @@
    .. include:: /intensions/revealjs.rsti
    .. include:: /concepts/revealjs.rsti
    .. include:: /manifest/revealjs.rsti
-   .. include:: /workflow/revealjs.rsti
+   .. include:: /build-system/revealjs.rsti
    .. include:: /user-configuration/revealjs.rsti
    .. include:: /metadata-layers/revealjs.rsti
    .. include:: /source-files/revealjs.rsti
@@ -57,7 +57,7 @@
    intensions
    concepts
    manifest
-   workflow
+   build-system
    user-configuration
    metadata-layers
    source-files

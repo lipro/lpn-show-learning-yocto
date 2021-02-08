@@ -13,7 +13,7 @@ Package Area
 
 .. only:: revealjs
 
-   .. image:: /workflow/build-system-concepts/package-feeds.*
+   .. image:: /build-system/concepts/package-feeds.*
 
    :ref:`ypdoc:overview-manual/concepts:package feeds`
 
@@ -24,12 +24,12 @@ Package Area
 
 .. only:: not revealjs
 
-   .. figure:: /workflow/build-system-concepts/package-feeds.*
+   .. figure:: /build-system/concepts/package-feeds.*
       :figclass: align-center
       :align: center
 
       :ref:`ypdoc:overview-manual/concepts:package feeds`
-      as part of Yocto Workflow
+      as part of Yocto Build System Workflow
 
    When the OpenEmbedded build system generates an image or an SDK, it gets
    the packages from a package feed area located in the Build Directory. The

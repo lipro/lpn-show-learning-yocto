@@ -1,5 +1,5 @@
-Workflow
-========
+Build System
+============
 
 .. revealjs_section::
    :data-background-image: _static/yp.svg
@@ -14,17 +14,17 @@ Workflow
 In general, the build’s workflow consists of several functional areas.
 :raw-html:`</small>`
 
-.. image:: /workflow/build-system-concepts/areas.*
+.. image:: /build-system/concepts/areas.*
 
-.. TBD: write down your "Workflow" notes here ...
+.. TBD: write down your "Build System" notes here ...
 
-.. include:: /workflow/user-configuration.rsti
-.. include:: /workflow/metadata-layers.rsti
-.. include:: /workflow/source-files.rsti
-.. include:: /workflow/package-feeds.rsti
-.. include:: /workflow/bitbake-tool.rsti
-.. include:: /workflow/images.rsti
-.. include:: /workflow/sdk.rsti
+.. include:: /build-system/user-configuration.rsti
+.. include:: /build-system/metadata-layers.rsti
+.. include:: /build-system/source-files.rsti
+.. include:: /build-system/package-feeds.rsti
+.. include:: /build-system/bitbake-tool.rsti
+.. include:: /build-system/images.rsti
+.. include:: /build-system/sdk.rsti
 
 .. Local variables:
    coding: utf-8
