@@ -1,7 +1,7 @@
 .. Never add or change more than structure, instead edit content in files:
    *.rsti
 
-Build System
+BitBake Tool
 ============
 
 .. only:: not revealjs
@@ -13,12 +13,12 @@ Build System
 
 https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#bitbake-dev-environment
 
-.. include:: /build-system/fetching.rsti
-.. include:: /build-system/patching.rsti
-.. include:: /build-system/compilation.rsti
-.. include:: /build-system/packaging.rsti
-.. include:: /build-system/image-generation.rsti
-.. include:: /build-system/sdk-generation.rsti
+.. include:: /bitbake-tool/fetching.rsti
+.. include:: /bitbake-tool/patching.rsti
+.. include:: /bitbake-tool/compilation.rsti
+.. include:: /bitbake-tool/packaging.rsti
+.. include:: /bitbake-tool/image-generation.rsti
+.. include:: /bitbake-tool/sdk-generation.rsti
 
 .. Local variables:
    coding: utf-8

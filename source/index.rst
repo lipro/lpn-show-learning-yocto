@@ -28,7 +28,7 @@
    .. include:: /metadata-layers/revealjs.rsti
    .. include:: /source-files/revealjs.rsti
    .. include:: /package-feeds/revealjs.rsti
-   .. include:: /build-system/revealjs.rsti
+   .. include:: /bitbake-tool/revealjs.rsti
    .. include:: /images/revealjs.rsti
    .. include:: /sdk/revealjs.rsti
    .. include:: /final/revealjs.rsti
@@ -62,7 +62,7 @@
    metadata-layers
    source-files
    package-feeds
-   build-system
+   bitbake-tool
    images
    sdk
    final
