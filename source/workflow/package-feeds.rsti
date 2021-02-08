@@ -1,0 +1,46 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Package Area
+------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. only:: revealjs
+
+   .. image:: /workflow/build-system-concepts/package-feeds.*
+
+   :ref:`ypdoc:overview-manual/concepts:package feeds`
+
+   :raw-html:`<small>`
+   Directories containing output packages (RPM, DEB or IPK), which are
+   subsequently used in the construction of an image or |SDK|.
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /workflow/build-system-concepts/package-feeds.*
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:package feeds`
+      as part of Yocto Workflow
+
+   When the OpenEmbedded build system generates an image or an SDK, it gets
+   the packages from a package feed area located in the Build Directory. The
+   general workflow figure shows this package feeds area in the upper-right
+   corner. See :doc:`package-feeds` for more details.
+
+.. TBD: write down your "Package Area" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

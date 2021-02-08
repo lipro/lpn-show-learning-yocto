@@ -1,6 +1,3 @@
-.. Never add or change more than structure, instead edit content in files:
-   *.rsti
-
 Workflow
 ========
 
@@ -9,12 +6,25 @@ Workflow
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
+   :data-transition: none
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+:ref:`ypdoc:overview-manual/concepts:openembedded build system concepts`
 
-.. image:: /_images/todo.jpg
+:raw-html:`<small>`
+In general, the build’s workflow consists of several functional areas.
+:raw-html:`</small>`
+
+.. image:: /workflow/build-system-concepts/areas.*
 
 .. TBD: write down your "Workflow" notes here ...
+
+.. include:: /workflow/user-configuration.rsti
+.. include:: /workflow/metadata-layers.rsti
+.. include:: /workflow/source-files.rsti
+.. include:: /workflow/package-feeds.rsti
+.. include:: /workflow/bitbake-tool.rsti
+.. include:: /workflow/images.rsti
+.. include:: /workflow/sdk.rsti
 
 .. Local variables:
    coding: utf-8

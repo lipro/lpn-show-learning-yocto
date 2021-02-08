@@ -1,0 +1,45 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Configuration Area
+------------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. only:: revealjs
+
+   .. image:: /workflow/build-system-concepts/user-configuration.*
+
+   :ref:`ypdoc:overview-manual/concepts:user configuration`
+
+   :raw-html:`<small>`
+   Setup values you can use to control the build process.
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /workflow/build-system-concepts/user-configuration.*
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:user configuration`
+      as part of Yocto Workflow
+
+   User configuration helps define the build. Through user configuration,
+   you can tell BitBake the target architecture for which you are building
+   the image, where to store downloaded source, and other build properties.
+   See :doc:`user-configuration` for more details.
+
+.. TBD: write down your "Configuration Area" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
