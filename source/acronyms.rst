@@ -29,6 +29,8 @@ will also be listed here as an acronym.
 :|CD|: |CD_|
 :|CI|: |CI_|
 :|SCMP|: |SCMP_|
+:|SCMS|: |SCMS_|
+:|SDK|: |SDK_|
 
 .. rubric:: specifically
 

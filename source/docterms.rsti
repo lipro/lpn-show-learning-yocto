@@ -16,6 +16,10 @@
 .. |CI_|        replace:: :abbr:`Continuous Integration (CI)`
 .. |SCMP|       replace:: :abbr:`SCMP (Software Configuration Management Plan)`
 .. |SCMP_|      replace:: :abbr:`Software Configuration Management Plan (SCMP)`
+.. |SCMS|       replace:: :abbr:`SCMS (Software Configuration Management System)`
+.. |SCMS_|      replace:: :abbr:`Software Configuration Management System (SCMS)`
+.. |SDK|        replace:: :abbr:`SDK (Software Development Kit)`
+.. |SDK_|       replace:: :abbr:`Software Development Kit (SDK)`
 
 .. specifically
 
