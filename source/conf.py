@@ -1138,6 +1138,7 @@ html_css_files = [
 #   'css/fix-cite.css',
 #   'css/fix-float.css',
     'css/strikethrough.css',
+    'css/underline.css',
     'css/tweaks-sphinx_rtd_theme.css',
 ]
 
@@ -1279,7 +1280,10 @@ html_search_scorer = '{}/js/scorer.js'.format(path_html_templates)
 #
 # https://sphinx-revealjs.readthedocs.io/en/v1.0.0/configurations.html#revealjs-static-path
 #
-revealjs_static_path = ['{}/revealjs'.format(path_static)]
+revealjs_static_path = [
+    '{}/revealjs'.format(path_static),
+    '{}/html'.format(path_static),
+]
 
 # List of using fonts from Google Fonts (https://fonts.google.com/). If this
 # value is set, render link and style tags into html.
@@ -1451,7 +1455,9 @@ revealjs_script_plugins = [
 # https://sphinx-revealjs.readthedocs.io/en/v1.0.0/configurations.html#revealjs-css-files
 #
 revealjs_css_files = [
-    'tweaks-revealjs.css',
+    'css/underline.css',
+    'css/strikethrough.css',
+    'css/tweaks-revealjs.css',
     'revealjs4/plugin/highlight/zenburn.css',
     'revealjs4/dist/theme/black.css\" id=\"theme',  # QnD hack for themeoverride
 ]
