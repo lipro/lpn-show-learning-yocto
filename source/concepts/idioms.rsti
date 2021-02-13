@@ -1,0 +1,63 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. only:: revealjs
+
+   :raw-html:`<small>`
+
+Idioms
+------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. revealjs_fragments::
+
+   #. :strong:`Build System`:
+      The build system specific to the Yocto Project based on the project
+      :strong:`Poky`, which uses :strong:`BitBake` as the :strong:`Task`
+      executor.
+
+   #. :strong:`Source Directory`:
+      Refers to the directory structure created as a result of creating a
+      local copy of the :strong:`Poky` and all other Git repositories as
+      referred by the :strong:`Git Repo` manifest. It contains :strong:`BitBake`,
+      Documentation, :strong:`Metadata` and other files that all support the
+      Yocto Project. Consequently, you must have the :strong:`Source Directory`
+      in place on your development system in order to do any development using
+      the Yocto Project.
+      |CRT| :term:`ypdoc:Source Directory`
+
+   #. :strong:`Build Directory`:
+      This term refers to the area used by the :strong:`Build System` for
+      downloads, builds and deployments.
+      |CRT| :term:`ypdoc:Build Directory`
+
+   #. :strong:`Cross-Development Toolchain`:
+      A collection of cross-compilers, linkers, debuggers, libraries and
+      utilities that run on one architecture and allow you to develop
+      software for a different, or targeted, architecture.
+      |CRT| :term:`ypdoc:Cross-Development Toolchain`
+
+   #. :strong:`Board Support Package (BSP)`:
+      A group of drivers, definitions, and other components that provide
+      support for a specific hardware configuration.
+      |CRT| :term:`ypdoc:Board Support Package (BSP)`, or
+      :doc:`ypdoc:bsp-guide/index` and :doc:`ypdoc:kernel-dev/index`
+
+.. only:: revealjs
+
+   :raw-html:`</small>`
+
+.. TBD: write down your "Idioms" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

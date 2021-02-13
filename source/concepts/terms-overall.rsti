@@ -1,0 +1,76 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. only:: revealjs
+
+   :raw-html:`<small>`
+
+Terms overall
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. revealjs_fragments::
+
+   #. :strong:`Git Repo` (:file:`repo`):
+      The collection manager that Google has built on top of Git to help
+      :underline:`manage multiple Git repositories`, does the uploads to
+      Gerrit and automates the Android system image development workflow.
+      The :command:`repo` command is an executable |Python| script that you
+      can put anywhere in your path.
+      |CRT| https://gerrit.googlesource.com/git-repo/
+
+   #. :strong:`BitBake`:
+      The :strong:`Task` :underline:`executor and scheduler` used by the
+      :strong:`Build System` to build :strong:`Images`. The :command:`bitbake`
+      command is part of an fancy |Python| and Bash environment around the
+      :strong:`BitBake` project.
+      |CRT| :term:`ypdoc:BitBake`, or
+      :homeyp:`Yocto Components and Tools <software-overview/project-components>`
+      |CRT| :homeyp:`BitBake <software-item/bitbake>`, or
+      :doc:`bbdoc:index`
+
+   #. :strong:`Metadata`:
+      The :underline:`files` that :strong:`BitBake` :underline:`parses when
+      building` an :strong:`Images`. In general, :strong:`Metadata` provides
+      :strong:`Recipes`, :strong:`Classes` and  :strong:`Configuration Files`.
+      |CRT| :term:`ypdoc:Metadata`, or
+      :doc:`bbdoc:index`
+      |CRT| :doc:`bbdoc:bitbake-user-manual/bitbake-user-manual-intro`
+      |CRT| :ref:`bbdoc:bitbake-user-manual/bitbake-user-manual-intro:introduction`
+
+   #. :strong:`OE-Core`:
+      A :underline:`core set` of :strong:`Metadata` originating with |OE_|
+      that is shared between |OE| and the Yocto Project.
+      |CRT| :term:`ypdoc:OpenEmbedded-Core (OE-Core)`, or
+      :homeyp:`Yocto Components and Tools <software-overview/project-components>`
+      |CRT| :homeyp:`OE-Core <software-item/openembedded-core>`, or
+      :wikioe:`OE Wikipedia <OpenEmbedded-Core#Introduction>`
+
+   #. :strong:`Poky`:
+      The reference :underline:`distribution` of the Yocto Project. It contains
+      the :strong:`Build System` (:strong:`BitBake` and :strong:`OE-Core`) as
+      well as a set of :strong:`Metadata` to get you started building your own
+      |distro|.
+      |CRT| :term:`ypdoc:Poky`, or
+      :homeyp:`Yocto Components and Tools <software-overview/project-components>`
+      |CRT| :homeyp:`Poky <software-item/poky>`, or
+      :homeyp:`Yocto Reference Distribution <software-overview/reference-distribution>`
+
+.. only:: revealjs
+
+   :raw-html:`</small>`
+
+.. TBD: write down your "Terms overall" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

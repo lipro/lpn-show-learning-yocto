@@ -10,11 +10,18 @@ Terms, Concepts, Idioms
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+|CRT| :doc:`ypdoc:ref-manual/terms`
 
-.. image:: /_images/todo.jpg
+slightly extended
 
 .. TBD: write down your "Terms, Concepts and Idioms" notes here ...
+
+.. include:: /concepts/terms-overall.rsti
+.. include:: /concepts/terms-internal.rsti
+.. include:: /concepts/metadata.rsti
+.. include:: /concepts/features.rsti
+.. include:: /concepts/idioms.rsti
+.. include:: /concepts/conclusion.rsti
 
 .. Local variables:
    coding: utf-8

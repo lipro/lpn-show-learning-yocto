@@ -1,0 +1,63 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. only:: revealjs
+
+   :raw-html:`<small>`
+
+Metadata
+--------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. revealjs_fragments::
+
+   #. :strong:`Classes`:
+      Files with the :file:`.bbclass` file extension that provided for
+      :underline:`logic encapsulation and inheritance` so that commonly
+      used patterns can be :underline:`defined once and then easily used`
+      in multiple :strong:`Recipes`.
+      |CRT| :term:`ypdoc:Classes`, or in
+      :ref:`Concept <ypdoc:overview-manual/concepts:classes>`, or in
+      :doc:`Reference <ypdoc:ref-manual/classes>`
+
+   #. :strong:`Recipes`:
+      Files with the :file:`.bb` file extension have a :underline:`set of
+      instructions` for building :strong:`Packages` or :strong:`Package
+      Groups` or :strong:`Images` and describes where you get source code,
+      which patches to apply, how to configure the source, :underline:`how
+      to compile` it and so on. It also :underline:`describe dependencies`
+      for libraries or for other :strong:`Recipes`. :strong:`Recipes`
+      represent the :underline:`logical unit of execution`.
+      |CRT| :term:`ypdoc:Recipe`, or in
+      :ref:`Concept <ypdoc:overview-manual/concepts:recipes>`
+
+   #. :strong:`Append Files`:
+      Files with the :file:`.bbappend` file extension that append build
+      information to a :strong:`Recipe`. The :strong:`Build System` respects
+      every :strong:`Append file` to have a corresponding :strong:`Recipe`
+      (:file:`.bb`) file.
+      |CRT| :term:`ypdoc:Append Files`
+
+   #. :strong:`Configuration Files`:
+      Configuration information in various
+      |CRT| :term:`ypdoc:Configuration File`, or in
+      :ref:`Concept <ypdoc:overview-manual/concepts:configurations>`
+
+.. only:: revealjs
+
+   :raw-html:`</small>`
+
+.. TBD: write down your "Metadata" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

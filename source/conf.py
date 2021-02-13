@@ -556,6 +556,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://docs.yoctoproject.org/objects.inv'
     'ypdoc': ('https://docs.yoctoproject.org/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://docs.yoctoproject.org/bitbake/objects.inv'
+    'bbdoc': ('https://docs.yoctoproject.org/bitbake/', None),
+
     #
     # Drawing the Docutils objects.inv from a RTD server,
     # but referring to the 0.16 web docs
@@ -586,7 +589,10 @@ intersphinx_mapping = {
 extlinks = {
     'wikide':       ('https://de.wikipedia.org/wiki/%s', 'German Wikipedia: '),
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
+    'wikioe':       ('https://www.openembedded.org/wiki/%s', 'OpenEmbedded Wikipedia: '),
+    'oelayer':      ('https://layers.openembedded.org/%s', 'OpenEmbedded Layer Index: '),
     'wikiyp':       ('https://wiki.yoctoproject.org/wiki/%s', 'Yocto Project Wiki: '),
+    'homeyp':       ('https://www.yoctoproject.org/%s', 'Yocto Project Home: '),
     'lpn.ghp.dir': (
         ghp_base + ghp_slug + '/%s',
         ghp_name + ': '
