@@ -10,10 +10,16 @@
 
 .. generally
 
+.. |BSP|        replace:: :abbr:`BSP (Board Support Package)`
+.. |BSP_|       replace:: :abbr:`Board Support Package (BSP)`
 .. |CD|         replace:: :abbr:`CD (Continuous Deployment / Delivery)`
 .. |CD_|        replace:: :abbr:`Continuous Deployment / Delivery (CD)`
 .. |CI|         replace:: :abbr:`CI (Continuous Integration)`
 .. |CI_|        replace:: :abbr:`Continuous Integration (CI)`
+.. |distro|     replace:: :abbr:`distro (distribution)`
+.. |distro_|    replace:: :abbr:`distribution (distro)`
+.. |OE|         replace:: :abbr:`OE (OpenEmbedded)`
+.. |OE_|        replace:: :abbr:`OpenEmbedded (OE)`
 .. |SCMP|       replace:: :abbr:`SCMP (Software Configuration Management Plan)`
 .. |SCMP_|      replace:: :abbr:`Software Configuration Management Plan (SCMP)`
 .. |SCMS|       replace:: :abbr:`SCMS (Software Configuration Management System)`
@@ -22,6 +28,10 @@
 .. |SDK_|       replace:: :abbr:`Software Development Kit (SDK)`
 
 .. specifically
+
+.. spelling::
+
+   distro
 
 .. Local variables:
    coding: utf-8

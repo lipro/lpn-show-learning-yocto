@@ -26,8 +26,11 @@ will also be listed here as an acronym.
 
 .. rubric:: generally
 
+:|BSP|: |BSP_|
 :|CD|: |CD_|
 :|CI|: |CI_|
+:|distro|: |distro_|
+:|OE|: |OE_|
 :|SCMP|: |SCMP_|
 :|SCMS|: |SCMS_|
 :|SDK|: |SDK_|
