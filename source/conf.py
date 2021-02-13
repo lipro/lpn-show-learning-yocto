@@ -1336,7 +1336,6 @@ revealjs_script_conf = '''
 
         theme: 'black',
         fragments: true,
-        center: false,
 
         transition: 'convex', // none/fade/slide/convex/concave/zoom
         background_transition: 'convex',
