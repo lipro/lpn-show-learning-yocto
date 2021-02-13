@@ -19,7 +19,7 @@ Metadata Area
    machine configuration, and policy configuration>`
 
    :raw-html:`<small>`
-   Various layers that provide software, machine and distro metadata.
+   Various layers that provide software, machine and |distro| metadata.
    :raw-html:`</small>`
 
 .. only:: not revealjs
@@ -38,10 +38,6 @@ Metadata Area
    and policies. See :doc:`metadata-layers` for more details.
 
 .. TBD: write down your "Metadata Area" notes here ...
-
-.. spelling::
-
-   distro
 
 .. Local variables:
    coding: utf-8

@@ -16,7 +16,7 @@ In general, the build’s workflow consists of several functional areas:
 :User Configuration:          Setup values you can use to control the
                               build process.
 :Metadata Layers:             Various layers that provide software, machine,
-                              and distro metadata.
+                              and |distro| metadata.
 :Source Files:                Upstream releases, local projects, and |SCMS|.
 :Package Feeds:               Directories containing output packages (RPM, DEB
                               or IPK), which are subsequently used in the
