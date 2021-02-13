@@ -12,7 +12,7 @@ Documentations
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-* The original documents: https://www.yoctoproject.org/documentation
+* The project documents: https://www.yoctoproject.org/documentation
 
   * :doc:`ypdoc:brief-yoctoprojectqs/index`
   * :doc:`ypdoc:overview-manual/index`
@@ -23,9 +23,10 @@ Documentations
   * :doc:`ypdoc:profile-manual/index`
   * :doc:`ypdoc:test-manual/index`
   * :doc:`ypdoc:sdk-manual/index`
+  * :doc:`bbdoc:index`
 
-* The original classroom: https://www.yoctoproject.org/learn
-* The original Wiki-pages: https://wiki.yoctoproject.org/
+* The project classroom: https://www.yoctoproject.org/learn
+* The project Wiki-pages: https://wiki.yoctoproject.org/
 
   * :wikiyp:`YP DevDay Austin 2020`
   * :wikiyp:`DevDay San Diego 2019`
