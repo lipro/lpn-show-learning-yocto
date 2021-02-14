@@ -35,8 +35,17 @@
       :data-background-size: 128px 128px
       :data-background-opacity: 0.33
 
-   :Involved Components: .. include:: /docinvolcomps.rsti
-   :Audience: .. include:: /docaudience.rsti
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      .. rubric:: Involved Components:
+
+   .. include:: /docinvolcomps.rsti
+
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      .. rubric:: Audience:
+
+   .. include:: /docaudience.rsti
 
 .. only:: html and not revealjs and not latex
 
