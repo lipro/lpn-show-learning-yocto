@@ -6,9 +6,9 @@
 
 .. revealjs_fragments::
 
-   * Yocto Workflow
-   * Bitbake Recipies
-   * Git Repo Manifest
+   * :strong:`Git` |nbsp| |--| |nbsp| Repo and Manifest
+   * :strong:`Yocto` |nbsp| |--| |nbsp| Terms and Workflow
+   * :strong:`Bitbake` |nbsp| |--| |nbsp| Layer and Recipies
 
 .. Local variables:
    coding: utf-8
