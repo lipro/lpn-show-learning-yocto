@@ -20,7 +20,7 @@
    .. include:: /challenge/revealjs.rsti
    .. include:: /decision/revealjs.rsti
    .. include:: /about/revealjs.rsti
-   .. include:: /intensions/revealjs.rsti
+   .. include:: /intentions/revealjs.rsti
    .. include:: /concepts/revealjs.rsti
    .. include:: /manifest/revealjs.rsti
    .. include:: /build-system/revealjs.rsti
@@ -54,7 +54,7 @@
    challenge
    decision
    about
-   intensions
+   intentions
    concepts
    manifest
    build-system

@@ -1,0 +1,48 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Life Cycle
+----------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 4 |nbsp| |--| |nbsp| Package Management
+
+.. rst-class:: left-justified fragment fade-in
+
+   how to :underline:`build and deploy` the given list of packages
+   and their dependencies
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 5 |nbsp| |--| |nbsp| Deployment Management
+
+.. rst-class:: left-justified fragment fade-in
+
+   what have to :underline:`share` and how to :underline:`distribute`
+   all the resulting artefacts
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 6 |nbsp| |--| |nbsp| QA Management (Test, Integration)
+
+.. rst-class:: left-justified fragment fade-in
+
+   how to :underline:`ensure accuracy` of all the development,
+   in parts and altogether
+
+.. TBD: write down your "Life Cycle" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

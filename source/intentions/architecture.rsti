@@ -1,0 +1,48 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Architecture
+------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 1 |nbsp| |--| |nbsp| Product Management
+
+.. rst-class:: left-justified fragment fade-in
+
+   which hard- and software features we have, and need for a specific product
+   |CRT| :underline:`feature sets`
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 2 |nbsp| |--| |nbsp| Feature Management
+
+.. rst-class:: left-justified fragment fade-in
+
+   how the distribution looks for a given feature set
+   |CRT| :underline:`composing`
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: 3 |nbsp| |--| |nbsp| Distribution Management
+
+.. rst-class:: left-justified fragment fade-in
+
+   which packages will needed for a given distribution / composing
+   |CRT| :underline:`flavor`
+
+.. TBD: write down your "Architecture" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
