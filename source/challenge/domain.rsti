@@ -11,14 +11,18 @@ Domains
    :data-background-size: cover
    :data-background-opacity: 0.08
 
-|CRT| the **COMMUNITY** we are all |!!|
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| the **COMMUNITY** |nbsp| |--| |nbsp| there are we all |!!|
 
 .. revealjs_fragments::
 
    * Market with its Suppliers and Vendors
    * Contractors and their Principals
 
-|CRT| we *should* take over the **WORKFLOWS** |!!|
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| we *should* take over the **WORKFLOWS** |!!|
 
 .. revealjs_fragments::
 

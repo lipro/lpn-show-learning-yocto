@@ -11,7 +11,9 @@ Business
    :data-background-size: cover
    :data-background-opacity: 0.08
 
-|CRT| where and who am I |?|
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| where and who am I |?|
 
 .. revealjs_fragments::
 
@@ -20,11 +22,14 @@ Business
    * ask you: what is **MY BUSINESS** |candle| *candle*
    * ask you: what is **THE COMMUNITY** |star| *star*
 
-my experience of the last 20 years:
+.. rst-class:: fragment grow highlight-blue
 
-.. revealjs_fragments::
+   .. rubric:: my experience of the last 20 years:
 
-   * **10** |--| **40 %** |candle| *candle* / **90** |--| **60 %** |star| *star*
+.. rst-class:: fragment fade-in
+
+   **10** |--| **40 %** |candle| *candle* /
+   **90** |--| **60 %** |star| *star*
 
 .. TBD: write down your "Business" notes here ...
 

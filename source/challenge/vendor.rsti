@@ -11,13 +11,19 @@ Vendor and Contractor
    :data-background-size: cover
    :data-background-opacity: 0.08
 
-|CRT| all participants and partners:
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| all participants and partners:
 
 .. revealjs_fragments::
 
-   * Engineers, Business Owners and Compliance Offices
+   * Engineers
+   * Business Owners
+   * Compliance Offices
 
-|CRT| have to ensure results with:
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| have to ensure results with:
 
 .. revealjs_fragments::
 

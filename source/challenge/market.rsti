@@ -11,13 +11,18 @@ Market
    :data-background-size: cover
    :data-background-opacity: 0.08
 
-|CRT| that are:
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| that are:
 
 .. revealjs_fragments::
 
-   * Customer / User, Retailer and Service
+   * Customer and User
+   * Retailer and Service
 
-|CRT| which are constantly looking for:
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: |CRT| which are constantly looking for:
 
 .. revealjs_fragments::
 
