@@ -14,13 +14,25 @@ Conclusion
 .. admonition:: the following applies and is unavoidable
    :class: important
 
-   .. revealjs_fragments::
+   .. rst-class:: left-justified fragment grow highlight-blue
 
-      #. :strong:`Git Repo:` determines the code base line
-      #. :strong:`Layers:` are essential and able to overlay
-      #. :strong:`Classes:` inheritable but not extensible
-      #. :strong:`Recipes:` extensible but not inheritable
-      #. :strong:`Features:` determines the final product
+      :strong:`Git Repo:` determines the code base line
+
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      :strong:`Layers:` are essential and able to overlay
+
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      :strong:`Classes:` inheritable but not extensible
+
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      :strong:`Recipes:` extensible but not inheritable
+
+   .. rst-class:: left-justified fragment grow highlight-blue
+
+      :strong:`Features:` determines the final product
 
 .. TBD: write down your "Conclusion" notes here ...
 
