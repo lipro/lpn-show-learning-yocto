@@ -59,7 +59,7 @@ Advisory Board and Technical Leadership
 
 * The industry needed a common build system and core technology
 
-  * Bitbake and |OE_| Core = |OE| build system
+  * BitBake and |OE_| Core = |OE| build system
 
 * The benefit of doing so is:
 
@@ -105,7 +105,7 @@ Advisory Board and Technical Leadership
 
   * x86, x86-64, ARM, PPC, MIPS
   * MIPS64, ARM Arch 64, PPC64
-  * and more exotic like MicroBlaze or Nios2
+  * and more exotic like MicroBlaze or Nios
 
 * Advanced kernel development tools
 * Layer model encourages modular development, reuse, and easy customizations
