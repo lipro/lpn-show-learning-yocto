@@ -686,6 +686,7 @@ extlinks = {
 bibtex_bibfiles = [
     '{}/sphinx.bib'.format(path_bibtex),
     '{}/python.bib'.format(path_bibtex),
+    '{}/yocto.bib'.format(path_bibtex),
 ]
 
 # Set the encoding of the bibliography files. If no encoding is specified,

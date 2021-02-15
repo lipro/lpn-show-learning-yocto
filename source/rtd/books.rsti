@@ -25,14 +25,14 @@ Books
    :header-rows: 0
    :stub-columns: 0
 
-   * - :raw-html:`<small>` |9780133443240| :raw-html:`</small>`
-     - :raw-html:`<small>` |9781788470469| :raw-html:`</small>`
-     - :raw-html:`<small>` |9781787283282| :raw-html:`</small>`
-     - :raw-html:`<small>` |9781788399210| :raw-html:`</small>`
-   * - :raw-html:`<small>` |9781787124455| :raw-html:`</small>`
+   * - :raw-html:`<small>` |9780133443240| :cite:`streif2016elswyp` :raw-html:`</small>`
+     - :raw-html:`<small>` |9781788470469| :cite:`salvadorangolini2017elduyp` :raw-html:`</small>`
+     - :raw-html:`<small>` |9781787283282| :cite:`simmonds2017melp` :raw-html:`</small>`
+     - :raw-html:`<small>` |9781788399210| :cite:`gonzalez2018eldypc` :raw-html:`</small>`
+   * - :raw-html:`<small>` |9781787124455| :cite:`vaduvagonzalezsimmonds2016ledlp` :raw-html:`</small>`
      - :raw-html:`<small>` |spare_book| :raw-html:`</small>`
-     - :raw-html:`<small>` |9781785281952| :raw-html:`</small>`
-     - :raw-html:`<small>` |9781785289736| :raw-html:`</small>`
+     - :raw-html:`<small>` |9781785281952| :cite:`texiermabaecker2015yrpi` :raw-html:`</small>`
+     - :raw-html:`<small>` |9781785289736| :cite:`sadiq2015ypwbbb` :raw-html:`</small>`
 
 :raw-html:`</small>`
 
@@ -47,6 +47,7 @@ Books
 .. |9780133443240| replace:: :strong:`2016` (480 pages)
    :raw-html:`<br />` |9780133443240_cover|
    :raw-html:`<br />` |978-0-13344-324-0|_
+   :raw-html:`<br />`
 .. |9780133443240_cover| image:: https://www.pearson.ch/images/big/9780133443240
    :alt: Embedded Linux Systems with the Yocto Project (ISBN: 978-0-13344-324-0)
    :width: 115
@@ -57,6 +58,7 @@ Books
 .. |9781788470469| replace:: :strong:`2017` (162 pages)
    :raw-html:`<br />` |9781788470469_cover|
    :raw-html:`<br />` |978-1-78847-046-9|_
+   :raw-html:`<br />`
 .. |9781788470469_cover| image:: https://static.packt-cdn.com/products/9781788470469/cover/normal
    :alt: Embedded Linux Development using Yocto Projects - Second Edition (ISBN: 978-1-78847-046-9)
    :width: 115
@@ -67,6 +69,7 @@ Books
 .. |9781787283282| replace:: :strong:`2017` (478 pages)
    :raw-html:`<br />` |9781787283282_cover|
    :raw-html:`<br />` |978-1-78728-328-2|_
+   :raw-html:`<br />`
 .. |9781787283282_cover| image:: https://static.packt-cdn.com/products/9781787283282/cover/normal
    :alt: Mastering Embedded Linux Programming - Second Edition (ISBN: 978-1-78728-328-2)
    :width: 115
@@ -77,6 +80,7 @@ Books
 .. |9781788399210| replace:: :strong:`2018` (456 pages)
    :raw-html:`<br />` |9781788399210_cover|
    :raw-html:`<br />` |978-1-78839-921-0|_
+   :raw-html:`<br />`
 .. |9781788399210_cover| image:: https://static.packt-cdn.com/products/9781788399210/cover/normal
    :alt: Embedded Linux Development Using Yocto Project Cookbook - Second Edition (ISBN: 978-1-78839-921-0)
    :width: 115
@@ -87,6 +91,7 @@ Books
 .. |9781787124455| replace:: :strong:`2016` (989 pages)
    :raw-html:`<br />` |9781787124455_cover|
    :raw-html:`<br />` |978-1-78712-445-5|_
+   :raw-html:`<br />`
 .. |9781787124455_cover| image:: https://www.packtpub.com/media/catalog/product/cache/c2dd93b9130e9fabaf187d1326a880fc/c/0/c06108_low_0.jpg
    :alt: Linux: Embedded Development - Learning Path (ISBN: 978-1-78712-445-5)
    :width: 115
@@ -97,6 +102,7 @@ Books
 .. |9781785281952| replace:: :strong:`2016` (214 pages)
    :raw-html:`<br />` |9781785281952_cover|
    :raw-html:`<br />` |978-1-78528-195-2|_
+   :raw-html:`<br />`
 .. |9781785281952_cover| image:: https://static.packt-cdn.com/products/9781785281952/cover/normal
    :alt: Yocto for Raspberry Pi (ISBN: 978-1-78528-195-2)
    :width: 115
@@ -107,6 +113,7 @@ Books
 .. |9781785289736| replace:: :strong:`2015` (144 pages)
    :raw-html:`<br />` |9781785289736_cover|
    :raw-html:`<br />` |978-1-78528-973-6|_
+   :raw-html:`<br />`
 .. |9781785289736_cover| image:: https://static.packt-cdn.com/products/9781785289736/cover/normal
    :alt: Using Yocto Project with BeagleBone Black (ISBN: 978-1-78528-973-6)
    :width: 115

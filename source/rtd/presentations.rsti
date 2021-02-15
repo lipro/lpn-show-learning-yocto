@@ -12,38 +12,50 @@ Presentations
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-* *Rudolf J. Streif*: |Introduction to the Yocto Project|_
-* *Jeffrey Osier-Mixon*, *Kevin McGrath*: |Yocto Project and Embedded OS|_
-* *Yi-Hsiu Hsu*: |Yocto Project Introduction|_
-* *Marcelo Sanz*: |Yocto Project Open Source Build System and Collaboration Initiative|_
-* *Yen-Chin Lee*: |Build your own embedded linux distributions by yocto project|_
+* *Jeffrey Osier-Mixon*, *Kevin McGrath*: |Yocto Project and Embedded OS (2015)|_
+  :cite:`osiermixonmcgrath2015ypembos`
+* *Rudolf J. Streif*: |Introduction to the Yocto Project (2015)|_
+  :cite:`streif2015introyp`
+* *Mark Hatle*, *Bruce Ashfield*: |Introduction to the Yocto Project (2012)|_
+  :cite:`hatleashfield2012introyp`
+* *Yi-Hsiu Hsu*: |Yocto Project Introduction (2015)|_
+  :cite:`hsu2015ypintro`
+* *Yen-Chin Lee*: |Build your own Embedded Linux distributions by Yocto Project (2015)|_
+  :cite:`lee2015eldyp`
+* *Marcelo A.L. Sanz*: |Yocto Project Open Source Build System and Collaboration Initiative (2012)|_
+  :cite:`sanz2012yposbsci`
 
 :raw-html:`</small>`
 
-.. |Introduction to the Yocto Project|
-   replace:: :strong:`Introduction to the Yocto Project`
-.. _`Introduction to the Yocto Project`:
+.. |Introduction to the Yocto Project (2012)|
+   replace:: :strong:`Introduction to the Yocto Project (2012)`
+.. _`Introduction to the Yocto Project (2012)`:
+   https://old.yoctoproject.org/sites/default/files/elc-e_devday_introyocto_2.pdf
+
+.. |Introduction to the Yocto Project (2015)|
+   replace:: :strong:`Introduction to the Yocto Project (2015)`
+.. _`Introduction to the Yocto Project (2015)`:
    https://elinux.org/images/a/a8/Getting_Started_with_Embedded_Linux-_Using_the_Yocto_Project_to_Build_your_Own_Custom_Embedded_Linux_Distribution.pdf
 
-.. |Yocto Project and Embedded OS|
-   replace:: :strong:`Yocto Project and Embedded OS`
-.. _`Yocto Project and Embedded OS`:
+.. |Yocto Project and Embedded OS (2015)|
+   replace:: :strong:`Yocto Project and Embedded OS (2015)`
+.. _`Yocto Project and Embedded OS (2015)`:
    https://www.intel.com/content/dam/www/public/us/en/documents/education/University/yocto-project-and-embedded-os-curriculum.pdf
 
-.. |Yocto Project Introduction|
-   replace:: :strong:`Yocto Project Introduction`
-.. _`Yocto Project Introduction`:
+.. |Yocto Project Introduction (2015)|
+   replace:: :strong:`Yocto Project Introduction (2015)`
+.. _`Yocto Project Introduction (2015)`:
    https://www.slideshare.net/YiHsiuHsu/yocto-project-introduction
 
-.. |Yocto Project Open Source Build System and Collaboration Initiative|
-   replace:: :strong:`Yocto Project Open Source Build System and Collaboration Initiative`
-.. _`Yocto Project Open Source Build System and Collaboration Initiative`:
-   https://www.slideshare.net/marcelolorenzati/yocto-iua-2012
-
-.. |Build your own embedded linux distributions by yocto project|
-   replace:: :strong:`Build your own embedded linux distributions by yocto project`
-.. _`Build your own embedded linux distributions by yocto project`:
+.. |Build your own Embedded Linux distributions by Yocto Project (2015)|
+   replace:: :strong:`Build your own Embedded Linux distributions by Yocto Project (2015)`
+.. _`Build your own Embedded Linux distributions by Yocto Project (2015)`:
    https://www.slideshare.net/coldnew/build-your-own-embedded-linux-distributions-by-yocto-project
+
+.. |Yocto Project Open Source Build System and Collaboration Initiative (2012)|
+   replace:: :strong:`Yocto Project Open Source Build System and Collaboration Initiative (2012)`
+.. _`Yocto Project Open Source Build System and Collaboration Initiative (2012)`:
+   https://www.slideshare.net/marcelolorenzati/yocto-iua-2012
 
 .. TBD: write down your "Presentations" notes here ...
 
