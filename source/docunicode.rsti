@@ -21,6 +21,7 @@
    :trim:
 .. |...| unicode:: U+02026 .. three dot leader
    :trim:
+.. |sm| unicode:: U+02120 .. service mark
 .. |tm| unicode:: U+02122 .. trade mark
 
 .. |degc| unicode:: U+02103 .. degree celsius
