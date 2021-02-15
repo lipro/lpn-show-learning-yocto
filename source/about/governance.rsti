@@ -10,9 +10,33 @@ Governance Structure
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete section` :raw-html:`</small>`
+|CRT| :homeyp:`Ecosystem <ecosystem>` and :homeyp:`Showcase
+<ecosystem/yocto-project-compatible-product-showcase>`
 
-.. image:: /_images/todo.jpg
+.. revealjs_fragments::
+
+   * based on meritocracy (leadership by demonstrated achievement)
+   * managed by its chief architect, **Richard Purdie**,
+     a `Linux Foundation fellow`_
+   * remain independent of any one of its member organizations
+
+.. admonition:: Linux Foundation
+   :class: note
+
+   .. only:: not revealjs
+
+      .. image:: /_extra/_static/lf.*
+         :align: right
+         :width: 96px
+
+   .. rst-class:: left-justified fragment fade-in
+
+      The Yocto Project is a `lab workgroup`_ of the `Linux Foundation`_,
+      who owns its trademark.
+
+.. _`lab workgroup`: https://www.linuxfoundation.org/en/projects/
+.. _`Linux Foundation`: https://www.linuxfoundation.org/
+.. _`Linux Foundation fellow`: https://www.linuxfoundation.org/about/fellows/
 
 .. TBD: write down your "Governance Structure" notes here ...
 

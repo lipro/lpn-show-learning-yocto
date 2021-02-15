@@ -1,0 +1,29 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Achievement and Standing
+------------------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. revealjs_fragments::
+
+   * open source collaboration project
+   * founded in 2010 as a collaboration among many hardware manufacturers,
+     open-source operating systems vendors and electronics companies
+   * help you create custom Linux-based systems for embedded products
+   * regardless of the hardware architecture
+   * provides templates, tools and methods (Best-Practice)
+
+.. TBD: write down your "Achievement and Standing" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

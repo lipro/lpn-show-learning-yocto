@@ -10,14 +10,16 @@ About
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+|CRT| :homeyp:`About the Yocto Project <about>`\ |regs|
 
 .. TBD: write down your "About" notes here ...
 
+.. include:: /about/about.rsti
 .. include:: /about/governance.rsti
+.. include:: /about/achievement.rsti
 .. include:: /about/offer.rsti
+.. include:: /about/provides.rsti
+.. include:: /about/community.rsti
 
 .. Local variables:
    coding: utf-8

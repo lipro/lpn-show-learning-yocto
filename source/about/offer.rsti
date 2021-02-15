@@ -10,9 +10,16 @@ Offer and Support
    :data-background-size: 128px 128px
    :data-background-opacity: 0.33
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete section` :raw-html:`</small>`
+.. revealjs_fragments::
 
-.. image:: /_images/todo.jpg
+   * resources and information for new and experienced users
+   * core system component recipes by |OE|
+   * example code to demonstrate its capabilities
+   * include the Yocto Project Linux kernel
+   * covers several build profiles across multiple architectures:
+     ARM, PPC, x86, and more
+   * |BSP| layers for customer or vendor specific platform support
+   * |BSP| layers follow a predetermined and standardized format
 
 .. TBD: write down your "Offer and Support" notes here ...
 
