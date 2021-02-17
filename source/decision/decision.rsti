@@ -1,0 +1,33 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: Embedded Linux Landscape
+
+.. revealjs_fragments::
+
+   * Android
+   * Baserock
+   * Buildroot
+   * OpenEmbedded
+   * OpenWrt
+   * The Yocto Project
+   * Commercial Distributions
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: Reflection
+
+.. revealjs_fragments::
+
+   * :strong:`Buildroot` |ALTRT| :strong:`The Yocto Project`
+
+.. TBD: write down your "Decision" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,34 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+OpenWrt
+-------
+
+.. revealjs_section::
+   :data-background-image: _static/ow.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://www.openwrt.org/
+
+.. revealjs_fragments::
+
+   * Debuted as open source OS for embedded devices routing network traffic
+   * Originally created from Linksys GPL sources for their WRT54G residential gateway
+   * Targeted thousands of `different hardware`_
+   * Buildroot-based build environment
+   * Headless operation with web UI
+   * Member of `Software Freedom Conservancy`_ (like Git, Inkscape, or Qemu)
+
+.. _`different hardware`: https://openwrt.org/toh/start
+.. _`Software Freedom Conservancy`: https://sfconservancy.org/
+
+.. TBD: write down your "OpenWrt" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

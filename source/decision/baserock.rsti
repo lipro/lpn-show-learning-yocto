@@ -1,0 +1,39 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Baserock
+--------
+
+.. revealjs_section::
+   :data-background-image: _static/brck.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://www.baserock.org/
+
+.. revealjs_fragments::
+
+   * Targeted for embedded appliances
+   * Slightly pushed by the GENIVI Alliance 
+   * Native Builds for x86, x86_64, ARMv7
+   * Based on `Morph`_ workflow tool
+   * Maintained by `Codethink Ltd.`_
+
+.. rst-class:: left-justified fragment fade-in
+
+   :raw-html:`<small>`
+   Last releases in 2016. |CRT| https://wiki.baserock.org/releases/
+   :raw-html:`</small>`
+
+.. _`Morph`: https://wiki.baserock.org/Morph/
+.. _`Codethink Ltd.`: http://codethink.co.uk/
+
+.. TBD: write down your "Baserock" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

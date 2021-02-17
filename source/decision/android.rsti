@@ -1,0 +1,30 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Android
+-------
+
+.. revealjs_section::
+   :data-background-image: _static/ar.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://source.android.com/
+
+.. revealjs_fragments::
+
+   * Great for systems with ARM-based SoCs and touch screens
+   * Build system and development tools by Google
+   * Java based system runtime environment on target
+   * Stable and widely accepted Java API for final applications
+   * Very limited adaptability for vendors, contributors or customers
+
+.. TBD: write down your "Android" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

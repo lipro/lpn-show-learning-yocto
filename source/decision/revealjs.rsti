@@ -10,11 +10,22 @@ Decision
    :data-background-size: 128px 128px
    :data-background-opacity: 0.33
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+:raw-html:`<small>`
+excerpts and quotes from
+:cite:`streif2015introyp,osiermixonmcgrath2015ypembos`.
+|nbsp| |---| |nbsp| |copy| 2015 The Linux Foundation.
+:raw-html:`</small>`
 
 .. TBD: write down your "Decision" notes here ...
+
+.. include:: /decision/decision.rsti
+.. include:: /decision/android.rsti
+.. include:: /decision/baserock.rsti
+.. include:: /decision/buildroot.rsti
+.. include:: /decision/openembedded.rsti
+.. include:: /decision/openwrt.rsti
+.. include:: /decision/reflection-1.rsti
+.. include:: /decision/reflection-2.rsti
 
 .. Local variables:
    coding: utf-8

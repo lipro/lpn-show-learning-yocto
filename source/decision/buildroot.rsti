@@ -1,0 +1,39 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Buildroot
+---------
+
+.. revealjs_section::
+   :data-background-image: _static/br.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://buildroot.org/
+
+.. revealjs_fragments::
+
+   * Targeted for complete Linux root filesystem build
+   * Generate a cross-compilation toolchain
+   * Simplifies and automates the building
+   * `uClibc`_ or `musl`_ target library
+   * `BusyBox`_ command line utility applications
+   * Based on `Kconfig`_ and `GNU Make`_ build tool
+   * Promoted by french non-profit `Buildroot Association`_
+
+.. _`uClibc`: https://www.uclibc-ng.org/
+.. _`musl`: https://www.musl-libc.org/
+.. _`BusyBox`: https://busybox.net/
+.. _`Kconfig`: https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html
+.. _`GNU Make`: https://www.gnu.org/software/make/
+.. _`Buildroot Association`: https://buildroot.org/association.html
+
+.. TBD: write down your "Buildroot" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

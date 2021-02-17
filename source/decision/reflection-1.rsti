@@ -1,0 +1,91 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. only:: revealjs
+
+   :raw-html:`<small>`
+
+Reflection 1/2
+--------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://lwn.net/Articles/682540/
+(`ELCE-2016`_, `ELCE-2018`_, `Youtube`_)
+
+.. tabularcolumns:: L{38mm}|C{58mm}C{58mm}
+.. list-table::
+   :class: longtable
+   :align: center
+   :width: 100 %
+   :widths: 38 58 58
+   :header-rows: 1
+
+   * -
+     - Buildroot
+     - Yocto Project
+   * - Minimal Size:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`2.2 MB`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`4.9 MB`
+   * - Build Time:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`15 minutes`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`51 minutes`
+   * - Concept:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :blue:`single Makefile`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`layered classes`
+   * - Complexity:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :yellow:`being simple by design, only patchable`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`multiple aspects of composing and QA`
+   * - Composing:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :blue:`multiple Kconfig file`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`feature driven`
+   * - State Cache:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`compiler only`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`on task level`
+
+.. only:: revealjs
+
+   :raw-html:`</small>`
+
+.. _`ELCE-2016`:
+   https://bootlin.com/pub/conferences/2016/elc/belloni-petazzoni-buildroot-oe/belloni-petazzoni-buildroot-oe.pdf
+.. _`ELCE-2018`:
+   https://elinux.org/images/9/9a/Buildroot-vs-Yocto-Differences-for-Your-Daily-Job-Luca-Ceresoli-AIM-Sportline.pdf
+.. _`Youtube`: https://youtu.be/wCVYQWFIvBs
+
+.. TBD: write down your "Reflection" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

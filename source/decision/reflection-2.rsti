@@ -1,0 +1,89 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. only:: revealjs
+
+   :raw-html:`<small>`
+
+Reflection 2/2
+--------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+.. tabularcolumns:: L{38mm}|C{58mm}C{58mm}
+.. list-table::
+   :class: longtable
+   :align: center
+   :width: 100 %
+   :widths: 38 58 58
+   :header-rows: 1
+
+   * -
+     - Buildroot
+     - Yocto Project
+   * - Rebuild:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`full` (:yellow:`will be improved`)
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`partial per task / on changes`
+   * - Meta/Configure:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :blue:`fixed`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`sharable`
+   * - Output:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`no packages or SDK`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`images, packages, SDK, licenses, manifests`
+   * - Reliance:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`no QA workflow`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`documented QA and RM`
+   * - 3rd Party:
+     - .. rst-class:: left-justified fragment fade-in
+
+          :red:`rare, some few`
+     - .. rst-class:: left-justified fragment fade-in
+
+          :green:`many (growing)`
+
+   * - Decision:
+     - .. only:: revealjs
+
+          Buildroot
+     - .. rst-class:: fragment grow highlight-blue
+
+          .. only:: revealjs
+
+             Yocto Project
+
+          .. only:: not revealjs
+
+             :strong:`Yocto Project`
+
+.. only:: revealjs
+
+   :raw-html:`</small>`
+
+.. TBD: write down your "Reflection" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

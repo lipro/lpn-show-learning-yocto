@@ -1,0 +1,40 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+OpenEmbedded
+------------
+
+.. revealjs_section::
+   :data-background-image: _static/oe.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+|CRT| https://www.openembedded.org/
+
+.. revealjs_fragments::
+
+   * Created by merging OpenZaurus with contributions from Familiar Linux,
+     OpenSIMPad into a common code base
+   * Focusing on broad hardware and architectures
+   * Based on `BitBake`_ build engine
+   * Technology code base for the Yocto Project and the Ångström Distribution
+
+.. rst-class:: left-justified fragment fade-in
+
+   :raw-html:`<small>`
+   The Ångström Distribution was widely used on TI-based embedded boards like
+   the BeagleBoard and PandaBoard and uses the Yocto Project build environment.
+   Last releases in 2017 (2020). |CRT| https://github.com/Angstrom-distribution
+   :raw-html:`</small>`
+
+.. _`BitBake`: https://github.com/openembedded/bitbake
+
+.. TBD: write down your "OpenEmbedded" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

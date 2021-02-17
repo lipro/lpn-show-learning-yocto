@@ -4,12 +4,18 @@
 Decision
 ========
 
-.. only:: not revealjs
+This section contains direct excerpts and quotes from publicly accessible
+presentations: :cite:`streif2015introyp,osiermixonmcgrath2015ypembos`.
+|nbsp| |---| |nbsp| |copy| 2015 The Linux Foundation.
 
-   .. todo:: complete chapter
-
-.. image:: /_images/todo.jpg
-   :align: center
+.. include:: /decision/decision.rsti
+.. include:: /decision/android.rsti
+.. include:: /decision/baserock.rsti
+.. include:: /decision/buildroot.rsti
+.. include:: /decision/openembedded.rsti
+.. include:: /decision/openwrt.rsti
+.. include:: /decision/reflection-1.rsti
+.. include:: /decision/reflection-2.rsti
 
 .. Local variables:
    coding: utf-8
