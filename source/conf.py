@@ -1146,6 +1146,7 @@ html_css_files = [
 #   'css/fix-float.css',
     'css/strikethrough.css',
     'css/underline.css',
+    'css/colors.css',
     'css/tweaks-sphinx_rtd_theme.css',
 ]
 
@@ -1462,6 +1463,7 @@ revealjs_script_plugins = [
 # https://sphinx-revealjs.readthedocs.io/en/v1.0.0/configurations.html#revealjs-css-files
 #
 revealjs_css_files = [
+    'css/colors.css',
     'css/underline.css',
     'css/strikethrough.css',
     'css/tweaks-revealjs.css',

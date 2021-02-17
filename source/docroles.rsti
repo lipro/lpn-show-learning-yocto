@@ -4,6 +4,12 @@
 
 .. simple class mappings
 
+.. role:: red
+.. role:: green
+.. role:: blue
+.. role:: yellow
+.. role:: black
+.. role:: white
 .. role:: strikethrough
 .. role:: underline
 
