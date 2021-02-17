@@ -133,7 +133,7 @@ Advisory Board and Technical Leadership
    * Large library of recipes to cross-compile over 1000 packages
    * Switched from flat meta-data architecture (|OE_| Classic) to
      layered architecture based on |OE_| Core layer, which is in
-     common with the Yocto Project and the Angstrom Distribution
+     common with the Yocto Project and the Ångström Distribution
 
 .. admonition:: Yocto Project
    :class: note
