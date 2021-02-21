@@ -5,17 +5,18 @@ Metadata Layers
 ===============
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/metadata-layers-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+.. image:: /metadata-layers/overview-manual/layer-input-landscape.png
 
 :raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#metadata-machine-configuration-and-policy-configuration
+These
+:ref:`layers provide Metadata <ypdoc:overview-manual/concepts:metadata,
+machine configuration, and policy configuration>` for the software,
+machine and policy.
 :raw-html:`</small>`
 
 .. TBD: write down your "Metadata Layers" notes here ...
