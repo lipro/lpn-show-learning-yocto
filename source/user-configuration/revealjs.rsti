@@ -5,17 +5,18 @@ User Configuration
 ==================
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/user-configuration-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+.. image:: /user-configuration/overview-manual/user-configuration.png
 
 :raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#user-configuration
+Through
+:ref:`user configuration <ypdoc:overview-manual/concepts:user configuration>`
+you can tell BitBake the target architecture for which you are building the
+image, where to store downloaded source and other build properties.
 :raw-html:`</small>`
 
 .. TBD: write down your "User Configuration" notes here ...
