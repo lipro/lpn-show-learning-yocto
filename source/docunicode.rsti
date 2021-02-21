@@ -269,6 +269,8 @@
 .. |_candle_| unicode:: U+1F56F .. candle
 .. |star| replace:: :raw-latex:`{` |_star_| :raw-latex:`}`
 .. |_star_| unicode:: U+2B50 .. star
+.. |open book| replace:: :raw-latex:`{` |_open book_| :raw-latex:`}`
+.. |_open book_| unicode:: U+1F4D6 .. open book
 
 .. |free of charge| replace:: :raw-latex:`{` |_free of charge_| :raw-latex:`}`
 .. |_free of charge_| unicode:: U+1F21A .. free of charge
