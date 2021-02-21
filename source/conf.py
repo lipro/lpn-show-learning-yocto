@@ -425,6 +425,7 @@ user_agent = 'Mozilla/5.0 AppleWebKit/537.36 Chrome/87.0.4280.88 Safari/537.36'
 #
 #linkcheck_ignore = ['http://localhost:\d+/']
 linkcheck_ignore = [
+    'https://git.yoctoproject.org/git/',  # 404 Client Error: Not Found (it's Git/HTTPS)
     'http://localhost:\d+/',
 ]
 

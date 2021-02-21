@@ -1,0 +1,70 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Platform Manifest
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central-bsp-platform
+:raw-html:`</small>`
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <manifest>
+
+     <default sync-j="4" revision="master"/>
+
+     <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+     <remote fetch="https://github.com/openembedded" name="oe"/>
+     <remote fetch="https://github.com/meta-qt5" name="qt5"/>
+     <remote fetch="https://github.com/lipro-yocto" name="lpn"/>
+
+     <project remote="yocto" name="poky" path="sources/poky"/>
+     <project remote="yocto" name="meta-mingw" path="sources/meta-mingw"/>
+     <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
+     <project remote="qt5" name="meta-qt5" path="sources/meta-qt5" />
+
+     <project remote="lpn" name="lpn-central-bsp-platform" path="platform/base"/>
+     <project remote="lpn" name="lpn-central-bsp-base" path="sources/base">
+       <copyfile dest="README.adoc" src="README.adoc"/>
+       <copyfile dest="setup-environment" src="setup-environment"/>
+     </project>
+
+   </manifest>
+
+.. rst-class:: left-justified fragment fade-in
+
+   :raw-html:`<small>`
+   |CRT| https://gerrit.googlesource.com/git-repo/+/master/docs
+   :raw-html:`</small>`
+
+   `Manifest Format`_,
+   `Configuration`_,
+   `Hooks`_
+
+.. _`Manifest Format`:
+   https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md
+.. _`Configuration`:
+   https://gerrit.googlesource.com/git-repo/+/master/docs/internal-fs-layout.md#dotconfig-layout
+.. _`Hooks`:
+   https://gerrit.googlesource.com/git-repo/+/master/docs/repo-hooks.md
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. spelling::
+
+   config
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

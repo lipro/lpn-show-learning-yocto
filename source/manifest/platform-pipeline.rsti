@@ -1,0 +1,32 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Platform Pipeline
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+.. only:: revealjs
+
+   .. image:: /manifest/lpn-central-bsp-pipeline.*
+
+.. only:: not revealjs
+
+   .. figure:: /manifest/lpn-central-bsp-pipeline.*
+      :figclass: align-center
+      :align: center
+
+      Revision Control of your Embedded Linux System using Git repo
+
+.. TBD: write down your "Platform Pipeline" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

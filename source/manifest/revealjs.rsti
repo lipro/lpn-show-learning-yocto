@@ -10,11 +10,15 @@ Git Repo Manifest
    :data-background-size: 128px 128px
    :data-background-opacity: 0.33
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+.. rubric:: PREFACE
 
-.. image:: /_images/todo.jpg
+.. include:: /manifest/manifest.rsti
 
 .. TBD: write down your "Git Repo Manifest" notes here ...
+
+.. include:: /manifest/android-tools.rsti
+.. include:: /manifest/platform-manifest.rsti
+.. include:: /manifest/platform-pipeline.rsti
 
 .. Local variables:
    coding: utf-8

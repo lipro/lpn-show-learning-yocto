@@ -1,0 +1,23 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. rst-class:: left-justified fragment fade-in
+
+   A product firmware stack will developed locally and pushed to
+   different in-house or external repositories at irregular intervals.
+   A tool to unifies all that repositories as necessary, performs
+   uploads and automates the pull and sync process will be needed.
+
+.. rst-class:: left-justified fragment fade-in
+
+   The :command:`repo` tool and a meta Git repository called
+   :emphasis:`manifest` or such as in our case :emphasis:`platform`
+   make it possible to get all the code needed to build your own
+   Yocto :emphasis:`source` and :emphasis:`build directory`.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

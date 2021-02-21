@@ -1,0 +1,52 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Android Tools
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/ar.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+:raw-html:`<small>`
+excerpts and quotes from
+https://source.android.com/setup/develop#repo
+|nbsp| |---| |nbsp| |copy| 2008 |--| 2021 Google LLC.
+:raw-html:`</small>`
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: Git
+
+.. rst-class:: left-justified fragment fade-in
+
+   handle projects that are distributed over
+   :underline:`multiple Git repositories`
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: Repo
+
+.. rst-class:: left-justified fragment fade-in
+
+   :underline:`unifies Git repositories`, performs uploads to Gerrit,
+   and automates the workflow
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   .. rubric:: Gerrit
+
+.. rst-class:: left-justified fragment fade-in
+
+   :underline:`code review` system for projects that use Git
+
+.. TBD: write down your "Android Tools" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
