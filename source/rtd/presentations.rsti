@@ -16,12 +16,21 @@ Presentations
   :cite:`osiermixonmcgrath2015ypembos`
 * *Rudolf J. Streif*: |Introduction to the Yocto Project (2015)|_
   :cite:`streif2015introyp`
+  |open book| :cite:`streif2016elswyp`
+* *Otavio Salvador*: |Yocto Training : Your next development platform for Embedded Linux (2013)|_
+  :cite:`salvador2013yptraining`
+  |open book| :cite:`salvadorangolini2017elduyp`
+* *Alex González*: |Introduction to Yocto (2012)|_
+  :cite:`gonzalez2012introyp`
+  |open book| :cite:`gonzalez2018eldypc,vaduvagonzalezsimmonds2016ledlp`
 * *Mark Hatle*, *Bruce Ashfield*: |Introduction to the Yocto Project (2012)|_
   :cite:`hatleashfield2012introyp`
 * *Yi-Hsiu Hsu*: |Yocto Project Introduction (2015)|_
   :cite:`hsu2015ypintro`
 * *Yen-Chin Lee*: |Build your own Embedded Linux distributions by Yocto Project (2015)|_
   :cite:`lee2015eldyp`
+* *Nicolas Dechesne*, *Riku Voipio*, *Trevor Woerner*: |OpenEmbedded and Yocto Introduction (2013)|_
+  :cite:`dechesnevoipiowoerner2013oeypintro`
 * *Marcelo A.L. Sanz*: |Yocto Project Open Source Build System and Collaboration Initiative (2012)|_
   :cite:`sanz2012yposbsci`
 
@@ -37,6 +46,16 @@ Presentations
 .. _`Introduction to the Yocto Project (2015)`:
    https://elinux.org/images/a/a8/Getting_Started_with_Embedded_Linux-_Using_the_Yocto_Project_to_Build_your_Own_Custom_Embedded_Linux_Distribution.pdf
 
+.. |Yocto Training : Your next development platform for Embedded Linux (2013)|
+   replace:: :strong:`Yocto Training : Your next development platform for Embedded Linux (2013)`
+.. _`Yocto Training : Your next development platform for Embedded Linux (2013)`:
+   https://www.slideshare.net/OtavioSalvador/yocto-training-in-english
+
+.. |Introduction to Yocto (2012)|
+   replace:: :strong:`Introduction to Yocto (2012)`
+.. _`Introduction to Yocto (2012)`:
+   https://www.slideshare.net/alexgonzalezgarcia/introduction-to-yocto
+
 .. |Yocto Project and Embedded OS (2015)|
    replace:: :strong:`Yocto Project and Embedded OS (2015)`
 .. _`Yocto Project and Embedded OS (2015)`:
@@ -51,6 +70,11 @@ Presentations
    replace:: :strong:`Build your own Embedded Linux distributions by Yocto Project (2015)`
 .. _`Build your own Embedded Linux distributions by Yocto Project (2015)`:
    https://www.slideshare.net/coldnew/build-your-own-embedded-linux-distributions-by-yocto-project
+
+.. |OpenEmbedded and Yocto Introduction (2013)|
+   replace:: :strong:`OpenEmbedded and Yocto Introduction (2013)`
+.. _`OpenEmbedded and Yocto Introduction (2013)`:
+   https://www.slideshare.net/linaroorg/linaro-open-embeddedworkshopwednesday
 
 .. |Yocto Project Open Source Build System and Collaboration Initiative (2012)|
    replace:: :strong:`Yocto Project Open Source Build System and Collaboration Initiative (2012)`
