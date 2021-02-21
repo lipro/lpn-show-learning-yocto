@@ -5,6 +5,7 @@ Build System
 ============
 
 .. figure:: /build-system/concepts/areas.*
+   :name: build-system-areas
    :figclass: align-center
    :align: center
 
