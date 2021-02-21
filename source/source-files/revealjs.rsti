@@ -5,17 +5,18 @@ Source Files
 ============
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/source-files-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+.. image:: /source-files/overview-manual/source-input.png
 
 :raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#sources-dev-environment
+In order for the build system to create an image or any target, it must be
+able to access :ref:`source files <ypdoc:overview-manual/concepts:sources>`.
+The Yocto Project represents source files over the :dfn:`Source Material`
+using :dfn:`Upstream Project Releases`, :dfn:`Local Projects`, and :dfn:`SCMs`.
 :raw-html:`</small>`
 
 .. TBD: write down your "Source Files" notes here ...
