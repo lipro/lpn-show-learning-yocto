@@ -13,7 +13,7 @@ Metadata Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/metadata-layers.*
+   .. image:: /build-system/concepts/metadata-layers-area.*
 
    :ref:`Metadata Layers <ypdoc:overview-manual/concepts:metadata,
    machine configuration, and policy configuration>`
@@ -24,7 +24,7 @@ Metadata Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/metadata-layers.*
+   .. figure:: /build-system/concepts/metadata-layers-area.*
       :figclass: align-center
       :align: center
 

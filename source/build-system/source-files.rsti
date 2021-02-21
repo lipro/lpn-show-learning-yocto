@@ -13,7 +13,7 @@ Source Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/source-files.*
+   .. image:: /build-system/concepts/source-files-area.*
 
    :ref:`ypdoc:overview-manual/concepts:sources`
 
@@ -23,7 +23,7 @@ Source Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/source-files.*
+   .. figure:: /build-system/concepts/source-files-area.*
       :figclass: align-center
       :align: center
 

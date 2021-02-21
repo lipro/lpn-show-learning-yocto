@@ -13,7 +13,7 @@ Package Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/package-feeds.*
+   .. image:: /build-system/concepts/package-feeds-area.*
 
    :ref:`ypdoc:overview-manual/concepts:package feeds`
 
@@ -24,7 +24,7 @@ Package Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/package-feeds.*
+   .. figure:: /build-system/concepts/package-feeds-area.*
       :figclass: align-center
       :align: center
 

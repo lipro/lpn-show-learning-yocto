@@ -13,7 +13,7 @@ Configuration Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/user-configuration.*
+   .. image:: /build-system/concepts/user-configuration-area.*
 
    :ref:`ypdoc:overview-manual/concepts:user configuration`
 
@@ -23,7 +23,7 @@ Configuration Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/user-configuration.*
+   .. figure:: /build-system/concepts/user-configuration-area.*
       :figclass: align-center
       :align: center
 

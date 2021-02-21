@@ -13,7 +13,7 @@ BitBake Tool Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/bitbake-tool.*
+   .. image:: /build-system/concepts/bitbake-tool-area.*
 
    :ref:`ypdoc:overview-manual/concepts:bitbake tool`
 
@@ -26,7 +26,7 @@ BitBake Tool Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/bitbake-tool.*
+   .. figure:: /build-system/concepts/bitbake-tool-area.*
       :figclass: align-center
       :align: center
 

@@ -13,7 +13,7 @@ SDK Area
 
 .. only:: revealjs
 
-   .. image:: /build-system/concepts/sdk.*
+   .. image:: /build-system/concepts/sdk-area.*
 
    :ref:`ypdoc:overview-manual/concepts:application development sdk`
 
@@ -23,7 +23,7 @@ SDK Area
 
 .. only:: not revealjs
 
-   .. figure:: /build-system/concepts/sdk.*
+   .. figure:: /build-system/concepts/sdk-area.*
       :figclass: align-center
       :align: center
 
