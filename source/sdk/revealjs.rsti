@@ -5,17 +5,15 @@ Application Devel-SDK
 =====================
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/sdk-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+.. image:: /sdk/overview-manual/sdk.png
 
 :raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#sdk-dev-environment
+The :ref:`SDK <ypdoc:overview-manual/concepts:application development sdk>` produced by the build system is the compressed form of a self-extracting installer, which consists of a cross-development toolchain, a set of libraries and headers and an SDK environment setup script. SDKs are written out to the deploy directory.
 :raw-html:`</small>`
 
 .. TBD: write down your "Application Development SDK" notes here ...
