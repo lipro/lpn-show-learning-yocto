@@ -5,17 +5,18 @@ Package Feeds
 =============
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/package-feeds-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
-
-.. image:: /_images/todo.jpg
+.. image:: /package-feeds/overview-manual/package-feeds.png
 
 :raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#package-feeds-dev-environment
+When the build system generates an image or an SDK, it gets the packages from
+a :ref:`package feed <ypdoc:overview-manual/concepts:package feeds>` area, an
+intermediary step in the build process. Before placing the packages into
+package feeds, the build process validates them.
 :raw-html:`</small>`
 
 .. TBD: write down your "Package Feeds" notes here ...
