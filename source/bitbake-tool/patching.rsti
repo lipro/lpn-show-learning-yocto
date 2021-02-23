@@ -5,18 +5,36 @@ Patching
 --------
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/bitbake-tool-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete section` :raw-html:`</small>`
+.. |bbt_desc_patching| replace::
+   Once source code is fetched and unpacked, BitBake :ref:`locates patch files
+   and applies them <ypdoc:overview-manual/concepts:patching>` to the source
+   files. The :ref:`ypdoc:ref-tasks-patch` task processes recipes by using the
+   :term:`ypdoc:SRC_URI` variable to locate applicable patch files. BitBake
+   finds and applies multiple patches for a single recipe.
 
-.. image:: /_images/todo.jpg
+.. only:: revealjs
 
-:raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#patching-dev-environment
-:raw-html:`</small>`
+   .. image:: /bitbake-tool/overview-manual/patching.png
+
+   :raw-html:`<small>`
+   |bbt_desc_patching|
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /bitbake-tool/overview-manual/patching.png
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:patching`
+      with Details
+
+   |bbt_desc_patching|
 
 .. TBD: write down your "Patching" notes here ...
 

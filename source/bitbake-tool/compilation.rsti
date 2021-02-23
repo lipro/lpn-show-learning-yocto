@@ -5,18 +5,38 @@ Compilation
 -----------
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/bitbake-tool-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete section` :raw-html:`</small>`
+.. |bbt_desc_compilation| replace::
+   After source code is patched, BitBake executes tasks that :ref:`configure
+   and compile <ypdoc:overview-manual/concepts:configuration, compilation, and
+   staging>` the source code. This step consists of three tasks:
+   :ref:`ypdoc:ref-tasks-configure`, :ref:`ypdoc:ref-tasks-compile` and
+   :ref:`ypdoc:ref-tasks-install`. It starts at the earliest after all
+   dependencies from the :term:`ypdoc:DEPENDS` variable in the recipe
+   have been resolved.
 
-.. image:: /_images/todo.jpg
+.. only:: revealjs
 
-:raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#configuration-compilation-and-staging-dev-environment
-:raw-html:`</small>`
+   .. image:: /bitbake-tool/overview-manual/configuration-compile-autoreconf.png
+
+   :raw-html:`<small>`
+   |bbt_desc_compilation|
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /bitbake-tool/overview-manual/configuration-compile-autoreconf.png
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:configuration, compilation, and staging`
+      with Details
+
+   |bbt_desc_compilation|
 
 .. TBD: write down your "Compilation" notes here ...
 

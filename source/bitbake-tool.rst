@@ -4,21 +4,49 @@
 BitBake Tool
 ============
 
-.. only:: not revealjs
+This section contains direct excerpts and quotes from publicly accessible
+documentation: :ref:`ypdoc:overview-manual/concepts:bitbake tool`
+|nbsp| |---| |nbsp| |copy| 2010 |--| 2021 The Yocto Project.
 
-   .. todo:: complete chapter
+The |OE_| build system uses :term:`ypdoc:BitBake` to produce images and
+Software Development Kits (SDKs). You can see from
+:numref:`build-system-areas`, the box :dfn:`BitBake Tool Area` in the middle
+consists of several functional stages:
 
-.. image:: /_images/todo.jpg
-   :align: center
+.. include:: /bitbake-tool/bitbake-tool.rsti
 
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#bitbake-dev-environment
+.. hint::
+
+   Separate documentation exists for the
+   :ref:`ypdoc:overview-manual/concepts:bitbake` tool. See the
+   :doc:`bbdoc:index` for reference material on BitBake.
+
+.. ..............................................................................
 
 .. include:: /bitbake-tool/fetching.rsti
+
+.. ..............................................................................
+
 .. include:: /bitbake-tool/patching.rsti
+
+.. ..............................................................................
+
 .. include:: /bitbake-tool/compilation.rsti
+
+.. ..............................................................................
+
 .. include:: /bitbake-tool/packaging.rsti
-.. include:: /bitbake-tool/image-generation.rsti
+
+.. ..............................................................................
+
+.. include:: /bitbake-tool/image-generation-1.rsti
+.. include:: /bitbake-tool/image-generation-2.rsti
+
+.. ..............................................................................
+
 .. include:: /bitbake-tool/sdk-generation.rsti
+
+.. ..............................................................................
 
 .. Local variables:
    coding: utf-8

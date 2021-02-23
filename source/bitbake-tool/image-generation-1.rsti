@@ -1,0 +1,45 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Image Generation 1/2
+--------------------
+
+.. revealjs_section::
+   :data-background-image: _images/bitbake-tool-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. |bbt_desc_image_generation_1| replace::
+   Once packages are split and stored in the :dfn:`Package Feeds`, the build
+   system uses BitBake to :ref:`generate the root filesystem image
+   <ypdoc:overview-manual/concepts:image generation>`. The
+   :ref:`ypdoc:ref-tasks-rootfs` task creates the root filesystem for an image.
+
+.. only:: revealjs
+
+   .. image:: /bitbake-tool/overview-manual/image-generation-1.png
+
+   :raw-html:`<small>`
+   |bbt_desc_image_generation_1|
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /bitbake-tool/overview-manual/image-generation-1.png
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:image generation`
+      with Details
+
+   |bbt_desc_image_generation_1|
+
+.. TBD: write down your "Image Generation 1/2" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,46 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Image Generation 2/2
+--------------------
+
+.. revealjs_section::
+   :data-background-image: _images/bitbake-tool-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. |bbt_desc_image_generation_2| replace::
+   The final stages of the :ref:`ypdoc:ref-tasks-rootfs` task handle post
+   processing, includes creation of a manifest file and optimizations. After
+   this, processing begins on the image through the :ref:`ypdoc:ref-tasks-image`
+   task and dynamically created tasks as needed by the image types; ends with
+   :ref:`ypdoc:ref-tasks-image-complete`.
+
+.. only:: revealjs
+
+   .. image:: /bitbake-tool/overview-manual/image-generation-2.png
+
+   :raw-html:`<small>`
+   |bbt_desc_image_generation_2|
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /bitbake-tool/overview-manual/image-generation-2.png
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:image generation`
+      with Details
+
+   |bbt_desc_image_generation_2|
+
+.. TBD: write down your "Image Generation 2/2" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

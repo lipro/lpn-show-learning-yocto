@@ -5,18 +5,37 @@ Fetching
 --------
 
 .. revealjs_section::
-   :data-background-image: _static/yp.svg
+   :data-background-image: _images/bitbake-tool-area.svg
    :data-background-position: top 0px left 43px
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete section` :raw-html:`</small>`
+.. |bbt_desc_source_fetch| replace::
+   The first stages of building a recipe are to :ref:`fetch and unpack
+   <ypdoc:overview-manual/concepts:source fetching>` the source code. The
+   :ref:`ypdoc:ref-tasks-fetch` and :ref:`ypdoc:ref-tasks-unpack` tasks fetch
+   the source files and unpack them into the :dfn:`Build Directory`. BitBake
+   uses the :term:`ypdoc:SRC_URI` variable to point to source files regardless
+   of their location.
 
-.. image:: /_images/todo.jpg
+.. only:: revealjs
 
-:raw-html:`<small>`
-https://www.yoctoproject.org/docs/current/overview-manual/overview-manual.html#source-fetching-dev-environment
-:raw-html:`</small>`
+   .. image:: /bitbake-tool/overview-manual/source-fetching.png
+
+   :raw-html:`<small>`
+   |bbt_desc_source_fetch|
+   :raw-html:`</small>`
+
+.. only:: not revealjs
+
+   .. figure:: /bitbake-tool/overview-manual/source-fetching.png
+      :figclass: align-center
+      :align: center
+
+      :ref:`ypdoc:overview-manual/concepts:source fetching`
+      with Details
+
+   |bbt_desc_source_fetch|
 
 .. TBD: write down your "Fetching" notes here ...
 
