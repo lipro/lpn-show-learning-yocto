@@ -3,12 +3,13 @@
 Final Closer Look
 =================
 
-.. only:: not revealjs
-
-   .. todo:: complete chapter
-
-.. image:: /_images/todo.jpg
+.. figure:: /final/jc-central-bsp-canadian-cross.*
+   :name: jc-central-bsp-canadian-cross
+   :figclass: align-center
    :align: center
+
+   The :wikien:`Canadian Cross <Cross compiler#Canadian_Cross>`
+   (reduced for host and target only)
 
 .. Local variables:
    coding: utf-8

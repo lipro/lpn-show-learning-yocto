@@ -10,9 +10,12 @@ Final Closer Look
    :data-background-size: 128px 128px
    :data-background-opacity: 0.33
 
-:raw-html:`<small>` :strong:`TODO:` :emphasis:`complete chapter` :raw-html:`</small>`
+:raw-html:`<small>`
+The :wikien:`Canadian Cross <Cross compiler#Canadian_Cross>`
+(reduced for host and target only)
+:raw-html:`</small>`
 
-.. image:: /_images/todo.jpg
+.. image:: /final/jc-central-bsp-canadian-cross.*
 
 .. TBD: write down your "Final Closer Look" notes here ...
 
