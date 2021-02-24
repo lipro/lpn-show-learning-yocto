@@ -29,6 +29,27 @@ considered to be official and can be accessed using the following links:
    * |GHP_LATEST_HTML|
    * |GHP_LATEST_PDF|
 
+.. rubric:: Prerequisites to readers' skills
+
+For a better understanding it is necessary that the following terms and
+methods are known and preferably practiced day by day:
+
+:Revision Controll Systems:
+
+   .. include:: /docprereq-rcs.rsti
+
+:Configuration and Build Tools:
+
+   .. include:: /docprereq-cbt.rsti
+
+:Distribution and Packaging:
+
+   .. include:: /docprereq-dpkg.rsti
+
+:Scripting:
+
+   .. include:: /docprereq-scr.rsti
+
 .. Local variables:
    coding: utf-8
    mode: text

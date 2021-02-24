@@ -1,0 +1,19 @@
+.. Never add or change more than meta informations (ex. LaTeX formatting),
+   instead edit content in files:
+   docpreample.rsti
+
+.. Readers' Prerequisites:
+
+.. revealjs_fragments::
+
+   * Revision Controll Systems
+   * Configuration and Build Tools
+   * Distribution and Packaging
+   * Scripting
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

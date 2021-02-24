@@ -16,6 +16,7 @@
 
 .. include:: /revealjs/greeting.rsti
 .. include:: /revealjs/what-for-who.rsti
+.. include:: /revealjs/prerequisites.rsti
 
 .. ...........................................................................
 
