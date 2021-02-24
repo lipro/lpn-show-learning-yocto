@@ -11,30 +11,14 @@ Package Area
    :data-background-opacity: 0.66
    :data-transition: none
 
-.. only:: revealjs
+.. image:: /build-system/concepts/package-feeds-area.*
 
-   .. image:: /build-system/concepts/package-feeds-area.*
+:ref:`ypdoc:overview-manual/concepts:package feeds`
 
-   :ref:`ypdoc:overview-manual/concepts:package feeds`
-
-   :raw-html:`<small>`
-   Directories containing output packages (RPM, DEB or IPK), which are
-   subsequently used in the construction of an image or |SDK|.
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /build-system/concepts/package-feeds-area.*
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:package feeds`
-      as part of Yocto Build System Workflow
-
-   When the OpenEmbedded build system generates an image or an SDK, it gets
-   the packages from a package feed area located in the Build Directory. The
-   general workflow figure shows this package feeds area in the upper-right
-   corner. See :doc:`package-feeds` for more details.
+:raw-html:`<small>`
+Directories containing output packages (RPM, DEB or IPK), which are
+subsequently used in the construction of an image or |SDK|.
+:raw-html:`</small>`
 
 .. TBD: write down your "Package Area" notes here ...
 

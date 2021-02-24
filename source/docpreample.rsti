@@ -3,11 +3,9 @@
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
-.. only:: not revealjs
+.. rubric:: PREAMBLE
 
-   .. rubric:: PREAMBLE
-
-   .. include:: /docpreamptxt.rsti
+.. include:: /docpreamptxt.rsti
 
 .. Local variables:
    coding: utf-8

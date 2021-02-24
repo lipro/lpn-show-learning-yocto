@@ -1,13 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-.. only:: revealjs
-
-   :raw-html:`<small>`
-
-Reflection 2/2
---------------
-
 .. revealjs_section::
    :data-background-image: _static/lpn.svg
    :data-background-position: top 52px left 86px
@@ -74,10 +67,6 @@ Reflection 2/2
           .. only:: not revealjs
 
              :strong:`Yocto Project`
-
-.. only:: revealjs
-
-   :raw-html:`</small>`
 
 .. TBD: write down your "Reflection" notes here ...
 

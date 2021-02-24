@@ -1,20 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-.. only:: revealjs
-
-   :raw-html:`<small>`
-
-Features
---------
-
-.. revealjs_section::
-   :data-background-image: _static/yp.svg
-   :data-background-position: top 0px left 43px
-   :data-background-size: 256px 256px
-   :data-background-opacity: 0.66
-   :data-transition: none
-
 :doc:`ypdoc:ref-manual/features` provide a mechanism for:
 
 .. revealjs_fragments::
@@ -34,22 +20,6 @@ Features
 
    #. backward and inter-layer compatibility for special (historical) cases
       |CRT| :ref:`ypdoc:ref-features-backfill`
-
-.. only:: revealjs
-
-   .. image:: /concepts/features.*
-      :align: right
-      :width: 300px
-
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /concepts/features.*
-      :figclass: align-center
-      :align: center
-
-      Yocto Build System :doc:`ypdoc:ref-manual/features` and their interaction
 
 .. TBD: write down your "Features" notes here ...
 

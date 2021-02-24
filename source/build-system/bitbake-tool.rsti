@@ -11,40 +11,16 @@ BitBake Tool Area
    :data-background-opacity: 0.66
    :data-transition: none
 
-.. only:: revealjs
+.. image:: /build-system/concepts/bitbake-tool-area.*
 
-   .. image:: /build-system/concepts/bitbake-tool-area.*
+:ref:`ypdoc:overview-manual/concepts:bitbake tool`
 
-   :ref:`ypdoc:overview-manual/concepts:bitbake tool`
-
-   :raw-html:`<small>`
-   Processes under the control of BitBake. This block expands on how BitBake
-   fetches source, applies patches, completes compilation, analyzes output
-   for package generation, creates and tests packages, generates images and
-   generates cross-development tools.
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /build-system/concepts/bitbake-tool-area.*
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:bitbake tool`
-      as part of Yocto WBuild System orkflow
-
-   The OpenEmbedded build system uses BitBake to produce images and |SDK_|.
-   You can see from the general workflow figure, the BitBake area consists
-   of several functional areas:
-
-   #. Source Fetching
-   #. Patching
-   #. Configuration, Compilation, and Staging
-   #. Package Splitting
-   #. Image Generation
-   #. SDK Generation
-
-   See :doc:`bitbake-tool` for more details.
+:raw-html:`<small>`
+Processes under the control of BitBake. This block expands on how BitBake
+fetches source, applies patches, completes compilation, analyzes output
+for package generation, creates and tests packages, generates images and
+generates cross-development tools.
+:raw-html:`</small>`
 
 .. TBD: write down your "BitBake Tool Area" notes here ...
 

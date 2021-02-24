@@ -1,9 +1,9 @@
 .. Don't change this file, instead edit content in files:
    glossary/*.rsti
 
-.. include:: /_glossary/common-terms.rsti
-.. include:: /_glossary/programming-languages.rsti
-.. include:: /_glossary/technologies.rsti
+.. include:: /_glossary/common-terms-docterms.rsti
+.. include:: /_glossary/programming-languages-docterms.rsti
+.. include:: /_glossary/technologies-docterms.rsti
 .. include:: /_glossary/abbreviations.rsti
 
 .. Local Abbreviations:

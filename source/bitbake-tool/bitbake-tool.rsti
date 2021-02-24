@@ -49,12 +49,7 @@
    :ref:`ypdoc:ref-tasks-populate_sdk`/:ref:`_ext <ypdoc:ref-tasks-populate_sdk_ext>`
    :raw-html:`</small>`
 
-.. .. rst-class:: left-justified fragment fade-in
-
-   :ref:`ypdoc:ref-tasks-fetch`,
-   :ref:`ypdoc:ref-tasks-unpack`
-
-.. TBD: write down your "About" notes here ...
+.. TBD: write down your "BitBake Tool" notes here ...
 
 .. Local variables:
    coding: utf-8

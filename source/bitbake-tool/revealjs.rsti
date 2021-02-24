@@ -11,6 +11,7 @@ BitBake Tool
    :data-background-opacity: 0.66
 
 .. include:: /bitbake-tool/bitbake-tool.rsti
+.. include:: /bitbake-tool/bitbake-tool-shared.rsti
 
 .. TBD: write down your "BitBake Tool" notes here ...
 

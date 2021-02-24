@@ -11,31 +11,13 @@ Source Area
    :data-background-opacity: 0.66
    :data-transition: none
 
-.. only:: revealjs
+.. image:: /build-system/concepts/source-files-area.*
 
-   .. image:: /build-system/concepts/source-files-area.*
+:ref:`ypdoc:overview-manual/concepts:sources`
 
-   :ref:`ypdoc:overview-manual/concepts:sources`
-
-   :raw-html:`<small>`
-   Upstream releases, local projects, and |SCMS|.
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /build-system/concepts/source-files-area.*
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:sources`
-      as part of Yocto Build System Workflow
-
-   In order for the OpenEmbedded build system to create an image or any
-   target, it must be able to access source files. The general workflow
-   figure represents source files using the "Upstream Project Releases",
-   "Local Projects", and "|SCMS| (optional)" boxes. The figure represents
-   mirrors, which also play a role in locating source files, with the
-   "Source Materials" box. See :doc:`source-files` for more details.
+:raw-html:`<small>`
+Upstream releases, local projects, and |SCMS|.
+:raw-html:`</small>`
 
 .. TBD: write down your "Source Area" notes here ...
 

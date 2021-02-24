@@ -10,17 +10,7 @@ Yocto Project Provides
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-.. only:: revealjs
-
-   .. image:: /about/yp-provides.*
-
-.. only:: not revealjs
-
-   .. figure:: /about/yp-provides.*
-      :figclass: align-center
-      :align: center
-
-      Yocto Project Deliveries :cite:`osiermixonmcgrath2015ypembos`
+.. image:: /about/yp-provides.*
 
 .. revealjs_fragments::
 

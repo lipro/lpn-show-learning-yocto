@@ -1,20 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-.. only:: revealjs
-
-   :raw-html:`<small>`
-
-Terms internal
---------------
-
-.. revealjs_section::
-   :data-background-image: _static/yp.svg
-   :data-background-position: top 0px left 43px
-   :data-background-size: 256px 256px
-   :data-background-opacity: 0.66
-   :data-transition: none
-
 .. revealjs_fragments::
 
    #. :strong:`Layer`:
@@ -55,14 +41,10 @@ Terms internal
 
    #. :strong:`Task`:
       A :underline:`unit of execution` for :strong:`BitBake` (e.g.
-      :code:`do_fetch`, :code:`do_patch`, :code:`do_compile`,
-      and so forth).
+      :ref:`ypdoc:ref-tasks-fetch`, :ref:`ypdoc:ref-tasks-patch`,
+      :ref:`ypdoc:ref-tasks-compile`, and so forth).
       |CRT| :term:`ypdoc:Task`, or in
       :doc:`Reference <ypdoc:ref-manual/tasks>`
-
-.. only:: revealjs
-
-   :raw-html:`</small>`
 
 .. TBD: write down your "Terms internal" notes here ...
 

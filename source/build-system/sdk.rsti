@@ -11,30 +11,13 @@ SDK Area
    :data-background-opacity: 0.66
    :data-transition: none
 
-.. only:: revealjs
+.. image:: /build-system/concepts/sdk-area.*
 
-   .. image:: /build-system/concepts/sdk-area.*
+:ref:`ypdoc:overview-manual/concepts:application development sdk`
 
-   :ref:`ypdoc:overview-manual/concepts:application development sdk`
-
-   :raw-html:`<small>`
-   Cross-development tools which are produced with the build system.
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /build-system/concepts/sdk-area.*
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:application development sdk`
-      as part of Yocto Build System Workflow
-
-   In the general workflow figure, the output labeled "Application Development
-   SDK" represents an |SDK|. The |SDK| generation process differs depending on
-   whether you build an extensible |SDK| (e.g.
-   :file:`bitbake -c populate_sdk_ext imagename`) or a standard SDK (e.g.
-   :file:`bitbake -c populate_sdk imagename`). See :doc:`sdk` for more details.
+:raw-html:`<small>`
+Cross-development tools which are produced with the build system.
+:raw-html:`</small>`
 
 .. TBD: write down your "Application Development SDK Area" notes here ...
 

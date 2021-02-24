@@ -1,7 +1,7 @@
 :topic: Bibliography
 
 .. Don't add content to this file, instead edit content in files:
-   bibliography/*.bib
+   _bibliography/*.bib
 
 .. index:: triple: Bibliography; Presentation; Learning Yocto
    :name: lsly-bibliography
@@ -10,6 +10,7 @@
 
    .. _bibliography:
 
+   ############
    Bibliography
    ############
 

@@ -1,0 +1,76 @@
+.. Never add or change more than content, instead edit structure in files:
+   /bitbake-tool/index.rst or revealjs.rsti
+
+.. ..............................................................................
+
+.. |bbt_desc_source_fetch| replace::
+   The first stages of building a recipe are to :ref:`fetch and unpack
+   <ypdoc:overview-manual/concepts:source fetching>` the source code. The
+   :ref:`ypdoc:ref-tasks-fetch` and :ref:`ypdoc:ref-tasks-unpack` tasks fetch
+   the source files and unpack them into the :dfn:`Build Directory`. BitBake
+   uses the :term:`ypdoc:SRC_URI` variable to point to source files regardless
+   of their location.
+
+.. ..............................................................................
+
+.. |bbt_desc_patching| replace::
+   Once source code is fetched and unpacked, BitBake :ref:`locates patch files
+   and applies them <ypdoc:overview-manual/concepts:patching>` to the source
+   files. The :ref:`ypdoc:ref-tasks-patch` task processes recipes by using the
+   :term:`ypdoc:SRC_URI` variable to locate applicable patch files. BitBake
+   finds and applies multiple patches for a single recipe.
+
+.. ..............................................................................
+
+.. |bbt_desc_compilation| replace::
+   After source code is patched, BitBake executes tasks that :ref:`configure
+   and compile <ypdoc:overview-manual/concepts:configuration, compilation, and
+   staging>` the source code. This step consists of three tasks:
+   :ref:`ypdoc:ref-tasks-configure`, :ref:`ypdoc:ref-tasks-compile` and
+   :ref:`ypdoc:ref-tasks-install`. It starts at the earliest after all
+   dependencies from the :term:`ypdoc:DEPENDS` variable in the recipe
+   have been resolved.
+
+.. ..............................................................................
+
+.. |bbt_desc_packaging| replace::
+   After compilation, the build system :ref:`analyzes the results and splits
+   the output into packages <ypdoc:overview-manual/concepts:package splitting>`.
+   The :ref:`ypdoc:ref-tasks-package` and :ref:`ypdoc:ref-tasks-packagedata`
+   tasks combine to analyze the files found in the installation directory:
+   debugging symbols, looking at shared library dependencies and relationships
+   of :term:`ypdoc:RDEPENDS` in the recipe.
+
+.. ..............................................................................
+
+.. |bbt_desc_image_generation_1| replace::
+   Once packages are split and stored in the :dfn:`Package Feeds`, the build
+   system uses BitBake to :ref:`generate the root filesystem image
+   <ypdoc:overview-manual/concepts:image generation>`. The
+   :ref:`ypdoc:ref-tasks-rootfs` task creates the root filesystem for an image.
+
+.. |bbt_desc_image_generation_2| replace::
+   The final stages of the :ref:`ypdoc:ref-tasks-rootfs` task handle post
+   processing, includes creation of a manifest file and optimizations. After
+   this, processing begins on the image through the :ref:`ypdoc:ref-tasks-image`
+   task and dynamically created tasks as needed by the image types; ends with
+   :ref:`ypdoc:ref-tasks-image-complete`.
+
+.. ..............................................................................
+
+.. |bbt_desc_sdk_generation| replace::
+   The build system uses BitBake to :ref:`generate the Software Development
+   Kit (SDK) installer script <ypdoc:overview-manual/concepts:sdk generation>`
+   for both the :dfn:`Standard SDK` (:ref:`ypdoc:ref-tasks-populate_sdk`) and
+   :dfn:`Extensible SDK` (:ref:`ypdoc:ref-tasks-populate_sdk_ext`). Like image
+   generation, the |SDK| script process consists of several stages and depends
+   on many variables.
+
+.. ..............................................................................
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

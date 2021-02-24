@@ -14,39 +14,67 @@ Challenge
 
 .. TBD: write down your "Challenge" notes here ...
 
-Example: UI Toolkits
---------------------
+.. include:: /challenge/example.rsti
+.. include:: /challenge/collaboration.rsti
+
+Market
+------
 
 .. revealjs_section::
-   :data-background-image: _static/lpn.svg
-   :data-background-position: top 52px left 86px
-   :data-background-size: 128px 128px
-   :data-background-opacity: 0.33
-   :data-transition: slide
-
-.. image:: /challenge/collaboration/wikipedia/Free_and_open-source-software_display_servers_and_UI_toolkits.*
-
-:raw-html:`<small>` :wikien:`Linux#Desktop` :raw-html:`</small>`
-
-.. TBD: write down your "UI Toolkits" notes here ...
-
-Collaboration
--------------
-
-.. revealjs_section::
-   :data-background-image: _static/lpn.svg
-   :data-background-position: top 52px left 86px
-   :data-background-size: 128px 128px
-   :data-background-opacity: 0.33
-
-.. image:: /challenge/collaboration.*
-
-.. TBD: write down your "Collaboration" notes here ...
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
 
 .. include:: /challenge/market.rsti
+
+Vendor and Contractor
+---------------------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
 .. include:: /challenge/vendor.rsti
+
+Community
+---------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
 .. include:: /challenge/community.rsti
+
+Business
+--------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
 .. include:: /challenge/business.rsti
+
+Domains
+-------
+
+.. revealjs_section::
+   :data-background-image: _images/collaboration.svg
+   :data-background-transition: slide
+   :data-background-position: center
+   :data-background-size: cover
+   :data-background-opacity: 0.08
+
 .. include:: /challenge/domain.rsti
 
 .. Local variables:

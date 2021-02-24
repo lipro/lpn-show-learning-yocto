@@ -3,11 +3,9 @@
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
-.. only:: not revealjs
+.. rubric:: LEGAL NOTICE
 
-   .. rubric:: LEGAL NOTICE
-
-   .. include:: /doclegtxt.rsti
+.. include:: /doclegtxt.rsti
 
 .. Local variables:
    coding: utf-8

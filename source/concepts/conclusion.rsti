@@ -1,16 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-Conclusion
-----------
-
-.. revealjs_section::
-   :data-background-image: _static/yp.svg
-   :data-background-position: top 0px left 43px
-   :data-background-size: 256px 256px
-   :data-background-opacity: 0.66
-   :data-transition: none
-
 .. admonition:: the following applies and is unavoidable
    :class: important
 

@@ -3,11 +3,9 @@
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
-.. only:: not revealjs
+.. rubric:: VERSION HISTORY
 
-   .. rubric:: VERSION HISTORY
-
-   .. include:: docverslog.rsti
+.. include:: docverslog.rsti
 
 .. Local variables:
    coding: utf-8

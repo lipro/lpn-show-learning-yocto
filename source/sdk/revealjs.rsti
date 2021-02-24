@@ -13,7 +13,11 @@ Application Devel-SDK
 .. image:: /sdk/overview-manual/sdk.png
 
 :raw-html:`<small>`
-The :ref:`SDK <ypdoc:overview-manual/concepts:application development sdk>` produced by the build system is the compressed form of a self-extracting installer, which consists of a cross-development toolchain, a set of libraries and headers and an SDK environment setup script. SDKs are written out to the deploy directory.
+The :ref:`SDK <ypdoc:overview-manual/concepts:application development sdk>`
+produced by the build system is the compressed form of a self-extracting
+installer, which consists of a cross-development toolchain, a set of
+libraries and headers and an SDK environment setup script. SDKs are
+written out to the deploy directory.
 :raw-html:`</small>`
 
 .. TBD: write down your "Application Development SDK" notes here ...

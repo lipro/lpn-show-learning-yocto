@@ -20,19 +20,10 @@ Governance Structure
      a `Linux Foundation fellow`_
    * remain independent of any one of its member organizations
 
-.. admonition:: Linux Foundation
-   :class: note
+.. rst-class:: left-justified fragment fade-in
 
-   .. only:: not revealjs
-
-      .. image:: /_extra/_static/lf.*
-         :align: right
-         :width: 96px
-
-   .. rst-class:: left-justified fragment fade-in
-
-      The Yocto Project is a `lab workgroup`_ of the `Linux Foundation`_,
-      who owns its trademark.
+   The Yocto Project is a `lab workgroup`_ of the `Linux Foundation`_,
+   who owns its trademark.
 
 .. _`lab workgroup`: https://www.linuxfoundation.org/en/projects/
 .. _`Linux Foundation`: https://www.linuxfoundation.org/

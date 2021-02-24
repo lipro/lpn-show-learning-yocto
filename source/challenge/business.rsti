@@ -1,16 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-Business
---------
-
-.. revealjs_section::
-   :data-background-image: _images/collaboration.svg
-   :data-background-transition: slide
-   :data-background-position: center
-   :data-background-size: cover
-   :data-background-opacity: 0.08
-
 .. rst-class:: left-justified fragment grow highlight-blue
 
    .. rubric:: |CRT| where and who am I |?|

@@ -11,29 +11,13 @@ Images Area
    :data-background-opacity: 0.66
    :data-transition: none
 
-.. only:: revealjs
+.. image:: /build-system/concepts/images-area.*
 
-   .. image:: /build-system/concepts/images-area.*
+:ref:`ypdoc:overview-manual/concepts:images`
 
-   :ref:`ypdoc:overview-manual/concepts:images`
-
-   :raw-html:`<small>`
-   Images produced by the build system.
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /build-system/concepts/images-area.*
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:images`
-      as part of Yocto Build System Workflow
-
-   The images produced by the build system are compressed forms of the root
-   filesystem and are ready to boot on a target device. You can see from the
-   general workflow figure that BitBake output, in part, consists of images.
-   See :doc:`images` for more details.
+:raw-html:`<small>`
+Images produced by the build system.
+:raw-html:`</small>`
 
 .. TBD: write down your "Images Area" notes here ...
 

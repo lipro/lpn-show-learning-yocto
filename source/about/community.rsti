@@ -10,17 +10,7 @@ Yocto Project Community
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-.. only:: revealjs
-
-   .. image:: /about/yp-community.*
-
-.. only:: not revealjs
-
-   .. figure:: /about/yp-community.*
-      :figclass: align-center
-      :align: center
-
-      The Yocto Project Community :cite:`osiermixonmcgrath2015ypembos`
+.. image:: /about/yp-community.*
 
 .. revealjs_fragments::
 

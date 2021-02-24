@@ -16,16 +16,52 @@ excerpts and quotes from
 |nbsp| |---| |nbsp| |copy| 2015 The Linux Foundation.
 :raw-html:`</small>`
 
+.. include:: /decision/decision.rsti
+
 .. TBD: write down your "Decision" notes here ...
 
-.. include:: /decision/decision.rsti
+Android
+-------
+
 .. include:: /decision/android.rsti
+
+Baserock
+--------
+
 .. include:: /decision/baserock.rsti
+
+Buildroot
+---------
+
 .. include:: /decision/buildroot.rsti
+
+OpenEmbedded
+------------
+
 .. include:: /decision/openembedded.rsti
+
+OpenWrt
+-------
+
 .. include:: /decision/openwrt.rsti
+
+:raw-html:`<small>`
+
+Reflection 1/2
+--------------
+
 .. include:: /decision/reflection-1.rsti
+
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+
+Reflection 2/2
+--------------
+
 .. include:: /decision/reflection-2.rsti
+
+:raw-html:`</small>`
 
 .. Local variables:
    coding: utf-8

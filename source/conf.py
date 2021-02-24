@@ -166,6 +166,8 @@ extensions = [
 
 # -- Specific configuration --------------------------------------------------
 
+logcfg.info('Build with tags: ' + ':'.join(map(str, tags)), color='red')
+
 path_extra = os.path.join(DOCSRC, '_extra')
 logcfg.info('EXTRAS     path is: "{}"'.format(path_extra), color='green')
 
@@ -224,10 +226,19 @@ language = 'en'
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-source_suffix
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = {
-    '.rst': 'restructuredtext',
-}
+# Use different master toctree document in case of Reveal.js builder
+if tags.has('revealjs'):         # pylint: disable=undefined-variable
+    source_suffix = {
+        # toctree entries will be filtered out by Reveal.js builder
+        # all content have to be include but toctree entries already
+        # needed for glossary terms and bibliography references
+        '.rstr': 'restructuredtext',
+    }
+else:
+    # source_suffix = ['.rst', '.md']
+    source_suffix = {
+        '.rst': 'restructuredtext',
+    }
 
 # The master toctree document.
 #

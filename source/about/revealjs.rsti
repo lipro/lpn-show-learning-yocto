@@ -12,9 +12,33 @@ About
 
 |CRT| :homeyp:`About the Yocto Project <about>`\ |regs|
 
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   The Yocto Project is not an Embedded Linux Distribution.
+
+.. rst-class:: left-justified fragment fade-in
+
+   It creates a custom one for You!
+
+.. rst-class:: left-justified fragment grow highlight-blue
+
+   The Yocto Project is not Single Open Source Project.
+
+.. rst-class:: left-justified fragment fade-in
+
+   It is an Ecosystem.
+
+.. rst-class:: left-justified fragment fade-in
+
+   :raw-html:`<small>`
+   The Yocto Project combines the convenience of a ready-to-run Linux
+   Distribution with the flexibility of a custom Linux operating system
+   stack. :cite:`streif2015introyp,osiermixonmcgrath2015ypembos`
+   |nbsp| |---| |nbsp| |copy| 2015 The Linux Foundation and Yocto Project.
+   :raw-html:`</small>`
+
 .. TBD: write down your "About" notes here ...
 
-.. include:: /about/about.rsti
 .. include:: /about/governance.rsti
 .. include:: /about/achievement.rsti
 .. include:: /about/offer.rsti

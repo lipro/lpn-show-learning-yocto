@@ -10,33 +10,11 @@ Compilation
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-.. |bbt_desc_compilation| replace::
-   After source code is patched, BitBake executes tasks that :ref:`configure
-   and compile <ypdoc:overview-manual/concepts:configuration, compilation, and
-   staging>` the source code. This step consists of three tasks:
-   :ref:`ypdoc:ref-tasks-configure`, :ref:`ypdoc:ref-tasks-compile` and
-   :ref:`ypdoc:ref-tasks-install`. It starts at the earliest after all
-   dependencies from the :term:`ypdoc:DEPENDS` variable in the recipe
-   have been resolved.
+.. image:: /bitbake-tool/overview-manual/configuration-compile-autoreconf.png
 
-.. only:: revealjs
-
-   .. image:: /bitbake-tool/overview-manual/configuration-compile-autoreconf.png
-
-   :raw-html:`<small>`
-   |bbt_desc_compilation|
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /bitbake-tool/overview-manual/configuration-compile-autoreconf.png
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:configuration, compilation, and staging`
-      with Details
-
-   |bbt_desc_compilation|
+:raw-html:`<small>`
+|bbt_desc_compilation|
+:raw-html:`</small>`
 
 .. TBD: write down your "Compilation" notes here ...
 

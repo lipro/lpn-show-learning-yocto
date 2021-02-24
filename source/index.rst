@@ -9,32 +9,6 @@
 .. include:: docsummary.rsti
 .. include:: docpreample.rsti
 
-.. revealjs_section::
-   :data-background-image: _static/lpn.svg
-   :data-background-position: top 52px left 86px
-   :data-background-size: 128px 128px
-   :data-background-opacity: 0.33
-
-.. only:: revealjs and not latex
-
-   .. include:: /challenge/revealjs.rsti
-   .. include:: /decision/revealjs.rsti
-   .. include:: /about/revealjs.rsti
-   .. include:: /intentions/revealjs.rsti
-   .. include:: /concepts/revealjs.rsti
-   .. include:: /manifest/revealjs.rsti
-   .. include:: /build-system/revealjs.rsti
-   .. include:: /user-configuration/revealjs.rsti
-   .. include:: /metadata-layers/revealjs.rsti
-   .. include:: /source-files/revealjs.rsti
-   .. include:: /package-feeds/revealjs.rsti
-   .. include:: /bitbake-tool/revealjs.rsti
-   .. include:: /images/revealjs.rsti
-   .. include:: /sdk/revealjs.rsti
-   .. include:: /final/revealjs.rsti
-   .. include:: /rtd/revealjs.rsti
-   .. include:: /thanks/revealjs.rsti
-
 .. only:: latex and not html
 
    .. include:: doclegal.rsti
@@ -51,26 +25,26 @@
    :hidden:
    :includehidden:
 
-   challenge
-   decision
-   about
-   intentions
-   concepts
-   manifest
-   build-system
-   user-configuration
-   metadata-layers
-   source-files
-   package-feeds
-   bitbake-tool
-   images
-   sdk
-   final
-   rtd
-   thanks
+   challenge/index
+   intentions/index
+   decision/index
+   about/index
+   concepts/index
+   manifest/index
+   build-system/index
+   user-configuration/index
+   metadata-layers/index
+   source-files/index
+   package-feeds/index
+   bitbake-tool/index
+   images/index
+   sdk/index
+   final/index
+   rtd/index
+   thanks/index
 
 :raw-latex:`\appendix`
-   
+
 .. toctree::
    :caption: Appendices
    :titlesonly:
@@ -83,7 +57,7 @@
    :caption: Lists and References
    :titlesonly:
    :hidden:
-   
+
    acronyms
    indexlol
    indexlot

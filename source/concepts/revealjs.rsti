@@ -16,11 +16,100 @@ slightly extended
 
 .. TBD: write down your "Terms, Concepts and Idioms" notes here ...
 
+:raw-html:`<small>`
+
+Terms overall
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/terms-overall.rsti
+
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+
+Terms internal
+--------------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/terms-internal.rsti
+
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+
+Metadata
+--------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/metadata.rsti
+
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+
+Features
+--------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/features.rsti
+
+.. image:: /concepts/features.*
+   :align: right
+   :width: 300px
+
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+
+Idioms
+------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/idioms.rsti
+
+:raw-html:`</small>`
+
+Conclusion
+----------
+
+.. revealjs_section::
+   :data-background-image: _static/yp.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+   :data-transition: none
+
 .. include:: /concepts/conclusion.rsti
 
 .. Local variables:

@@ -16,9 +16,40 @@ Git Repo Manifest
 
 .. TBD: write down your "Git Repo Manifest" notes here ...
 
+Android Tools
+-------------
+
+.. revealjs_section::
+   :data-background-image: _static/ar.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /manifest/android-tools.rsti
+
+Platform Manifest
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /manifest/platform-manifest.rsti
+
+Platform Pipeline
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /manifest/platform-pipeline.rsti
+
+.. image:: /manifest/lpn-central-bsp-pipeline.*
 
 .. Local variables:
    coding: utf-8

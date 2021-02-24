@@ -10,32 +10,11 @@ Packaging
    :data-background-size: 256px 256px
    :data-background-opacity: 0.66
 
-.. |bbt_desc_packaging| replace::
-   After compilation, the build system :ref:`analyzes the results and splits
-   the output into packages <ypdoc:overview-manual/concepts:package splitting>`.
-   The :ref:`ypdoc:ref-tasks-package` and :ref:`ypdoc:ref-tasks-packagedata`
-   tasks combine to analyze the files found in the installation directory:
-   debugging symbols, looking at shared library dependencies and relationships
-   of :term:`ypdoc:RDEPENDS` in the recipe.
+.. image:: /bitbake-tool/overview-manual/analysis-for-package-splitting.png
 
-.. only:: revealjs
-
-   .. image:: /bitbake-tool/overview-manual/analysis-for-package-splitting.png
-
-   :raw-html:`<small>`
-   |bbt_desc_packaging|
-   :raw-html:`</small>`
-
-.. only:: not revealjs
-
-   .. figure:: /bitbake-tool/overview-manual/analysis-for-package-splitting.png
-      :figclass: align-center
-      :align: center
-
-      :ref:`ypdoc:overview-manual/concepts:package splitting`
-      with Details
-
-   |bbt_desc_packaging|
+:raw-html:`<small>`
+|bbt_desc_packaging|
+:raw-html:`</small>`
 
 .. TBD: write down your "Packaging" notes here ...
 
