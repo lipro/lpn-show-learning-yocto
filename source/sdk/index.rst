@@ -144,6 +144,11 @@ The following list shows the variables associated with an :dfn:`Extensible SDK`:
   :term:`ypdoc:INHERIT` value globally within the :dfn:`Extensible SDK`
   configuration.
 
+.. seealso::
+
+   * :wikiyp:`Application Development with Extensible SDK`
+   * :wikiyp:`Extensible SDK`
+
 .. rubric:: Standard SDK
 
 .. code-block:: bash
@@ -181,6 +186,13 @@ This next list, shows the variables associated with a :dfn:`Standard SDK`:
   up the target part of the |SDK|. This variable also plays a minor role for
   :dfn:`Extensible SDK` development as well. However, it is mainly used for the
   :dfn:`Standard SDK`.
+
+.. seealso::
+
+   * :wikiyp:`Application Development with Legacy SDK`
+   * :wikiyp:`TipsAndTricks/Cmake,Eclipse, and SDKS`
+
+.. ...........................................................................
 
 .. spelling::
 

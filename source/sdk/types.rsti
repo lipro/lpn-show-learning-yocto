@@ -1,0 +1,42 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+written out to the :dfn:`Build Directory` inside the
+:file:`tmp/deploy/sdk/` folder for two different types:
+
+.. rst-class:: fragment grow highlight-blue
+
+   :dfn:`Standard SDK`: :command:`bitbake -c populate_sdk imagename`
+
+.. rst-class:: fragment fade-in
+
+   standard (legacy) SDK :green:`w/o any binding into the build system`
+
+   * :wikiyp:`Application Development with Legacy SDK`
+   * :wikiyp:`TipsAndTricks/Cmake,Eclipse, and SDKS`
+
+.. rst-class:: fragment grow highlight-blue
+
+   :dfn:`Extensible SDK`: :command:`bitbake -c populate_sdk_ext imagename`
+
+.. rst-class:: fragment fade-in
+
+   extensible (next) SDK with :red:`complete binding into the build system`
+
+   * :wikiyp:`Application Development with Extensible SDK`
+   * :wikiyp:`Extensible SDK`
+
+Note
+
+An :dfn:`Extensible SDK` requires a shared infrastructure!
+:raw-html:`</small>`
+
+.. TBD: write down your "Meta Layer Types" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

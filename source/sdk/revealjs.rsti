@@ -22,6 +22,17 @@ written out to the deploy directory.
 
 .. TBD: write down your "Application Development SDK" notes here ...
 
+SDK Types
+---------
+
+.. revealjs_section::
+   :data-background-image: _images/sdk-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /sdk/types.rsti
+
 .. Local variables:
    coding: utf-8
    mode: text
