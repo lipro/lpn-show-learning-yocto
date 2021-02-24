@@ -1,6 +1,8 @@
 .. Never add or change more than content, instead edit structure in files:
    /manifest/index.rst
 
+:raw-latex:`\clearpage\phantomsection`
+
 Platform Manifest
 =================
 
