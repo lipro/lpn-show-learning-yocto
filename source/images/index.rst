@@ -68,6 +68,8 @@ directory containing images for the current configuration.
    be useful for external scripts that need to obtain the latest version of
    each file.
 
+.. ...........................................................................
+
 .. spelling::
 
    filesystems

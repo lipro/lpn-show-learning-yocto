@@ -1,0 +1,57 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+written out to the :dfn:`Build Directory` inside the
+:file:`tmp/deploy/images/machine/` folder for the types:
+
+.. rst-class:: fragment grow highlight-blue
+
+   bootloaders
+
+.. rst-class:: fragment fade-in
+
+   bootloader binary file, if applicable to the target machine
+
+.. rst-class:: fragment grow highlight-blue
+
+   kernel-image
+
+.. rst-class:: fragment fade-in
+
+   kernel binary file with specifyed naming scheme
+
+.. rst-class:: fragment grow highlight-blue
+
+   kernel-modules (legacy purposes and can be suppressed)
+
+.. rst-class:: fragment fade-in
+
+   tarball file with all the modules built for a kernel
+
+.. rst-class:: fragment grow highlight-blue
+
+   root-filesystem-image
+
+.. rst-class:: fragment fade-in
+
+   root filesystem image files for the target machine
+
+.. rst-class:: fragment grow highlight-blue
+
+   symlinks
+
+.. rst-class:: fragment fade-in
+
+   symbolic link that points to the most recently built file for each machine
+
+:raw-html:`</small>`
+
+.. TBD: write down your "Meta Layer Types" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
