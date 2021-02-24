@@ -1,0 +1,38 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central-bsp-base
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+The :command:`setup-environment` script provides many basic options that
+setup a build environment with the correct :dfn:`User Configuration`.
+Here is a short synopsis:
+:raw-html:`</small>`
+
+.. code-block:: bash
+
+   MACHINE="selected_machine_name" \
+   DISTRO="selected_distribution_name" \
+   source setup-environment "selected_build_directory"
+
+:raw-html:`<small>`
+The :command:`setup-environment` calls the :command:`oe-init-build-env` script
+implicitly from the correct place in the Poky :dfn:`Source Directory`.
+:raw-html:`</small>`
+
+To get a detailed online help use:
+
+.. code-block:: bash
+
+   source setup-environment --help
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

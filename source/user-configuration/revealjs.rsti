@@ -21,6 +21,39 @@ image, where to store downloaded source and other build properties.
 
 .. TBD: write down your "User Configuration" notes here ...
 
+``bblayers.conf``
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _images/user-configuration-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /user-configuration/bblayers-conf.rsti
+
+``local.conf``
+--------------
+
+.. revealjs_section::
+   :data-background-image: _images/user-configuration-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /user-configuration/local-conf.rsti
+
+``setup-environment``
+---------------------
+
+.. revealjs_section::
+   :data-background-image: _images/user-configuration-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /user-configuration/setup-environment.rsti
+
 .. Local variables:
    coding: utf-8
    mode: text

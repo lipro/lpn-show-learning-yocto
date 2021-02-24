@@ -92,6 +92,13 @@ assignments for the same variable could be affected. For example, if the
 :file:`conf/local.conf` after :file:`conf/auto.conf`, :code:`VARIABLE_1`
 is assigned the value from the :file:`conf/local.conf` file.
 
+.. toctree::
+   :hidden:
+
+   bblayers-conf
+   local-conf
+   setup-environment
+
 .. Local variables:
    coding: utf-8
    mode: text

@@ -1,0 +1,46 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central-bsp-base
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+The :file:`local.conf` file provides many basic variables that define
+a build environment. Here is a list of a few:
+
+.. rst-class:: left-justified fragment fade-in
+
+   :blue:`Target Machine Selection:`
+   :code:`MACHINE ??= "qemux86-64"`
+
+   :blue:`Target Distribution Selection:`
+   :code:`DISTRO ?= "poky"`
+
+   :blue:`Target Packaging Format:`
+   :code:`PACKAGE_CLASSES ?= "package_rpm"`
+
+   :blue:`Download Directory:`
+   :code:`DL_DIR ?= "${TOPDIR}/downloads"`
+
+   :blue:`Shared State Cache Directory:`
+   :code:`SSTATE_DIR ?= "${TOPDIR}/sstate-cache"`
+
+   :blue:`Build Output:`
+   :code:`TMPDIR = "${TOPDIR}/tmp"`
+
+   :blue:`Parallelism Options:`
+   :code:`BB_NUMBER_THREADS ?= "4"`
+
+The :command:`setup-environment` script have to use to generate the
+content of the :file:`local.conf` file.
+:raw-html:`</small>`
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
