@@ -138,6 +138,12 @@ exist for multiple form factors, graphics support systems, and so forth.
    While :numref:`layer-input` shows several :file:`recipes-*` directories,
    not all these directories appear in all |BSP| layers.
 
+.. toctree::
+   :hidden:
+
+   types
+   stack
+
 .. Local variables:
    coding: utf-8
    mode: text

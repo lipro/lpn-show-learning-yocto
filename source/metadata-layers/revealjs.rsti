@@ -21,6 +21,39 @@ machine and policy.
 
 .. TBD: write down your "Metadata Layers" notes here ...
 
+Meta Layer Types
+----------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/types.rsti
+
+Meta Layer Stack
+----------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/stack.rsti
+
+.. image:: /metadata-layers/lpn-central-bsp-layer.*
+
+:raw-html:`<small>`
+|ml_layer_stack_desc| |nbsp| |--| |nbsp| remember:
+:raw-html:`</small>`
+
+.. rst-class:: fragment fade-in
+
+   .. image:: /manifest/lpn-central-bsp-pipeline.*
+      :height: 255px
+
 .. Local variables:
    coding: utf-8
    mode: text

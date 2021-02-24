@@ -1,0 +1,14 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. TBD: write down your "Meta Layer Stack" notes here ...
+
+.. |ml_layer_stack_desc| replace::
+   Metadata Layer Priorities (:code:`BBFILE_PRIORITY_LayerName`)
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,35 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. rst-class:: fragment grow highlight-blue
+
+   :dfn:`Software Layers`: :green:`Metadata .bb + Patches`
+
+.. rst-class:: fragment fade-in
+
+   user/vendor/community supplied recipe files, patches and append files
+
+.. rst-class:: fragment grow highlight-blue
+
+   :dfn:`Distribution Layers`: :yellow:`Policy Configuration`
+
+.. rst-class:: fragment fade-in
+
+   top-level or general policies for :dfn:`Images` or :dfn:`SDKs` being built
+
+.. rst-class:: fragment grow highlight-blue
+
+   :dfn:`BSP Layers`: :red:`Machine Configuration`
+
+.. rst-class:: fragment fade-in
+
+   specific to a particular target architecture
+
+.. TBD: write down your "Meta Layer Types" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
