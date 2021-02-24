@@ -1,0 +1,43 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Patching in Recipe
+------------------
+
+.. revealjs_section::
+   :data-background-image: _images/bitbake-tool-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+:raw-html:`<small>`
+http://git.yoctoproject.org/cgit/cgit.cgi/poky
+:raw-html:`<br />`
+http://cgit.openembedded.org/meta-openembedded
+:raw-html:`</small>`
+
+The :file:`poky/meta` and :file:`meta-openembedded/meta-oe` layer provides
+support recipes. The following related :term:`ypdoc:SRC_URI` being used:
+:raw-html:`<small>`
+
+.. rst-class:: fragment fade-in
+
+   :blue:`boost_1.75.0.bb`:
+   ``SRC_URI += "file://boost-CVE-2012-2677.patch ..."``
+
+   :blue:`opencv_4.5.0.bb`:
+   ``SRC_URI = "git://github.com/opencv/opencv.git;name=opencv ... file://download.patch ..."``
+
+Files in the :term:`ypdoc:SRC_URI` list variable with the :file:`.patch`
+or :file:`.diff` extension are automatically identified as a patch and
+applied if present beside the recipe.
+:raw-html:`</small>`
+
+.. TBD: write down your "Fetching" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

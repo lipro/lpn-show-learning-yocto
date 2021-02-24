@@ -15,6 +15,7 @@ Fetching
 |bbt_desc_source_fetch|
 
 .. include:: /bitbake-tool/bitbake-tool-shared.rsti
+.. include:: /bitbake-tool/fetching-details.rsti
 
 .. Local variables:
    coding: utf-8

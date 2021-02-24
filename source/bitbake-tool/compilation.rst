@@ -15,6 +15,7 @@ Compilation
 |bbt_desc_compilation|
 
 .. include:: /bitbake-tool/bitbake-tool-shared.rsti
+.. include:: /bitbake-tool/compilation-details.rsti
 
 .. Local variables:
    coding: utf-8

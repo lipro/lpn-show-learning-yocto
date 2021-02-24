@@ -15,6 +15,7 @@ Patching
 |bbt_desc_patching|
 
 .. include:: /bitbake-tool/bitbake-tool-shared.rsti
+.. include:: /bitbake-tool/patching-details.rsti
 
 .. Local variables:
    coding: utf-8

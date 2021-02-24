@@ -16,9 +16,13 @@ BitBake Tool
 .. TBD: write down your "BitBake Tool" notes here ...
 
 .. include:: /bitbake-tool/fetching.rsti
+.. include:: /bitbake-tool/fetching-details.rsti
 .. include:: /bitbake-tool/patching.rsti
+.. include:: /bitbake-tool/patching-details.rsti
 .. include:: /bitbake-tool/compilation.rsti
+.. include:: /bitbake-tool/compilation-details.rsti
 .. include:: /bitbake-tool/packaging.rsti
+.. include:: /bitbake-tool/packaging-details.rsti
 .. include:: /bitbake-tool/image-generation-1.rsti
 .. include:: /bitbake-tool/image-generation-2.rsti
 .. include:: /bitbake-tool/sdk-generation.rsti

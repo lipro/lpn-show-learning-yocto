@@ -1,0 +1,46 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+Fetching in Recipe
+------------------
+
+.. revealjs_section::
+   :data-background-image: _images/bitbake-tool-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/meta-lpn-central (dummy, not yet)
+:raw-html:`</small>`
+
+The :file:`meta-lpn-central` layer may provides private (closed) recipes.
+The following related :term:`ypdoc:SRC_URI` being used:
+:raw-html:`<small>`
+
+.. rst-class:: fragment fade-in
+
+   :yellow:`lib-utility_hg.bb`:
+   ``"${LPN_CENTRAL_HG};``\ ``module=lib_utility;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+
+   :yellow:`lib-crypto_hg.bb`:
+   ``"${LPN_CENTRAL_HG};``\ ``module=lib_crypto;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+
+   :green:`app-mcu-ctrl_hg.bb`:
+   ``"${LPN_CENTRAL_HG};``\ ``module=app_mcu_ctrl;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+
+   :blue:`boost_1.75.0.bb`:
+   ``"https://dl.bintray.com/boostorg/release/``\ ``${PV}/``\ ``source/``\ ``${BOOST_P}``\ ``.tar.bz2"``
+
+For private recipes: :term:`ypdoc:SRCREV` is set to :code:`SRCREV = "default"`
+and :code:`LPN_CENTRAL_HG` comes from :file:`meta-lpn-central/conf/layer.conf`.
+:raw-html:`</small>`
+
+.. TBD: write down your "Fetching" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
