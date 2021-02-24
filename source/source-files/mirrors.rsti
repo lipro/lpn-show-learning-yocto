@@ -1,0 +1,37 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+:emphasis:`(almost all recipes by policy)`
+
+The :file:`conf/distro/poky.conf` file provides the two kinds of mirrors:
+:raw-html:`</small>`
+
+.. rst-class:: fragment grow highlight-blue
+
+   :code:`PREMIRRORS`: the pre-mirrors
+
+.. rst-class:: fragment fade-in
+
+   :raw-html:`<small>`
+   check before looking :dfn:`Upstream Project Releases`
+   :raw-html:`</small>`
+
+.. rst-class:: fragment grow highlight-blue
+
+   :code:`MIRRORS`: the regular mirrors
+
+.. rst-class:: fragment fade-in
+
+   :raw-html:`<small>`
+   alternative location should the :dfn:`Upstream Project Releases` not available
+   :raw-html:`</small>`
+
+.. TBD: write down your "Source Material" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,27 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+:emphasis:`(no preference for this)`
+
+.. revealjs_fragments::
+
+   * custom bits of software the user provides
+   * these bits reside somewhere local to a project;
+     perhaps a directory into which the user checks in items
+   * use the :ref:`ypdoc:ref-classes-externalsrc` class in recipes
+     to include a local projects
+
+Note
+
+Community does not use local projects! Never seen!
+:raw-html:`</small>`
+
+.. TBD: write down your "Local Projects" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

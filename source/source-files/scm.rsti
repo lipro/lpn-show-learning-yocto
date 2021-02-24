@@ -1,0 +1,31 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+:emphasis:`(almost vendor or product recipes)`
+
+.. revealjs_fragments::
+
+   * get source files through an |SCMS| such as Git or Subversion or Mercurial
+   * repository is cloned and/or checked out
+
+Example
+
+The :file:`meta-lpn-central/conf/layer.conf` file may tells BitBake
+how to reach special (perhaps hidden) Git and Mercurial servers:
+:raw-html:`</small>`
+
+.. code-block:: none
+
+   LPN_CENTRAL_GIT ?= "git://10.20.30.40/services/git"
+   LPN_CENTRAL_SVN ?= "svn://10.20.30.40/services/svn"
+   LPN_CENTRAL_HG ?= "hg://10.20.30.40/services/hg"
+
+.. TBD: write down your "Source Code Manager (optional)" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

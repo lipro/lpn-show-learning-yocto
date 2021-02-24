@@ -1,0 +1,30 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+:emphasis:`(almost all recipes)`
+
+.. revealjs_fragments::
+
+   * exist anywhere in the form of an archived file (e.g. tarball or ZIP file)
+   * correspond to individual recipes, :term:`ypdoc:PN` and :term:`ypdoc:PV`
+     match with a upstream archive file
+   * archive file can be for any released product that can be built using
+     a recipe
+
+Example
+
+The :file:`tslib_1.11.bb` recipe points to the following XZ compressed
+tarball file:
+https://github.com/kergoth/tslib/releases/download/1.11/tslib-1.11.tar.xz
+
+:raw-html:`</small>`
+
+.. TBD: write down your "Upstream Project Releases" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

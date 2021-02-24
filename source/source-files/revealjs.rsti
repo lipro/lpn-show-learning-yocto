@@ -21,6 +21,50 @@ using :dfn:`Upstream Project Releases`, :dfn:`Local Projects`, and :dfn:`SCMs`.
 
 .. TBD: write down your "Source Files" notes here ...
 
+Upstream Project Releases
+-------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/source-files-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /source-files/upstream.rsti
+
+Local Projects
+--------------
+
+.. revealjs_section::
+   :data-background-image: _images/source-files-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /source-files/local.rsti
+
+Source Code Manager (optional)
+------------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/source-files-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /source-files/scm.rsti
+
+Source Mirror(s)
+----------------
+
+.. revealjs_section::
+   :data-background-image: _images/source-files-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /source-files/mirrors.rsti
+
 .. Local variables:
    coding: utf-8
    mode: text

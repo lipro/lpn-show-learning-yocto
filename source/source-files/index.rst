@@ -97,6 +97,14 @@ Two kinds of mirrors exist:
    site across the Internet that is used as an alternative location for source
    code should the primary site not be functioning for some reason or another.
 
+.. toctree::
+   :hidden:
+
+   upstream
+   local
+   scm
+   mirrors
+
 .. Local variables:
    coding: utf-8
    mode: text
