@@ -11,29 +11,29 @@ Fetching in Recipe
    :data-background-opacity: 0.66
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/meta-lpn-central (dummy, not yet)
+https://github.com/lipro-yocto/meta-lpn-apps (dummy, not yet)
 :raw-html:`</small>`
 
-The :file:`meta-lpn-central` layer may provides private (closed) recipes.
-The following related :term:`ypdoc:SRC_URI` being used:
+The :file:`meta-lpn-apps` layer may provides private (closed) recipes.
+The following related :term:`ypdoc:SRC_URI` may being used:
 :raw-html:`<small>`
 
 .. rst-class:: fragment fade-in
 
    :yellow:`lib-utility_hg.bb`:
-   ``"${LPN_CENTRAL_HG};``\ ``module=lib_utility;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+   ``"${CENTRAL_HG};``\ ``module=lib_utility;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
 
    :yellow:`lib-crypto_hg.bb`:
-   ``"${LPN_CENTRAL_HG};``\ ``module=lib_crypto;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+   ``"${CENTRAL_HG};``\ ``module=lib_crypto;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
 
    :green:`app-mcu-ctrl_hg.bb`:
-   ``"${LPN_CENTRAL_HG};``\ ``module=app_mcu_ctrl;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
+   ``"${CENTRAL_HG};``\ ``module=app_mcu_ctrl;``\ ``branch=default;``\ ``rev=${SRCREV};``\ ``protocol=ssh"``
 
    :blue:`boost_1.75.0.bb`:
    ``"https://dl.bintray.com/boostorg/release/``\ ``${PV}/``\ ``source/``\ ``${BOOST_P}``\ ``.tar.bz2"``
 
 For private recipes: :term:`ypdoc:SRCREV` is set to :code:`SRCREV = "default"`
-and :code:`LPN_CENTRAL_HG` comes from :file:`meta-lpn-central/conf/layer.conf`.
+and :code:`CENTRAL_HG` should comes from e.g. :file:`meta/conf/layer.conf`.
 :raw-html:`</small>`
 
 .. TBD: write down your "Fetching" notes here ...

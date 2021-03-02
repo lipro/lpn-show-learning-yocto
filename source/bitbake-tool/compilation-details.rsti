@@ -11,11 +11,11 @@ Compilation in Recipe
    :data-background-opacity: 0.66
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/meta-lpn-central (dummy, not yet)
+https://github.com/lipro-yocto/meta-lpn-apps (dummy, not yet)
 :raw-html:`</small>`
 
-The :file:`meta-lpn-central` layer may provides private (closed) recipes.
-The following related :term:`ypdoc:DEPENDS` being used:
+The :file:`meta-lpn-apps` layer may provides private (closed) recipes.
+The following related :term:`ypdoc:DEPENDS` may being used:
 :raw-html:`<small>`
 
 .. rst-class:: fragment fade-in

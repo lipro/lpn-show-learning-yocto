@@ -11,11 +11,11 @@ Packaging in Recipe
    :data-background-opacity: 0.66
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/meta-lpn-central (dummy, not yet)
+https://github.com/lipro-yocto/meta-lpn-apps (dummy, not yet)
 :raw-html:`</small>`
 
-The :file:`meta-lpn-central` layer may provides private (closed) recipes.
-The following related :term:`ypdoc:RDEPENDS` being used:
+The :file:`meta-lpn-apps` layer may provides private (closed) recipes.
+The following related :term:`ypdoc:RDEPENDS` may being used:
 :raw-html:`<small>`
 
 .. rst-class:: fragment fade-in
@@ -23,7 +23,7 @@ The following related :term:`ypdoc:RDEPENDS` being used:
    :green:`app-mcu-ctrl`:
    ``"i2c-tools"``
 
-   :yellow:`packagegroup-lpn-toolchain-target`:
+   :yellow:`packagegroup-lpn-apps-toolchain-target`:
    ``"boost-staticdev opencv-staticdev lib-utility-staticdev lib-crypto-staticdev"``
 
 The following related :term:`ypdoc:RDEPENDS` may being used as policy;
@@ -32,7 +32,7 @@ mostly controlled by common :dfn:`Image Features`, e.g.
 
 .. rst-class:: fragment fade-in
 
-   :yellow:`packagegroup-core-tools-testapps`:
+   :yellow:`packagegroup-central-tools-testapps`:
    ``"devregs spitools v4l-utils"``
 
    :yellow:`hostapd_%`:
