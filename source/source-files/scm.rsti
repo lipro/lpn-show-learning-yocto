@@ -11,15 +11,15 @@
 
 Example
 
-The :file:`meta-lpn-central/conf/layer.conf` file may tells BitBake
-how to reach special (perhaps hidden) Git and Mercurial servers:
+The :file:`meta/conf/layer.conf` file may tells BitBake how to reach special
+(perhaps hidden) Git, Subversion, or Mercurial servers:
 :raw-html:`</small>`
 
 .. code-block:: none
 
-   LPN_CENTRAL_GIT ?= "git://10.20.30.40/services/git"
-   LPN_CENTRAL_SVN ?= "svn://10.20.30.40/services/svn"
-   LPN_CENTRAL_HG ?= "hg://10.20.30.40/services/hg"
+   CENTRAL_GIT ?= "git://10.20.30.40/services/git"
+   CENTRAL_SVN ?= "svn://10.20.30.40/services/svn"
+   CENTRAL_HG ?= "hg://10.20.30.40/services/hg"
 
 .. TBD: write down your "Source Code Manager (optional)" notes here ...
 

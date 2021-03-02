@@ -4,7 +4,9 @@
 :raw-html:`<small>`
 :emphasis:`(almost all recipes by policy)`
 
-The :file:`conf/distro/poky.conf` file provides the two kinds of mirrors:
+The :file:`meta-poky/conf/distro/poky.conf` file as required by
+the :file:`meta-cedi/conf/distro/cedi.conf` file provides
+the two kinds of mirrors:
 :raw-html:`</small>`
 
 .. rst-class:: fragment grow highlight-blue
