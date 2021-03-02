@@ -2,7 +2,7 @@
    revealjs.rsti
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/lpn-central-bsp-platform
+https://github.com/lipro-yocto/lpn-central-repo
 :raw-html:`</small>`
 
 .. code-block:: xml
@@ -15,20 +15,19 @@ https://github.com/lipro-yocto/lpn-central-bsp-platform
      <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
      <remote fetch="https://github.com/openembedded" name="oe"/>
      <remote fetch="https://github.com/meta-qt5" name="qt5"/>
-     <remote fetch="https://github.com/lipro-yocto" name="lpn"/>
+     <remote fetch="https://github.com/lipro-yocto" name="lpy"/>
 
      <project remote="yocto" name="poky" path="sources/poky"/>
-     <project remote="yocto" name="meta-mingw" path="sources/meta-mingw"/>
-     <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
-     <project remote="qt5" name="meta-qt5" path="sources/meta-qt5" />
+     <project remote="yocto" name="meta-mingw" path="sources/yocto/meta-mingw"/>
+     <project remote="oe" name="meta-openembedded" path="sources/openembedded"/>
+     <project remote="qt5" name="meta-qt5" path="sources/qt/meta-qt5" />
 
-     <project remote="lpn" name="lpn-central-bsp-platform" path="platform/base"/>
-     <project remote="lpn" name="lpn-central-bsp-base" path="sources/base">
-       <copyfile dest="README.adoc" src="README.adoc"/>
-       <copyfile dest="setup-environment" src="setup-environment"/>
+     <project remote="lpy" name="lpn-central" path="sources/central">
+       <copyfile dest="setup-environment" src="scripts/setup-environment"/>
      </project>
 
    </manifest>
+
 
 .. rst-class:: left-justified fragment fade-in
 

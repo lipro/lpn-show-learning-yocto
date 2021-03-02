@@ -81,7 +81,7 @@ sources, and run the following, e.g. from the :file:`lipro-yocto` setup:
 
    mkdir lpn-central-bsp
    cd lpn-central-bsp
-   repo init --manifest-url=https://github.com/lipro-yocto/lpn-central-bsp-platform \
+   repo init --manifest-url=https://github.com/lipro-yocto/lpn-central-repo \
              --manifest-branch=master --manifest-name=default.xml
 
 This sets up the current directory as the working directory for this repo

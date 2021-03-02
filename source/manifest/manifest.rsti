@@ -11,9 +11,9 @@
 .. rst-class:: left-justified fragment fade-in
 
    The :command:`repo` tool and a meta Git repository called
-   :emphasis:`manifest` or such as in our case :emphasis:`platform`
-   make it possible to get all the code needed to build your own
-   Yocto :emphasis:`source` and :emphasis:`build directory`.
+   :emphasis:`manifest` or such as in our case :emphasis:`platform repo`
+   make it possible to get all the code needed to build your own Yocto
+   :emphasis:`source` and :emphasis:`build directory`.
 
 .. Local variables:
    coding: utf-8
