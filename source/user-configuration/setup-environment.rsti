@@ -2,7 +2,7 @@
    revealjs.rsti
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/lpn-central-bsp-base
+https://github.com/lipro-yocto/lpn-central |CRT| scripts
 :raw-html:`</small>`
 
 :raw-html:`<small>`
@@ -13,9 +13,11 @@ Here is a short synopsis:
 
 .. code-block:: bash
 
-   MACHINE="selected_machine_name" \
-   DISTRO="selected_distribution_name" \
-   source setup-environment "selected_build_directory"
+   DISTRO="cedi" \
+   MACHINE="helium" \
+   SDKMACHINE="x86_64-mingw32" \
+   BUILD_DIR="build-cedi-helium" \
+   source setup-environment
 
 :raw-html:`<small>`
 The :command:`setup-environment` calls the :command:`oe-init-build-env` script

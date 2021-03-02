@@ -2,7 +2,7 @@
    revealjs.rsti
 
 :raw-html:`<small>`
-https://github.com/lipro-yocto/lpn-central-bsp-base
+https://github.com/lipro-yocto/lpn-central |CRT| meta-cedi/conf
 :raw-html:`</small>`
 
 :raw-html:`<small>`
@@ -15,7 +15,7 @@ a build environment. Here is a list of a few:
    :code:`MACHINE ??= "qemux86-64"`
 
    :blue:`Target Distribution Selection:`
-   :code:`DISTRO ?= "poky"`
+   :code:`DISTRO ?= "cedi"`
 
    :blue:`Target Packaging Format:`
    :code:`PACKAGE_CLASSES ?= "package_rpm"`
@@ -32,11 +32,18 @@ a build environment. Here is a list of a few:
    :blue:`Parallelism Options:`
    :code:`BB_NUMBER_THREADS ?= "4"`
 
+   :blue:`Host SDK Machine Selection:`
+   :code:`SDKMACHINE ?= "x86_64"`
+
 The :command:`setup-environment` script have to use to generate the
 content of the :file:`local.conf` file.
 :raw-html:`</small>`
 
 .. TBD: write down your "Platform Manifest" notes here ...
+
+.. spelling::
+
+   conf
 
 .. Local variables:
    coding: utf-8
