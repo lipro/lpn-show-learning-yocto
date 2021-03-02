@@ -1,0 +1,38 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central |CRT| :green:`meta/recipes-core/images`
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+The :file:`meta` (central core) layer provides recipes and classes for all the
+specific evaluation and demonstration images and package groups based on the
+customized image class :file:`central-image.bbclass`. The following images are
+supported:
+
+.. rst-class:: left-justified fragment fade-in
+
+   :green:`central-image-minimal:`
+   A small image just capable of allowing an Central device to boot.
+
+   :green:`central-dev-image:`
+   A developer image just capable of allowing an Central device to boot.
+
+   :green:`central-debug-image:`
+   A debugging image just capable of allowing an Central device to boot.
+
+   :green:`central-image:`
+   A product image capable of allowing an Central device to boot and provides
+   full feature support.
+
+:raw-html:`</small>`
+
+.. TBD: write down your "Meta Layer Images" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

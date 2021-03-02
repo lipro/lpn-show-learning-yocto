@@ -143,6 +143,9 @@ exist for multiple form factors, graphics support systems, and so forth.
 
    types
    stack
+   machines
+   distros
+   images
 
 .. Local variables:
    coding: utf-8

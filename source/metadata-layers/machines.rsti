@@ -1,0 +1,30 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central |CRT| :red:`meta-lpn-bsp/conf/machine`
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+The :file:`meta-lpn-bsp` layer provides machine configurations for all the
+specific evaluation hardware based on QEMU or real target architecture. The
+following target machines are supported:
+
+.. rst-class:: left-justified fragment fade-in
+
+   :red:`hydrogen:`
+   QEMU x86 machine based on :code:`qemux86`
+
+   :red:`helium:`
+   QEMU x86-64 machine based on :code:`qemux86-64`
+
+:raw-html:`</small>`
+
+.. TBD: write down your "Meta Layer Machines" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

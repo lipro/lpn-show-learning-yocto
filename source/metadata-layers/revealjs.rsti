@@ -52,7 +52,40 @@ Meta Layer Stack
 .. rst-class:: fragment fade-in
 
    .. image:: /manifest/lpn-central-bsp-pipeline.*
-      :height: 255px
+      :height: 200px
+
+Meta Layer Machines
+-------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/machines.rsti
+
+Meta Layer Distros
+------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/distros.rsti
+
+Meta Layer Images
+-----------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/images.rsti
 
 .. Local variables:
    coding: utf-8

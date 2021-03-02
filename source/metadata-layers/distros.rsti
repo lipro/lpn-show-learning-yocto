@@ -1,0 +1,32 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+:raw-html:`<small>`
+https://github.com/lipro-yocto/lpn-central |CRT| :yellow:`meta-cedi/conf/distro`
+:raw-html:`</small>`
+
+:raw-html:`<small>`
+The :file:`meta-cedi` layer provides policy configurations for all the
+specific evaluation distributions based on Poky. The following distributions
+are supported:
+
+.. rst-class:: left-justified fragment fade-in
+
+   :yellow:`cedi:`
+   Central Distro (Li-Pro.Net Demonstration) based on :code:`poky`
+
+:raw-html:`</small>`
+
+.. TBD: write down your "Meta Layer Distros" notes here ...
+
+.. spelling::
+
+   Distro
+   Distros
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
