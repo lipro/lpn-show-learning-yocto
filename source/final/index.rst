@@ -3,8 +3,8 @@
 Final Closer Look
 =================
 
-.. figure:: /final/jc-central-bsp-canadian-cross.*
-   :name: jc-central-bsp-canadian-cross
+.. figure:: /final/lpn-central-bsp-canadian-cross.*
+   :name: lpn-central-bsp-canadian-cross
    :figclass: align-center
    :align: center
 
