@@ -1,0 +1,45 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. code-block:: none
+
+   SUMMMARY = "Central Minimal Boot Requirements"
+   DESCRIPTION = "The minimal set of packages required to boot a Central system"
+   LICENSE = "MIT"
+   PR = "r0"
+
+   # For backwards compatibility after rename
+   RPROVIDES_packagegroup-central-boot = "packagegroup-boot-central"
+   RREPLACES_packagegroup-central-boot = "packagegroup-boot-central"
+   RCONFLICTS_packagegroup-central-boot = "packagegroup-boot-central"
+
+.. code-block:: none
+
+   # packages which content depend on MACHINE_FEATURES need to be MACHINE_ARCH
+   PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+   inherit packagegroup
+
+   # Set by the machine configuration with packages essential
+   # for Central device bootup.
+   MACHINE_ESSENTIAL_EXTRA_CENTRAL_RDEPENDS ?= ""
+   MACHINE_ESSENTIAL_EXTRA_CENTRAL_RRECOMMENDS ?= ""
+
+.. code-block:: none
+
+   RDEPENDS_${PN} = " \
+       ${MACHINE_ESSENTIAL_EXTRA_CENTRAL_RDEPENDS} \
+   "
+
+   RRECOMMENDS_${PN} = " \
+       ${MACHINE_ESSENTIAL_EXTRA_CENTRAL_RRECOMMENDS} \
+   "
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

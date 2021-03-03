@@ -6,6 +6,15 @@ Meta Layer Images
 
 .. include:: /metadata-layers/images.rsti
 
+.. toctree::
+   :hidden:
+
+   central-image-bb
+   central-image-bbclass
+   central-image-version-bbclass
+   packagegroup-central-boot-bb
+   packagegroup-central-tools-testapps-bb
+
 .. Local variables:
    coding: utf-8
    mode: text

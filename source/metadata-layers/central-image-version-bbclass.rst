@@ -1,16 +1,10 @@
 .. Never add or change more than content, instead edit structure in files:
    /metadata-layers/index.rst
 
-Meta Layer Machines
-===================
+:blue:`central-image-version.bbclass`
+=====================================
 
-.. include:: /metadata-layers/machines.rsti
-
-.. toctree::
-   :hidden:
-
-   hydrogen-conf
-   helium-conf
+.. include:: /metadata-layers/central-image-version-bbclass.rsti
 
 .. Local variables:
    coding: utf-8

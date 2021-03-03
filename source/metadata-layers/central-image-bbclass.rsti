@@ -1,0 +1,56 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. code-block:: none
+
+   # Common code for generating Central reference images
+
+   LIC_FILES_CHKSUM = "\
+       file://${CENTRALCOREBASE}/LICENSE;md5=4d183b8707e22082e5a8c5ad268e5149 \
+   "
+
+.. code-block:: none
+
+   # - qt5-sdk          - Qt5/X11 SDK and demo applications
+   # - tools-cross      - tools usable for basic cross development
+   FEATURE_PACKAGES_qt5-sdk = "\
+       packagegroup-qt5-toolchain-target \
+       packagegroup-qt5-qtcreator-debug \
+   "
+   FEATURE_PACKAGES_tools-cross = ""
+   # Provides the Central specific features 'qt5-sdk' and 'tools-cross'.
+
+.. code-block:: none
+
+   CENTRAL_IMAGE_BASE_INSTALL = '\
+       packagegroup-central-boot \
+       packagegroup-base-central \
+       \
+       ${@bb.utils.contains("IMAGE_FEATURES", "tools-cross", \
+                            "packagegroup-central-tools-cross", "", d)} \
+       ${@bb.utils.contains("IMAGE_FEATURES", "tools-debug", \
+                            "packagegroup-central-tools-debug", "", d)} \
+       ${@bb.utils.contains("IMAGE_FEATURES", "tools-profile", \
+                            "packagegroup-central-tools-profile", "", d)} \
+       ${@bb.utils.contains("IMAGE_FEATURES", "tools-testapps", \
+                            "packagegroup-central-tools-testapps", "", d)} \
+       ${@bb.utils.contains("IMAGE_FEATURES", "tools-sdk", \
+                            "packagegroup-central-sdk", "", d)} \
+       \
+       ${CENTRAL_IMAGE_EXTRA_INSTALL} \
+       '
+
+   CENTRAL_IMAGE_EXTRA_INSTALL ?= ""
+
+   CORE_IMAGE_EXTRA_INSTALL += "${CENTRAL_IMAGE_BASE_INSTALL}"
+
+   inherit core-image central-image-version
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

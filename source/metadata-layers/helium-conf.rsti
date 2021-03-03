@@ -1,0 +1,47 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. code-block:: none
+
+   #@TYPE: Machine
+   #@NAME: QEMU x86-64 machine
+   #@DESCRIPTION: Machine configuration for running an x86-64 system on QEMU (based on qemux86-64).
+   #@MAINTAINER: Stephan Linz <linz@li-pro.net>
+
+   require conf/machine/include/qemux86-64.inc
+   require conf/machine/include/lpn-emu.inc
+
+.. rubric:: ``qemux86-64.inc``
+
+.. code-block:: none
+
+   # derived from qemux86-64
+   require conf/machine/qemux86-64.conf
+   MACHINEOVERRIDES_prepend = "qemux86-64:"
+
+   # remap derived machine back to qemux86-64 for the Linux kernel
+   KMACHINE = "qemux86-64"
+
+.. rubric:: ``lpn-emu.inc``
+
+.. code-block:: none
+
+   # is a Li-Pro.Net emulated system
+   require conf/machine/include/lpn.inc
+   MACHINEOVERRIDES_append = ":lpnemu"
+
+.. rubric:: ``lpn.inc``
+
+.. code-block:: none
+
+   # is a Li-Pro.Net system
+   MACHINEOVERRIDES_append = ":lpn"
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

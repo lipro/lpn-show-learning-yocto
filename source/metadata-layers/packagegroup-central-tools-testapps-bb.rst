@@ -1,16 +1,10 @@
 .. Never add or change more than content, instead edit structure in files:
    /metadata-layers/index.rst
 
-Meta Layer Machines
-===================
+:green:`packagegroup-central-tools-testapps.bb`
+===============================================
 
-.. include:: /metadata-layers/machines.rsti
-
-.. toctree::
-   :hidden:
-
-   hydrogen-conf
-   helium-conf
+.. include:: /metadata-layers/packagegroup-central-tools-testapps-bb.rsti
 
 .. Local variables:
    coding: utf-8

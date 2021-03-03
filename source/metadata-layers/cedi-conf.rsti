@@ -1,0 +1,56 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. code-block:: none
+
+   require ${COREBASE}/meta-poky/conf/distro/poky.conf
+
+   DISTROOVERRIDES = "poky:${@d.getVar('DISTRO') or ''}"
+
+   DISTRO = "cedi"
+   DISTRO_NAME = "Central Distro (Li-Pro.Net Demonstration)"
+   DISTRO_VERSION_append = "+r1.0"
+   DISTRO_CODENAME_append = "-cedi"
+   TARGET_VENDOR = "-cedi"
+   SDK_VENDOR = "-cedisdk"
+
+   MAINTAINER = "Cedi <cedi@li-pro.net>"
+
+   LOCALCONF_VERSION = "1"
+
+.. code-block:: none
+
+   # Override poky pre-settings (remove).
+   POKY_DEFAULT_DISTRO_FEATURES = ""
+   POKY_DEFAULT_EXTRA_RDEPENDS = ""
+   POKY_DEFAULT_EXTRA_RRECOMMENDS = ""
+
+   # Setup Cedi defaults.
+   CEDI_DEFAULT_DISTRO_FEATURES = "largefile opengl ptest multiarch wayland vulkan"
+   CEDI_DEFAULT_EXTRA_RDEPENDS = "packagegroup-core-boot"
+   CEDI_DEFAULT_EXTRA_RRECOMMENDS = "kernel-module-af-packet"
+
+   DISTRO_FEATURES = "${DISTRO_FEATURES_DEFAULT} ${CEDI_DEFAULT_DISTRO_FEATURES}"
+   DISTRO_EXTRA_RDEPENDS += " ${CEDI_DEFAULT_EXTRA_RDEPENDS}"
+   DISTRO_EXTRA_RRECOMMENDS += " ${CEDI_DEFAULT_EXTRA_RRECOMMENDS}"
+
+.. code-block:: none
+
+   # Use systemd for system initialization
+   DISTRO_FEATURES_append = " systemd"
+   VIRTUAL-RUNTIME_init_manager = "systemd"
+   VIRTUAL-RUNTIME_login_manager = "shadow-base"
+   DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+   VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+
+   # Add Cedi sanity bbclass.
+   INHERIT += "cedi-sanity"
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

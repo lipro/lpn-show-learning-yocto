@@ -65,6 +65,28 @@ Meta Layer Machines
 
 .. include:: /metadata-layers/machines.rsti
 
+:red:`hydrogen.conf`
+--------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/hydrogen-conf.rsti
+
+:red:`helium.conf`
+------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/helium-conf.rsti
+
 Meta Layer Distros
 ------------------
 
@@ -76,6 +98,17 @@ Meta Layer Distros
 
 .. include:: /metadata-layers/distros.rsti
 
+:yellow:`cedi.conf`
+-------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/cedi-conf.rsti
+
 Meta Layer Images
 -----------------
 
@@ -86,6 +119,61 @@ Meta Layer Images
    :data-background-opacity: 0.66
 
 .. include:: /metadata-layers/images.rsti
+
+:green:`central-image.bb`
+-------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/central-image-bb.rsti
+
+:blue:`central-image.bbclass`
+-----------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/central-image-bbclass.rsti
+
+:blue:`central-image-version.bbclass`
+-------------------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/central-image-version-bbclass.rsti
+
+:green:`packagegroup-central-boot.bb`
+-------------------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/packagegroup-central-boot-bb.rsti
+
+:green:`packagegroup-central-tools-testapps.bb`
+-----------------------------------------------
+
+.. revealjs_section::
+   :data-background-image: _images/metadata-layers-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /metadata-layers/packagegroup-central-tools-testapps-bb.rsti
 
 .. Local variables:
    coding: utf-8

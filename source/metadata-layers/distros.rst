@@ -6,6 +6,11 @@ Meta Layer Distros
 
 .. include:: /metadata-layers/distros.rsti
 
+.. toctree::
+   :hidden:
+
+   cedi-conf
+
 .. Local variables:
    coding: utf-8
    mode: text

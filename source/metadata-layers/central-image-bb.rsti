@@ -1,0 +1,47 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. code-block:: none
+
+   require central-image-base.bb
+
+   SUMMARY = "A product image capable of allowing an Central \
+   device to boot and provides full feature support."
+
+   DESCRIPTION = "A product image capable of allowing an Central \
+   device to boot in graphical mode and provides full feature support."
+
+   LICENSE = "MIT"
+   PR = "r0"
+
+   IMAGE_FEATURES += " \
+       ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11-base', '', d)} \
+   "
+
+   inherit central-image
+
+.. rubric:: ``central-image-base.bb``
+
+.. code-block:: none
+
+   SUMMARY = "A console-only image that fully supports the target device \
+   hardware provided by Central."
+
+   LICENSE = "MIT"
+   PR = "r0"
+
+   IMAGE_FEATURES += " \
+       package-management \
+       splash \
+   "
+
+   inherit central-image
+
+.. TBD: write down your "Platform Manifest" notes here ...
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
