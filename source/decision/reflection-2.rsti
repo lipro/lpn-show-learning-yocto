@@ -1,12 +1,6 @@
 .. Never add or change more than content, instead edit structure in files:
    revealjs.rsti
 
-.. revealjs_section::
-   :data-background-image: _static/lpn.svg
-   :data-background-position: top 52px left 86px
-   :data-background-size: 128px 128px
-   :data-background-opacity: 0.33
-
 .. tabularcolumns:: L{38mm}|C{58mm}C{58mm}
 .. list-table::
    :class: longtable
@@ -14,6 +8,7 @@
    :width: 100 %
    :widths: 38 58 58
    :header-rows: 1
+   :stub-columns: 1
 
    * -
      - Buildroot

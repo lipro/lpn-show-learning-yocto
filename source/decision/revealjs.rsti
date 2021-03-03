@@ -23,25 +23,55 @@ excerpts and quotes from
 Android
 -------
 
+.. revealjs_section::
+   :data-background-image: _static/ar.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /decision/android.rsti
 
 Baserock
 --------
+
+.. revealjs_section::
+   :data-background-image: _static/brck.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
 
 .. include:: /decision/baserock.rsti
 
 Buildroot
 ---------
 
+.. revealjs_section::
+   :data-background-image: _static/br.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /decision/buildroot.rsti
 
 OpenEmbedded
 ------------
 
+.. revealjs_section::
+   :data-background-image: _static/oe.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
 .. include:: /decision/openembedded.rsti
 
 OpenWrt
 -------
+
+.. revealjs_section::
+   :data-background-image: _static/ow.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
 
 .. include:: /decision/openwrt.rsti
 
@@ -49,6 +79,12 @@ OpenWrt
 
 Reflection 1/2
 --------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
 
 .. include:: /decision/reflection-1.rsti
 
@@ -58,6 +94,12 @@ Reflection 1/2
 
 Reflection 2/2
 --------------
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
 
 .. include:: /decision/reflection-2.rsti
 
