@@ -1,0 +1,604 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta content="Sphinx 3.4.3" name="producer" />
+<meta content="Sphinx 3.4.3" name="creator" />
+<meta content="Li-Pro.Net" name="publisher" />
+<meta content="Learning Yocto." name="subject" />
+<meta content="LPN-QMS-SHOW-00000,Learning,Yocto,Bitbake" name="keywords" />
+<meta content="Li-Pro.Net — Documentation" name="author" />
+<meta content="2018‒2021 Li-Pro.Net and individual contributors." name="copyright" />
+<meta content="preliminary (:emphasis:`some mature, much in progress`)" name="docstat" />
+<meta content="LPN-QMS-SHOW-00000" name="docnumb" />
+<meta content="Yocto" name="project" />
+<meta content="Yocto" name="title" />
+<meta content="Learning" name="subtitle" />
+<meta content="0.0.0" name="version" />
+<meta content="0.0.0-75-g2094a49" name="release" />
+<meta content="2094a49d" name="identify" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta content="Application Development SDK" name="topic" />
+    
+  <title>14. Application Development SDK &mdash; Learning Yocto</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/underline.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/colors.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="15. Final Closer Look" href="../final/index.html" />
+    <link rel="prev" title="13. Images" href="../images/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Yocto
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../challenge/index.html">1. Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/example.html">1.1. Example: UI Toolkits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/collaboration.html">1.2. Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/market.html">1.3. Market</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/vendor.html">1.4. Vendor and Contractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/community.html">1.5. Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/business.html">1.6. Business</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/domain.html">1.7. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intentions/index.html">2. Intentions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decision/index.html">3. Decision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decision/android.html">3.1. Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/baserock.html">3.2. Baserock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/buildroot.html">3.3. Buildroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openembedded.html">3.4. OpenEmbedded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openwrt.html">3.5. OpenWrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/reflection.html">3.6. Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">4. About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/governance.html">4.1. Governance Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/achievement.html">4.2. Achievement and Standing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/offer.html">4.3. Offer and Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/provides.html">4.4. Yocto Project Provides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/community.html">4.5. Yocto Project Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">5. Terms, Concepts, Idioms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest/index.html">6. Git Repo Manifest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-manifest.html">6.1. Platform Manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-pipeline.html">6.2. Platform Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build-system/index.html">7. Build System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/user-configuration.html">7.1. Configuration Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/metadata-layers.html">7.2. Metadata Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/source-files.html">7.3. Source Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/package-feeds.html">7.4. Package Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/bitbake-tool.html">7.5. BitBake Tool Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/images.html">7.6. Images Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/sdk.html">7.7. SDK Area</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-configuration/index.html">8. User Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/bblayers-conf.html">8.1. <code class="docutils literal notranslate"><span class="pre">bblayers.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/local-conf.html">8.2. <code class="docutils literal notranslate"><span class="pre">local.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/setup-environment.html">8.3. <code class="docutils literal notranslate"><span class="pre">setup-environment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata-layers/index.html">9. Metadata Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/types.html">9.1. Meta Layer Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/stack.html">9.2. Meta Layer Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/machines.html">9.3. Meta Layer Machines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/hydrogen-conf.html"><span class="red">hydrogen.conf</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/helium-conf.html"><span class="red">helium.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/distros.html">9.4. Meta Layer Distros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/cedi-conf.html"><span class="yellow">cedi.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/images.html">9.5. Meta Layer Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bb.html"><span class="green">central-image.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bbclass.html"><span class="blue">central-image.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-version-bbclass.html"><span class="blue">central-image-version.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-boot-bb.html"><span class="green">packagegroup-central-boot.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-tools-testapps-bb.html"><span class="green">packagegroup-central-tools-testapps.bb</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../source-files/index.html">10. Source Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/upstream.html">10.1. Upstream Project Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/local.html">10.2. Local Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/scm.html">10.3. Source Code Manager (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/mirrors.html">10.4. Source Mirror(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../package-feeds/index.html">11. Package Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bitbake-tool/index.html">12. BitBake Tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/inherit.html">12.1. Inherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/fetching.html">12.2. Fetching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/fetching.html#fetching-in-recipe">Fetching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/patching.html">12.3. Patching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/patching.html#patching-in-recipe">Patching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/compilation.html">12.4. Compilation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/compilation.html#compilation-in-recipe">Compilation in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/packaging.html">12.5. Packaging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/packaging.html#packaging-in-recipe">Packaging in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/image-generation.html">12.6. Image Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/sdk-generation.html">12.7. SDK Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">13. Images</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Application Development SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../final/index.html">15. Final Closer Look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtd/index.html">16. Read-The-Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#documentations">16.1. Documentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#presentations">16.2. Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#books">16.3. Books</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thanks/index.html">17. Thank You</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">General Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/common-terms.html">Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/programming-languages.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/technologies.html">Technologies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acronyms.html">Acronyms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yocto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+
+<div class="rst-content style-external-links">
+
+  <dl class="field-list simple">
+    <dt class="field-odd" style="line-height: unset;">Yocto</dt>
+    <dd class="field-odd" style="line-height: unset;">Learning</dd>
+    <dt class="field-even" style="line-height: unset;">Document Number</dt>
+    <dd class="field-even" style="line-height: unset;">LPN-QMS-SHOW-00000</dd>
+    <dt class="field-odd" style="line-height: unset;">Revision (VCS)</dt>
+    <dd class="field-odd" style="line-height: unset;">0.0.0-75-g2094a49 (2094a49d)</dd>
+  </dl>
+</div>
+    
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">14. </span>Application Development SDK</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/sdk/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="application-development-sdk">
+<h1><span class="section-number">14. </span>Application Development SDK<a class="headerlink" href="#application-development-sdk" title="Permalink to this headline">¶</a></h1>
+<p>This section contains direct excerpts and quotes from publicly accessible
+documentation: <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#application-development-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span>Application Development SDK</span></a> — © 2010–2021 The Yocto Project.</p>
+<div class="align-center figure" id="sdk">
+<img alt="../_images/sdk.png" src="../_images/sdk.png" />
+<p class="caption"><span class="caption-number">Figure 14.1 </span><span class="caption-text"><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#application-development-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span>Application Development SDK</span></a>
+with Details</span><a class="headerlink" href="#sdk" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <a class="reference internal" href="../build-system/index.html#build-system-areas"><span class="std std-numref">Figure 7.1</span></a>, the output labeled <em class="dfn">Application
+Development SDK</em> represents an <abbr title="Software Development Kit">SDK</abbr>. The <abbr title="Software Development Kit">SDK</abbr> generation process differs
+depending on whether you build an <em class="dfn">Extensible SDK</em> (e.g. <strong class="command">bitbake
+-c populate_sdk_ext imagename</strong>) or a <em class="dfn">Standard SDK</em> (e.g. <strong class="command">bitbake
+-c populate_sdk imagename</strong>).</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>The Yocto Project supports several methods by which you can set up this
+cross-development environment. These methods include downloading pre-built
+SDK installers (e.g. from a tool vendor) or building and installing your
+own SDK installer with the help of the Yocto Project.</p></li>
+<li><p>For background information on cross-development toolchains in the Yocto
+Project development environment, see the
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#cross-development-toolchain-generation" title="(in The Yocto Project ® vVersion: Current Development)"><span>Cross-Development Toolchain Generation</span></a>
+section as part of the <em class="dfn">BitBake Tool Area</em>.</p></li>
+<li><p>For information on setting up a cross-development environment, see the
+<a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Application Development and the Extensible Software Development Kit (eSDK)</span></a> manual.</p></li>
+</ul>
+</div>
+<p>The specific form of this output is a set of files that includes a
+self-extracting <abbr title="Software Development Kit">SDK</abbr> installer (<code class="file docutils literal notranslate"><span class="pre">*.sh</span></code>), host and target manifest files,
+and files used for <abbr title="Software Development Kit">SDK</abbr> testing. When the <abbr title="Software Development Kit">SDK</abbr> installer file is run, it
+installs the <abbr title="Software Development Kit">SDK</abbr>. The <abbr title="Software Development Kit">SDK</abbr> consists of a cross-development toolchain, a set
+of libraries and headers, and an <abbr title="Software Development Kit">SDK</abbr> environment setup script. Running this
+installer essentially sets up your cross-development environment. You can think
+of the cross-toolchain as the <em class="dfn">host</em> part because it runs on the <abbr title="Software Development Kit">SDK</abbr>
+machine. You can think of the libraries and headers as the <em class="dfn">target</em> part
+because they are built for the target hardware. The environment setup script
+is added so that you can initialize the environment before using the tools.</p>
+<p class="rubric">Two different SDK types</p>
+<p>All the output files for an <abbr title="Software Development Kit">SDK</abbr> are written to the <code class="file docutils literal notranslate"><span class="pre">deploy/sdk</span></code> folder
+inside the <em class="dfn">Build Directory</em> as shown in <a class="reference internal" href="#sdk"><span class="std std-numref">Figure 14.1</span></a>. Depending on the
+type of <abbr title="Software Development Kit">SDK</abbr>, several variables exist that help configure these files. For a
+side-by-side comparison of main features supported for an <em class="dfn">Extensible SDK</em>
+as compared to a <em class="dfn">Standard SDK</em>, see the
+<a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/intro.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Introduction</span></a> chapter in the <a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Application Development and the Extensible Software Development Kit (eSDK)</span></a>.</p>
+<table class="colwidths-given longtable docutils align-center" id="id11" style="width: 100%">
+<caption><span class="caption-number">Table 14.1 </span><span class="caption-text">Features summary for the two SDK types</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Feature</p></th>
+<th class="head"><p><em class="dfn">Standard SDK</em></p></th>
+<th class="head"><p><em class="dfn">Extensible SDK</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Toolchain</p></th>
+<td><p>Yes</p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#id6" id="id1">1</a></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Debugger</p></th>
+<td><p>Yes</p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#id6" id="id2">1</a></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Size</p></th>
+<td><p>100+ ㎆</p></td>
+<td><p>1+ ㎇ (or 300+ ㎆ for minimal w/toolchain)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/devtool-reference.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">devtool</span></a></p></th>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Build Images</p></th>
+<td><p><span class="yellow">No</span></p></td>
+<td><p><span class="green">Yes</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Updateable</p></th>
+<td><p><span class="yellow">No</span></p></td>
+<td><p><span class="green">Yes</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Managed Sysroot <a class="footnote-reference brackets" href="#id7" id="id3">2</a></p></th>
+<td><p><span class="green">No</span></p></td>
+<td><p><span class="red">Yes</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Installed Packages</p></th>
+<td><p>No <a class="footnote-reference brackets" href="#id8" id="id4">3</a></p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#id9" id="id5">4</a></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Construction</p></th>
+<td><p><span class="green">Packages</span></p></td>
+<td><p><span class="yellow">Shared State</span></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p><em class="dfn">Extensible SDK</em> contains the toolchain and debugger if
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_EXT_TYPE" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_EXT_TYPE</span></a> is <code class="code docutils literal notranslate"><span class="pre">full</span></code> or
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_INCLUDE_TOOLCHAIN" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_INCLUDE_TOOLCHAIN</span></a> is <code class="code docutils literal notranslate"><span class="pre">1</span></code>,
+<strong>which is the default</strong>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Sysroot is managed through the use of the <strong class="command">devtool</strong> command.
+Thus, it is less likely that you will <strong>corrupt your SDK sysroot</strong>
+when you try to add additional libraries.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>You can add runtime package management to the <em class="dfn">Standard SDK</em> but
+it <strong>is not supported by default</strong>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>You <strong>must build and make the Shared State Cache available</strong> to
+<em class="dfn">Extensible SDK</em> users for <em class="dfn">packages</em> you want to enable
+users to install.</p>
+</dd>
+</dl>
+<p class="rubric">Extensible SDK</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bitbake -c populate_sdk_ext imagename
+</pre></div>
+</div>
+<p>The Yocto Project <em class="dfn">Extensible SDK</em> (eSDK) has tools that allow you to
+easily add new applications and libraries to an image, modify the source of
+an existing component and test changes on the target hardware. The main benefit
+over the <em class="dfn">Standard SDK</em> is improved team workflow due to tighter
+integration with the <abbr title="OE">OpenEmbedded</abbr> build system and have access to developer tools. For
+a detailed description see the <a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/extensible.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Using the Extensible SDK</span></a> chapter in
+the <a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Application Development and the Extensible Software Development Kit (eSDK)</span></a>. News about development can read on the
+<a class="reference external" href="https://wiki.yoctoproject.org/wiki/Extensible SDK">Yocto Project Wiki: Extensible SDK</a>.</p>
+<p>The following list shows the variables associated with an <em class="dfn">Extensible SDK</em>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPLOY_DIR" title="(in The Yocto Project ® vVersion: Current Development)"><span>DEPLOY_DIR</span></a>: Points to the <em class="dfn">Deploy Directory</em> inside the
+<em class="dfn">Build Directory</em>.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_EXT_TYPE" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_EXT_TYPE</span></a>: Controls whether or not shared state artifacts
+are copied into the <em class="dfn">Extensible SDK</em>. By default, all required shared
+state artifacts are copied into the <abbr title="Software Development Kit">SDK</abbr>.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_INCLUDE_PKGDATA" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_INCLUDE_PKGDATA</span></a>: Specifies whether or not package data is
+included in the <em class="dfn">Extensible SDK</em> for all recipes in the <em class="dfn">world</em>
+target.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_INCLUDE_TOOLCHAIN" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_INCLUDE_TOOLCHAIN</span></a>: Specifies whether or not the toolchain
+is included when building the <em class="dfn">Extensible SDK</em>.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_LOCAL_CONF_WHITELIST" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_LOCAL_CONF_WHITELIST</span></a>: A list of variables allowed through
+from the build system configuration into the <em class="dfn">Extensible SDK</em>
+configuration.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_LOCAL_CONF_BLACKLIST" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_LOCAL_CONF_BLACKLIST</span></a>: A list of variables not allowed
+through from the build system configuration into the <em class="dfn">Extensible SDK</em>
+configuration.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_INHERIT_BLACKLIST" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_INHERIT_BLACKLIST</span></a>: A list of classes to remove from the
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-INHERIT" title="(in The Yocto Project ® vVersion: Current Development)"><span>INHERIT</span></a> value globally within the <em class="dfn">Extensible SDK</em>
+configuration.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Application Development with Extensible SDK">Yocto Project Wiki: Application Development with Extensible SDK</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Extensible SDK">Yocto Project Wiki: Extensible SDK</a></p></li>
+</ul>
+</div>
+<p class="rubric">Standard SDK</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bitbake -c populate_sdk imagename
+</pre></div>
+</div>
+<p>The Standard <abbr title="Software Development Kit">SDK</abbr> provides a cross-development toolchain and libraries
+tailored to the contents of a specific image. You would use the <em class="dfn">Standard
+SDK</em> if you want a more traditional toolchain experience as compared to the
+<em class="dfn">Extensible SDK</em>. For a detailed description see the
+<a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/using.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Using the Standard SDK</span></a> chapter in the <a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Application Development and the Extensible Software Development Kit (eSDK)</span></a>.
+Some use case scenarios can read on the <a class="reference external" href="https://wiki.yoctoproject.org/wiki/SDK Generator">Yocto Project Wiki: SDK Generator</a>.</p>
+<p>This next list, shows the variables associated with a <em class="dfn">Standard SDK</em>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPLOY_DIR" title="(in The Yocto Project ® vVersion: Current Development)"><span>DEPLOY_DIR</span></a>: Points to the deploy directory.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDKMACHINE" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDKMACHINE</span></a>: Specifies the architecture of the machine on
+which the cross-development tools are run to create packages for the
+target hardware.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDKIMAGE_FEATURES" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDKIMAGE_FEATURES</span></a>: Lists the features to include in the
+<em class="dfn">target</em> part of the <abbr title="Software Development Kit">SDK</abbr>.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-TOOLCHAIN_HOST_TASK" title="(in The Yocto Project ® vVersion: Current Development)"><span>TOOLCHAIN_HOST_TASK</span></a>: Lists packages that make up the host
+part of the <abbr title="Software Development Kit">SDK</abbr> (i.e. the part that runs on the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDKMACHINE" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDKMACHINE</span></a>).
+When you use BitBake to create the <abbr title="Software Development Kit">SDK</abbr>, a set of default packages apply.
+This variable allows you to add more packages.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-TOOLCHAIN_TARGET_TASK" title="(in The Yocto Project ® vVersion: Current Development)"><span>TOOLCHAIN_TARGET_TASK</span></a>: Lists packages that make up the target
+part of the <abbr title="Software Development Kit">SDK</abbr> (i.e. the part built for the target hardware).</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDKPATH" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDKPATH</span></a>: Defines the default <abbr title="Software Development Kit">SDK</abbr> installation path offered
+by the installation script.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_HOST_MANIFEST" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_HOST_MANIFEST</span></a>: Lists all the installed packages that make
+up the host part of the <abbr title="Software Development Kit">SDK</abbr>. This variable also plays a minor role for
+<em class="dfn">Extensible SDK</em> development as well. However, it is mainly used for the
+<em class="dfn">Standard SDK</em>.</p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SDK_TARGET_MANIFEST" title="(in The Yocto Project ® vVersion: Current Development)"><span>SDK_TARGET_MANIFEST</span></a>: Lists all the installed packages that make
+up the target part of the <abbr title="Software Development Kit">SDK</abbr>. This variable also plays a minor role for
+<em class="dfn">Extensible SDK</em> development as well. However, it is mainly used for the
+<em class="dfn">Standard SDK</em>.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Application Development with Legacy SDK">Yocto Project Wiki: Application Development with Legacy SDK</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/TipsAndTricks/Cmake,Eclipse, and SDKS">Yocto Project Wiki: TipsAndTricks/Cmake,Eclipse, and SDKS</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../final/index.html" class="btn btn-neutral float-right" title="15. Final Closer Look" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../images/index.html" class="btn btn-neutral float-left" title="13. Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2018‒2021 Li-Pro.Net and individual contributors..
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+  
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,3373 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Sphinx 3.4.3" name="producer" />
+<meta content="Sphinx 3.4.3" name="creator" />
+<meta content="Li-Pro.Net" name="publisher" />
+<meta content="Learning Yocto." name="subject" />
+<meta content="LPN-QMS-SHOW-00000,Learning,Yocto,Bitbake" name="keywords" />
+<meta content="Li-Pro.Net — Documentation" name="author" />
+<meta content="2018‒2021 Li-Pro.Net and individual contributors." name="copyright" />
+<meta content="preliminary (:emphasis:`some mature, much in progress`)" name="docstat" />
+<meta content="LPN-QMS-SHOW-00000" name="docnumb" />
+<meta content="Yocto" name="project" />
+<meta content="Yocto" name="title" />
+<meta content="Learning" name="subtitle" />
+<meta content="0.0.0" name="version" />
+<meta content="0.0.0-75-g2094a49" name="release" />
+<meta content="2094a49d" name="identify" />
+
+  <title>Learning Yocto</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/revealjs4/dist/reveal.css" />
+    <link rel="stylesheet" href="https://" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/underline.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/strikethrough.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tweaks-revealjs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/revealjs4/plugin/highlight/zenburn.css" />
+    <link rel="stylesheet" type="text/css" href="_static/revealjs4/dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&amp;display=swap" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/lpn.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Glossary" href="glossary.html" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+    <style>
+      .reveal *, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        font-family: 'M PLUS 1p', sans-serif;
+      }
+    </style>
+    
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides">
+            <aside class="notes">
+Never add or change more than reST role definitions (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Roles:</aside>
+<aside class="notes">
+simple class mappings</aside>
+<aside class="notes">
+conditional raw outputs</aside>
+<aside class="notes">
+inline syntax highlighting for well known languages</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docsummary.rst</aside>
+<aside class="notes">
+Abstract:</aside>
+<aside class="notes">
+Status:</aside>
+<aside class="notes">
+Copyright, License, Credits:</aside>
+<aside class="notes">
+Organization:</aside>
+<aside class="notes">
+Authors:</aside>
+<aside class="notes">
+Licenses:</aside>
+<aside class="notes">
+Preample</aside>
+<aside class="notes">
+Downloads and References:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h1>Learning Yocto</h1>
+<aside class="notes">
+...........................................................................</aside>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit structure and formattings in files:
+index.rstr</aside>
+<p>0.0.0</p>
+<p><span class="raw-html"><small></span> preliminary (<em>some mature, much in progress</em>) <span class="raw-html"></small></span></p>
+<hr class="docutils" />
+<dl class="field-list">
+<dt class="field-odd">Content</dt>
+<dd class="field-odd"><aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docsummary.rsti</aside>
+<aside class="notes">
+Target Audience:</aside>
+<ul class="simple">
+<li class="fragment"><p>Domain and Tool Landscape</p></li>
+<li class="fragment"><p>Concepts, Workflow and Build System</p></li>
+<li class="fragment"><p><em>Dive into the deep</em> – <strong>coming soon</strong></p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</dd>
+</dl>
+<hr class="docutils" />
+<p><span class="raw-html"><small></span>
+<em>build with Sphinx, presented with Reveal.js</em>
+<span class="raw-html"><br /></span>
+Copyright © 2018‒2021 Li-Pro.Net and individual contributors. — All rights reserved. — <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a> — Release: 0.0.0-75-g2094a49
+<span class="raw-html"></small></span>
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License: Attribution-ShareAlike 3.0 Unported" class="align-top" src="https://licensebuttons.net/l/by-sa/3.0/88x31.png" style="height: 30pt;" /></a></p>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit structure and formattings in files:
+index.rstr</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>What for who?</h2>
+<p class="left-justified fragment grow highlight-blue rubric">Involved Components:</p>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docsummary.rsti</aside>
+<aside class="notes">
+Involved Components:</aside>
+<ul class="simple">
+<li class="fragment"><p><strong>Git</strong> – Repo and Manifest</p></li>
+<li class="fragment"><p><strong>Yocto</strong> – Terms and Workflow</p></li>
+<li class="fragment"><p><strong>Bitbake</strong> – Layer and Recipies</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p class="left-justified fragment grow highlight-blue rubric">Audience:</p>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docsummary.rsti</aside>
+<aside class="notes">
+Target Audience:</aside>
+<ul class="simple">
+<li class="fragment"><p>System Architects</p></li>
+<li class="fragment"><p>Hard- and Software Developers</p></li>
+<li class="fragment"><p>Integrators and Testers</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit structure and formattings in files:
+index.rstr</aside>
+</section>
+<section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>What you should know?</h2>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docpreample.rsti</aside>
+<aside class="notes">
+Readers' Prerequisites:</aside>
+<ul class="simple">
+<li class="fragment"><p>Revision Controll Systems</p></li>
+<li class="fragment"><p>Configuration and Build Tools</p></li>
+<li class="fragment"><p>Distribution and Packaging</p></li>
+<li class="fragment"><p>Scripting</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Revision Controll Systems</h3>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docpreample.rsti</aside>
+<aside class="notes">
+Readers' Prerequisites: Revision Controll Systems</aside>
+<ul class="simple">
+<li class="fragment"><p>Git</p></li>
+<li class="fragment"><p>Subversion</p></li>
+<li class="fragment"><p>Mercurial</p></li>
+<li class="fragment"><p>Principals of work</p></li>
+<li class="fragment"><p>Collaboration work</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Configuration and Build Tools</h3>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docpreample.rsti</aside>
+<aside class="notes">
+Readers' Prerequisites: Configuration and Build Tools</aside>
+<ul class="simple">
+<li class="fragment"><p>Kconfig + GNU Make</p></li>
+<li class="fragment"><p>Autotools and CMake</p></li>
+<li class="fragment"><p>Qmake</p></li>
+<li class="fragment"><p>Ninja</p></li>
+<li class="fragment"><p>Source Code Patching</p></li>
+<li class="fragment"><p>Triad: <code class="code docutils literal notranslate"><span class="pre">config</span></code> → <code class="code docutils literal notranslate"><span class="pre">make</span></code> → <code class="code docutils literal notranslate"><span class="pre">install</span></code></p></li>
+<li class="fragment"><p>Canadian Cross: <code class="code docutils literal notranslate"><span class="pre">build</span></code> → <code class="code docutils literal notranslate"><span class="pre">host</span></code> → <code class="code docutils literal notranslate"><span class="pre">target</span></code></p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Distribution and Packaging</h3>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docpreample.rsti</aside>
+<aside class="notes">
+Readers' Prerequisites: Distribution and Packaging</aside>
+<ul class="simple">
+<li class="fragment"><p>Debian Packages: <code class="file docutils literal notranslate"><span class="pre">*.deb</span></code></p></li>
+<li class="fragment"><p>Red Hat Packages: <code class="file docutils literal notranslate"><span class="pre">*.rpm</span></code></p></li>
+<li class="fragment"><p>Open Packages:  <code class="file docutils literal notranslate"><span class="pre">*.opkg</span></code> /  <code class="file docutils literal notranslate"><span class="pre">*.ipkg</span></code></p></li>
+<li class="fragment"><p>System Root: <code class="code docutils literal notranslate"><span class="pre">SYSROOT</span></code></p></li>
+<li class="fragment"><p>Destination Directory: <code class="code docutils literal notranslate"><span class="pre">DESTDIR</span></code></p></li>
+<li class="fragment"><p>Package Repository (Server)</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Scripting</h3>
+<aside class="notes">
+Never add or change more than meta informations (ex. LaTeX formatting),
+instead edit content in files:
+docpreample.rsti</aside>
+<aside class="notes">
+Readers' Prerequisites: Scripting</aside>
+<ul class="simple">
+<li class="fragment"><p>Bash</p></li>
+<li class="fragment"><p>Python</p></li>
+<li class="fragment"><p>Perl (rarely)</p></li>
+</ul>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+...........................................................................</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Challenge</h2>
+<img alt="_images/challenge.svg" src="_images/challenge.svg" /><aside class="notes">
+TBD: write down your &quot;Challenge&quot; notes here ...</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33" data-transition="slide">
+<h3>Example: UI Toolkits</h3>
+<img alt="_images/Free_and_open-source-software_display_servers_and_UI_toolkits.svg" src="_images/Free_and_open-source-software_display_servers_and_UI_toolkits.svg" /><p><span class="raw-html"><small></span> <a class="reference external" href="https://en.wikipedia.org/wiki/Linux#Desktop">English Wikipedia: Linux#Desktop</a> <span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Example: UI Toolkits&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Collaboration</h3>
+<img alt="_images/collaboration.svg" src="_images/collaboration.svg" /><aside class="notes">
+TBD: write down your &quot;Collaboration&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/collaboration.svg" data-background-transition="slide" data-background-position="center" data-background-size="cover" data-background-opacity="0.08">
+<h3>Market</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">→ that are:</p>
+<ul class="simple">
+<li class="fragment"><p>Customer and User</p></li>
+<li class="fragment"><p>Retailer and Service</p></li>
+</ul>
+<p class="left-justified fragment grow highlight-blue rubric">→ which are constantly looking for:</p>
+<ul class="simple">
+<li class="fragment"><p>Improvements and Bug Fixes (updates)</p></li>
+<li class="fragment"><p>Features and Extensions (back ports)</p></li>
+<li class="fragment"><p>Documentation and Tests</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Market&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/collaboration.svg" data-background-transition="slide" data-background-position="center" data-background-size="cover" data-background-opacity="0.08">
+<h3>Vendor and Contractor</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">→ all participants and partners:</p>
+<ul class="simple">
+<li class="fragment"><p>Engineers</p></li>
+<li class="fragment"><p>Business Owners</p></li>
+<li class="fragment"><p>Compliance Offices</p></li>
+</ul>
+<p class="left-justified fragment grow highlight-blue rubric">→ have to ensure results with:</p>
+<ul class="simple">
+<li class="fragment"><p>protected release base line: <abbr title="SCMP">Software Configuration Management Plan</abbr></p></li>
+<li class="fragment"><p>build and test: <abbr title="CI">Continuous Integration</abbr></p></li>
+<li class="fragment"><p><strong>DISTRIBUTION</strong>: <abbr title="CD">Continuous Deployment / Delivery</abbr></p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Vendor and Contractor&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/collaboration.svg" data-background-transition="slide" data-background-position="center" data-background-size="cover" data-background-opacity="0.08">
+<h3>Community</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">→ what is their role  ❓ </p>
+<ul class="simple">
+<li class="fragment"><p>best efforts to <strong>COOPERATE</strong> with and <strong>MUTUAL ASSISTANCE</strong> the business</p></li>
+<li class="fragment"><p> 🈚  <em>free of charge</em>: <strong>SCALE</strong>, <strong>BE FAST</strong>, pay later</p></li>
+<li class="fragment"><p> 🈺  <em>open for business</em>: <strong>SHARE WITH ALL</strong>,
+no protection, survival of the fittest</p></li>
+<li class="fragment"><p> 🈴  <em>passing grade</em>: <strong>BEST FOR ALL</strong>, acceptance</p></li>
+<li class="fragment"><p> ㊙  <em>secret</em>: kick out the Troll</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Community&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/collaboration.svg" data-background-transition="slide" data-background-position="center" data-background-size="cover" data-background-opacity="0.08">
+<h3>Business</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">→ where and who am I  ❓ </p>
+<ul class="simple">
+<li class="fragment"><p>mostly I am a tiny candle in front of the biggest star of all</p></li>
+<li class="fragment"><p>leads to: relation of  🕯  <em>candle</em> /  ⭐  <em>star</em></p></li>
+<li class="fragment"><p>ask you: what is <strong>MY BUSINESS</strong>  🕯  <em>candle</em></p></li>
+<li class="fragment"><p>ask you: what is <strong>THE COMMUNITY</strong>  ⭐  <em>star</em></p></li>
+</ul>
+<p class="fragment grow highlight-blue rubric">my experience of the last 20 years:</p>
+<p class="fragment fade-in"><strong>10</strong>–<strong>40 %</strong>  🕯  <em>candle</em> /
+<strong>90</strong>–<strong>60 %</strong>  ⭐  <em>star</em></p>
+<aside class="notes">
+TBD: write down your &quot;Business&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/collaboration.svg" data-background-transition="slide" data-background-position="center" data-background-size="cover" data-background-opacity="0.08">
+<h3>Domains</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">→ the <strong>COMMUNITY</strong> – there are we all  ‼ </p>
+<ul class="simple">
+<li class="fragment"><p>Market with its Suppliers and Vendors</p></li>
+<li class="fragment"><p>Contractors and their Principals</p></li>
+</ul>
+<p class="left-justified fragment grow highlight-blue rubric">→ we <em>should</em> take over the <strong>WORKFLOWS</strong>  ‼ </p>
+<ul class="simple">
+<li class="fragment"><p>Infrastructure</p></li>
+<li class="fragment"><p>Frameworks</p></li>
+<li class="fragment"><p>Toolboxes</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Domains&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Intentions</h2>
+<p>from the perspective of:</p>
+<ul class="simple">
+<li class="fragment"><p>Architecture</p></li>
+<li class="fragment"><p>Life Cycle</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Intentions&quot; notes here ...</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Architecture</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">1 – Product Management</p>
+<p class="left-justified fragment fade-in">which hard- and software features we have, and need for a specific product
+→ <span class="underline">feature sets</span></p>
+<p class="left-justified fragment grow highlight-blue rubric">2 – Feature Management</p>
+<p class="left-justified fragment fade-in">how the distribution looks for a given feature set
+→ <span class="underline">composing</span></p>
+<p class="left-justified fragment grow highlight-blue rubric">3 – Distribution Management</p>
+<p class="left-justified fragment fade-in">which packages will needed for a given distribution / composing
+→ <span class="underline">flavor</span></p>
+<aside class="notes">
+TBD: write down your &quot;Architecture&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Life Cycle</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">4 – Package Management</p>
+<p class="left-justified fragment fade-in">how to <span class="underline">build and deploy</span> the given list of packages
+and their dependencies</p>
+<p class="left-justified fragment grow highlight-blue rubric">5 – Deployment Management</p>
+<p class="left-justified fragment fade-in">what have to <span class="underline">share</span> and how to <span class="underline">distribute</span>
+all the resulting artefacts</p>
+<p class="left-justified fragment grow highlight-blue rubric">6 – QA Management (Test, Integration)</p>
+<p class="left-justified fragment fade-in">how to <span class="underline">ensure accuracy</span> of all the development,
+in parts and altogether</p>
+<aside class="notes">
+TBD: write down your &quot;Life Cycle&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Decision</h2>
+<p><span class="raw-html"><small></span>
+excerpts and quotes from
+<span id="id1">[<a class="reference internal" href="bibliography.html#id16"><span>Str15</span></a>,<a class="reference internal" href="bibliography.html#id19"><span>OMM15</span></a>]</span>. — © 2015 The Linux Foundation.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment grow highlight-blue rubric">Embedded Linux Landscape</p>
+<ul class="simple">
+<li class="fragment"><p>Android</p></li>
+<li class="fragment"><p>Baserock</p></li>
+<li class="fragment"><p>Buildroot</p></li>
+<li class="fragment"><p>OpenEmbedded</p></li>
+<li class="fragment"><p>OpenWrt</p></li>
+<li class="fragment"><p>The Yocto Project</p></li>
+<li class="fragment"><p>Commercial Distributions</p></li>
+</ul>
+<p class="left-justified fragment grow highlight-blue rubric">Reflection</p>
+<ul class="simple">
+<li class="fragment"><p><strong>Buildroot</strong> ↔ <strong>The Yocto Project</strong></p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Decision&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+TBD: write down your &quot;Decision&quot; notes here ...</aside>
+</section>
+<section data-background-image="_static/ar.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Android</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://source.android.com/">https://source.android.com/</a></p>
+<ul class="simple">
+<li class="fragment"><p>Great for systems with ARM-based SoCs and touch screens</p></li>
+<li class="fragment"><p>Build system and development tools by Google</p></li>
+<li class="fragment"><p>Java based system runtime environment on target</p></li>
+<li class="fragment"><p>Stable and widely accepted Java API for final applications</p></li>
+<li class="fragment"><p>Very limited adaptability for vendors, contributors or customers</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Android&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/brck.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Baserock</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://www.baserock.org/">https://www.baserock.org/</a></p>
+<ul class="simple">
+<li class="fragment"><p>Targeted for embedded appliances</p></li>
+<li class="fragment"><p>Slightly pushed by the GENIVI Alliance</p></li>
+<li class="fragment"><p>Native Builds for x86, x86_64, ARMv7</p></li>
+<li class="fragment"><p>Based on <a class="reference external" href="https://wiki.baserock.org/Morph/">Morph</a> workflow tool</p></li>
+<li class="fragment"><p>Maintained by <a class="reference external" href="http://codethink.co.uk/">Codethink Ltd.</a></p></li>
+</ul>
+<p class="left-justified fragment fade-in"><span class="raw-html"><small></span>
+Last releases in 2016. → <a class="reference external" href="https://wiki.baserock.org/releases/">https://wiki.baserock.org/releases/</a>
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Baserock&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/br.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Buildroot</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://buildroot.org/">https://buildroot.org/</a></p>
+<ul class="simple">
+<li class="fragment"><p>Targeted for complete Linux root filesystem build</p></li>
+<li class="fragment"><p>Generate a cross-compilation toolchain</p></li>
+<li class="fragment"><p>Simplifies and automates the building</p></li>
+<li class="fragment"><p><a class="reference external" href="https://www.uclibc-ng.org/">uClibc</a> or <a class="reference external" href="https://www.musl-libc.org/">musl</a> target library</p></li>
+<li class="fragment"><p><a class="reference external" href="https://busybox.net/">BusyBox</a> command line utility applications</p></li>
+<li class="fragment"><p>Based on <a class="reference external" href="https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html">Kconfig</a> and <a class="reference external" href="https://www.gnu.org/software/make/">GNU Make</a> build tool</p></li>
+<li class="fragment"><p>Promoted by french non-profit <a class="reference external" href="https://buildroot.org/association.html">Buildroot Association</a></p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Buildroot&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/oe.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>OpenEmbedded</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://www.openembedded.org/">https://www.openembedded.org/</a></p>
+<ul class="simple">
+<li class="fragment"><p>Created by merging OpenZaurus with contributions from Familiar Linux,
+OpenSIMPad into a common code base</p></li>
+<li class="fragment"><p>Focusing on broad hardware and architectures</p></li>
+<li class="fragment"><p>Based on <a class="reference external" href="https://github.com/openembedded/bitbake">BitBake</a> build engine</p></li>
+<li class="fragment"><p>Technology code base for the Yocto Project and the Ångström Distribution</p></li>
+</ul>
+<p class="left-justified fragment fade-in"><span class="raw-html"><small></span>
+The Ångström Distribution was widely used on TI-based embedded boards like
+the BeagleBoard and PandaBoard and uses the Yocto Project build environment.
+Last releases in 2017 (2020). → <a class="reference external" href="https://github.com/Angstrom-distribution">https://github.com/Angstrom-distribution</a>
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;OpenEmbedded&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/ow.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>OpenWrt</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://www.openwrt.org/">https://www.openwrt.org/</a></p>
+<ul class="simple">
+<li class="fragment"><p>Debuted as open source OS for embedded devices routing network traffic</p></li>
+<li class="fragment"><p>Originally created from Linksys GPL sources for their WRT54G residential gateway</p></li>
+<li class="fragment"><p>Targeted thousands of <a class="reference external" href="https://openwrt.org/toh/start">different hardware</a></p></li>
+<li class="fragment"><p>Buildroot-based build environment</p></li>
+<li class="fragment"><p>Headless operation with web UI</p></li>
+<li class="fragment"><p>Member of <a class="reference external" href="https://sfconservancy.org/">Software Freedom Conservancy</a> (like Git, Inkscape, or Qemu)</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;OpenWrt&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Reflection 1/2</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p>→ <a class="reference external" href="https://lwn.net/Articles/682540/">https://lwn.net/Articles/682540/</a>
+(<a class="reference external" href="https://bootlin.com/pub/conferences/2016/elc/belloni-petazzoni-buildroot-oe/belloni-petazzoni-buildroot-oe.pdf">ELCE-2016</a>, <a class="reference external" href="https://elinux.org/images/9/9a/Buildroot-vs-Yocto-Differences-for-Your-Daily-Job-Luca-Ceresoli-AIM-Sportline.pdf">ELCE-2018</a>, <a class="reference external" href="https://youtu.be/wCVYQWFIvBs">Youtube</a>)</p>
+<table class="colwidths-given longtable docutils align-center" style="width: 100%">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p>Buildroot</p></th>
+<th class="head"><p>Yocto Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Minimal Size:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="green">2.2 MB</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="red">4.9 MB</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Build Time:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="green">15-45 minutes</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="red">1-2 hours</span> (at least)</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Concept:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="blue">single Makefile</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">layered classes</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Complexity:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="yellow">being simple by design, only patchable</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">multiple aspects of composing and QA</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Composing:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="blue">multiple Kconfig file</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">feature driven</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>State Cache:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="red">compiler only</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">on task level</span> (states)</p></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+TBD: write down your &quot;Reflection&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Reflection 2/2</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<table class="colwidths-given longtable docutils align-center" style="width: 100%">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p>Buildroot</p></th>
+<th class="head"><p>Yocto Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Rebuild:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="red">full</span> (<span class="yellow">will be improved</span>)</p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">partial per task / on changes</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Meta/Configure:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="blue">fixed</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">sharable</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Output:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="red">no packages or SDK</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">images, packages, SDK, licenses, manifests</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Reliance:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="red">no QA workflow</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">documented QA and RM</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>3rd Party:</p></th>
+<td><p class="left-justified fragment fade-in"><span class="red">rare, some few</span></p></td>
+<td><p class="left-justified fragment fade-in"><span class="green">many (growing)</span></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Decision:</p></th>
+<td><p>Buildroot</p></td>
+<td><p class="fragment grow highlight-blue">Yocto Project</p>
+<aside class="notes">
+</aside>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+TBD: write down your &quot;Reflection&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>About</h2>
+<p>→ <a class="reference external" href="https://www.yoctoproject.org/about">About the Yocto Project</a>®</p>
+<p class="left-justified fragment grow highlight-blue">The Yocto Project is not an Embedded Linux Distribution.</p>
+<p class="left-justified fragment fade-in">It creates a custom one for You!</p>
+<p class="left-justified fragment grow highlight-blue">The Yocto Project is not Single Open Source Project.</p>
+<p class="left-justified fragment fade-in">It is an Ecosystem.</p>
+<p class="left-justified fragment fade-in"><span class="raw-html"><small></span>
+The Yocto Project combines the convenience of a ready-to-run Linux
+Distribution with the flexibility of a custom Linux operating system
+stack. <span id="id2">[<a class="reference internal" href="bibliography.html#id16"><span>Str15</span></a>,<a class="reference internal" href="bibliography.html#id19"><span>OMM15</span></a>]</span> — © 2015 The Linux Foundation and Yocto Project.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;About&quot; notes here ...</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/lf.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Governance Structure</h3>
+<p>→ <a class="reference external" href="https://www.yoctoproject.org/ecosystem">Ecosystem</a> and <a class="reference external" href="https://www.yoctoproject.org/ecosystem/yocto-project-compatible-product-showcase">Showcase</a></p>
+<ul class="simple">
+<li class="fragment"><p>based on meritocracy (leadership by demonstrated achievement)</p></li>
+<li class="fragment"><p>managed by its chief architect, <strong>Richard Purdie</strong>,
+a <a class="reference external" href="https://www.linuxfoundation.org/about/fellows/">Linux Foundation fellow</a></p></li>
+<li class="fragment"><p>remain independent of any one of its member organizations</p></li>
+</ul>
+<p class="left-justified fragment fade-in">The Yocto Project is a <a class="reference external" href="https://www.linuxfoundation.org/en/projects/">lab workgroup</a> of the <a class="reference external" href="https://www.linuxfoundation.org/">Linux Foundation</a>,
+who owns its trademark.</p>
+<aside class="notes">
+TBD: write down your &quot;Governance Structure&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Achievement and Standing</h3>
+<ul class="simple">
+<li class="fragment"><p>open source collaboration project</p></li>
+<li class="fragment"><p>founded in 2010 as a collaboration among many hardware manufacturers,
+open-source operating systems vendors and electronics companies</p></li>
+<li class="fragment"><p>help you create custom Linux-based systems for embedded products</p></li>
+<li class="fragment"><p>regardless of the hardware architecture</p></li>
+<li class="fragment"><p>provides templates, tools and methods (Best-Practice)</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Achievement and Standing&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/oe.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Offer and Support</h3>
+<ul class="simple">
+<li class="fragment"><p>resources and information for new and experienced users</p></li>
+<li class="fragment"><p>core system component recipes by <abbr title="OpenEmbedded">OE</abbr></p></li>
+<li class="fragment"><p>example code to demonstrate its capabilities</p></li>
+<li class="fragment"><p>include the Yocto Project Linux kernel</p></li>
+<li class="fragment"><p>covers several build profiles across multiple architectures:
+ARM, PPC, x86, and more</p></li>
+<li class="fragment"><p><abbr title="Board Support Package">BSP</abbr> layers for customer or vendor specific platform support</p></li>
+<li class="fragment"><p><abbr title="Board Support Package">BSP</abbr> layers follow a predetermined and standardized format</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Offer and Support&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Yocto Project Provides</h3>
+<img alt="_images/yp-provides.svg" src="_images/yp-provides.svg" /><ul class="simple">
+<li class="fragment"><p>embedded tools</p></li>
+<li class="fragment"><p>best practices</p></li>
+<li class="fragment"><p>reference implementation</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Yocto Project Provides&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Yocto Project Community</h3>
+<img alt="_images/yp-community.svg" src="_images/yp-community.svg" /><ul class="simple">
+<li class="fragment"><p>Linux Foundation: chief architect</p></li>
+<li class="fragment"><p><abbr title="OE">OpenEmbedded</abbr>: technologies and software</p></li>
+<li class="fragment"><p>silicon vendors and electronics companies</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Yocto Project Community&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Terms, Concepts, Idioms</h2>
+<p>→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Terms</span></a></p>
+<p>slightly extended</p>
+<aside class="notes">
+TBD: write down your &quot;Terms, Concepts and Idioms&quot; notes here ...</aside>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Terms overall</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Git Repo</strong> (<code class="file docutils literal notranslate"><span class="pre">repo</span></code>):
+The collection manager that Google has built on top of Git to help
+<span class="underline">manage multiple Git repositories</span>, does the uploads to
+Gerrit and automates the Android system image development workflow.
+The <strong class="command">repo</strong> command is an executable <a class="reference internal" href="_glossary/programming-languages.html#term-Python"><span class="xref std std-term">Python</span></a> script that you
+can put anywhere in your path.
+→ <a class="reference external" href="https://gerrit.googlesource.com/git-repo/">https://gerrit.googlesource.com/git-repo/</a></p></li>
+<li class="fragment"><p><strong>BitBake</strong>:
+The <strong>Task</strong> <span class="underline">executor and scheduler</span> used by the
+<strong>Build System</strong> to build <strong>Images</strong>. The <strong class="command">bitbake</strong>
+command is part of an fancy <a class="reference internal" href="_glossary/programming-languages.html#term-Python"><span class="xref std std-term">Python</span></a> and Bash environment around the
+<strong>BitBake</strong> project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-BitBake" title="(in The Yocto Project ® vVersion: Current Development)"><span>BitBake</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/bitbake">BitBake</a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bitbake/index.html" title="(in Bitbake vVersion: Current Development)"><span>BitBake User Manual</span></a></p></li>
+<li class="fragment"><p><strong>Metadata</strong>:
+The <span class="underline">files</span> that <strong>BitBake</strong> <span class="underline">parses when
+building</span> an <strong>Images</strong>. In general, <strong>Metadata</strong> provides
+<strong>Recipes</strong>, <strong>Classes</strong> and  <strong>Configuration Files</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Metadata" title="(in The Yocto Project ® vVersion: Current Development)"><span>Metadata</span></a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bitbake/index.html" title="(in Bitbake vVersion: Current Development)"><span>BitBake User Manual</span></a>
+→ <a class="reference external" href="https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-intro.html" title="(in Bitbake vVersion: Current Development)"><span>Overview</span></a>
+→ <a class="reference external" href="https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-intro.html#introduction" title="(in Bitbake vVersion: Current Development)"><span>Introduction</span></a></p></li>
+<li class="fragment"><p><strong>OE-Core</strong>:
+A <span class="underline">core set</span> of <strong>Metadata</strong> originating with <abbr title="OE">OpenEmbedded</abbr>
+that is shared between <abbr title="OpenEmbedded">OE</abbr> and the Yocto Project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-OpenEmbedded-Core-OE-Core" title="(in The Yocto Project ® vVersion: Current Development)"><span>OpenEmbedded-Core (OE-Core)</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/openembedded-core">OE-Core</a>, or
+<a class="reference external" href="https://www.openembedded.org/wiki/OpenEmbedded-Core#Introduction">OE Wikipedia</a></p></li>
+<li class="fragment"><p><strong>Poky</strong>:
+The reference <span class="underline">distribution</span> of the Yocto Project. It contains
+the <strong>Build System</strong> (<strong>BitBake</strong> and <strong>OE-Core</strong>) as
+well as a set of <strong>Metadata</strong> to get you started building your own
+<abbr title="distribution">distro</abbr>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Poky" title="(in The Yocto Project ® vVersion: Current Development)"><span>Poky</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/poky">Poky</a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/reference-distribution">Yocto Reference Distribution</a></p></li>
+</ol>
+<aside class="notes">
+TBD: write down your &quot;Terms overall&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Terms internal</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Layer</strong>:
+A <span class="underline">collection</span> of <strong>Recipes</strong> <span class="underline">representing
+the core</span>, a <abbr title="BSP">Board Support Package</abbr>, an <span class="underline">application stack</span>, or any other
+<span class="underline">3rd party contributions</span>. <strong>Layers</strong> are hierarchical
+in their ability to override previous specifications.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Layer" title="(in The Yocto Project ® vVersion: Current Development)"><span>Layer</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#layers" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p>
+<ul class="simple">
+<li><p>list of <a class="reference external" href="https://www.yoctoproject.org/software-overview/layers">Yocto Compatible Layers</a></p></li>
+<li><p>list of <a class="reference external" href="https://layers.openembedded.org/layers">OpenEmbedded Contributed Layers</a></p></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Image</strong>:
+An <span class="underline">artifact</span> of the <strong>BitBake</strong> build process given
+a collection of <strong>Recipes</strong> and related <strong>Metadata</strong>.
+<strong>Images</strong> are the binary output that run on specific target
+architecture.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Image" title="(in The Yocto Project ® vVersion: Current Development)"><span>Image</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#images" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/images.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+<li class="fragment"><p><strong>Package</strong>:
+Refers to a <strong>Recipe</strong>’s <span class="underline">packaged output</span> produced
+by <strong>BitBake</strong> (i.e. a <em>“baked recipe”</em>). A
+<strong>Package</strong> is generally the <span class="underline">compiled binaries</span>
+produced from the <strong>Recipe</strong>’s sources. You <em>“bake”</em>
+any <em>“bin”</em> by running it through <strong>BitBake</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Package" title="(in The Yocto Project ® vVersion: Current Development)"><span>Package</span></a></p></li>
+<li class="fragment"><p><strong>Package Groups</strong>:
+Arbitrary <span class="underline">group of software</span> <strong>Recipes</strong>. You use
+<strong>Package Groups</strong> to hold <strong>Recipes</strong> that, when built,
+<span class="underline">usually accomplish a single</span> <strong>Task</strong>. For example,
+<strong>Package Groups</strong> could contain the <strong>Recipes</strong> for a
+company’s proprietary or value-add software.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Package-Groups" title="(in The Yocto Project ® vVersion: Current Development)"><span>Package Groups</span></a></p></li>
+<li class="fragment"><p><strong>Task</strong>:
+A <span class="underline">unit of execution</span> for <strong>BitBake</strong> (e.g.
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-fetch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_fetch</span></a>, <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-patch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_patch</span></a>,
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-compile" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_compile</span></a>, and so forth).
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Task" title="(in The Yocto Project ® vVersion: Current Development)"><span>Task</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+</ol>
+<aside class="notes">
+TBD: write down your &quot;Terms internal&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Metadata</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Classes</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bbclass</span></code> file extension that provided for
+<span class="underline">logic encapsulation and inheritance</span> so that commonly
+used patterns can be <span class="underline">defined once and then easily used</span>
+in multiple <strong>Recipes</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Classes" title="(in The Yocto Project ® vVersion: Current Development)"><span>Classes</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#classes" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/classes.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+<li class="fragment"><p><strong>Recipes</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bb</span></code> file extension have a <span class="underline">set of
+instructions</span> for building <strong>Packages</strong> or <strong>Package
+Groups</strong> or <strong>Images</strong> and describes where you get source code,
+which patches to apply, how to configure the source, <span class="underline">how
+to compile</span> it and so on. It also <span class="underline">describe dependencies</span>
+for libraries or for other <strong>Recipes</strong>. <strong>Recipes</strong>
+represent the <span class="underline">logical unit of execution</span>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Recipe" title="(in The Yocto Project ® vVersion: Current Development)"><span>Recipe</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#recipes" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p></li>
+<li class="fragment"><p><strong>Append Files</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bbappend</span></code> file extension that append build
+information to a <strong>Recipe</strong>. The <strong>Build System</strong> respects
+every <strong>Append file</strong> to have a corresponding <strong>Recipe</strong>
+(<code class="file docutils literal notranslate"><span class="pre">.bb</span></code>) file.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Append-Files" title="(in The Yocto Project ® vVersion: Current Development)"><span>Append Files</span></a></p></li>
+<li class="fragment"><p><strong>Configuration Files</strong>:
+Configuration information in various
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Configuration-File" title="(in The Yocto Project ® vVersion: Current Development)"><span>Configuration File</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#configurations" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p></li>
+</ol>
+<aside class="notes">
+TBD: write down your &quot;Metadata&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Features</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Features</span></a> provide a mechanism for:</p>
+<ol class="arabic simple">
+<li class="fragment"><p>working out which <strong>Packages</strong> or <strong>Package Groups</strong> should
+be included in the generated <strong>Image</strong>, typically configured in
+<strong>Image</strong> <strong>Recipes</strong> and their related <strong>Classes</strong>
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-image" title="(in The Yocto Project ® vVersion: Current Development)"><span>Image Features</span></a></p></li>
+<li class="fragment"><p>distributions <strong>Configuration Files</strong> can select which features
+they want to support
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-distro" title="(in The Yocto Project ® vVersion: Current Development)"><span>Distro Features</span></a></p></li>
+<li class="fragment"><p>machine <strong>Configuration Files</strong> specifies the hardware functions
+that will be available for a given machine
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-machine" title="(in The Yocto Project ® vVersion: Current Development)"><span>Machine Features</span></a></p></li>
+<li class="fragment"><p>backward and inter-layer compatibility for special (historical) cases
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-backfill" title="(in The Yocto Project ® vVersion: Current Development)"><span>Feature Backfilling</span></a></p></li>
+</ol>
+<aside class="notes">
+TBD: write down your &quot;Features&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<a class="reference internal image-reference" href="_images/features.svg"><img alt="_images/features.svg" class="align-right" src="_images/features.svg" width="300px" /></a>
+<p><span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Idioms</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Build System</strong>:
+The build system specific to the Yocto Project based on the project
+<strong>Poky</strong>, which uses <strong>BitBake</strong> as the <strong>Task</strong>
+executor.</p></li>
+<li class="fragment"><p><strong>Source Directory</strong>:
+Refers to the directory structure created as a result of creating a
+local copy of the <strong>Poky</strong> and all other Git repositories as
+referred by the <strong>Git Repo</strong> manifest. It contains <strong>BitBake</strong>,
+Documentation, <strong>Metadata</strong> and other files that all support the
+Yocto Project. Consequently, you must have the <strong>Source Directory</strong>
+in place on your development system in order to do any development using
+the Yocto Project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Source-Directory" title="(in The Yocto Project ® vVersion: Current Development)"><span>Source Directory</span></a></p></li>
+<li class="fragment"><p><strong>Build Directory</strong>:
+This term refers to the area used by the <strong>Build System</strong> for
+downloads, builds and deployments.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Build-Directory" title="(in The Yocto Project ® vVersion: Current Development)"><span>Build Directory</span></a></p></li>
+<li class="fragment"><p><strong>Cross-Development Toolchain</strong>:
+A collection of cross-compilers, linkers, debuggers, libraries and
+utilities that run on one architecture and allow you to develop
+software for a different, or targeted, architecture.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Cross-Development-Toolchain" title="(in The Yocto Project ® vVersion: Current Development)"><span>Cross-Development Toolchain</span></a></p></li>
+<li class="fragment"><p><strong>Board Support Package (BSP)</strong>:
+A group of drivers, definitions, and other components that provide
+support for a specific hardware configuration.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Board-Support-Package-BSP" title="(in The Yocto Project ® vVersion: Current Development)"><span>Board Support Package (BSP)</span></a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bsp-guide/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Board Support Package Developer’s Guide</span></a> and <a class="reference external" href="https://docs.yoctoproject.org/kernel-dev/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Linux Kernel Development Manual</span></a></p></li>
+</ol>
+<aside class="notes">
+TBD: write down your &quot;Idioms&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Conclusion</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<div class="important admonition">
+<p class="admonition-title">the following applies and is unavoidable</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Git Repo:</strong> determines the code base line</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Layers:</strong> are essential and able to overlay</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Classes:</strong> inheritable but not extensible</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Recipes:</strong> extensible but not inheritable</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Features:</strong> determines the final product</p>
+</div>
+<aside class="notes">
+TBD: write down your &quot;Conclusion&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/ar.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Git Repo Manifest</h2>
+<p class="rubric">PREFACE</p>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="left-justified fragment fade-in">A product firmware stack will developed locally and pushed to
+different in-house or external repositories at irregular intervals.
+A tool to unifies all that repositories as necessary, performs
+uploads and automates the pull and sync process will be needed.</p>
+<p class="left-justified fragment fade-in">The <strong class="command">repo</strong> tool and a meta Git repository called
+<em>manifest</em> or such as in our case <em>platform repo</em>
+make it possible to get all the code needed to build your own Yocto
+<em>source</em> and <em>build directory</em>.</p>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+TBD: write down your &quot;Git Repo Manifest&quot; notes here ...</aside>
+</section>
+<section data-background-image="_static/ar.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Android Tools</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+excerpts and quotes from
+<a class="reference external" href="https://source.android.com/setup/develop#repo">https://source.android.com/setup/develop#repo</a> — © 2008–2021 Google LLC.
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment grow highlight-blue rubric">Git</p>
+<p class="left-justified fragment fade-in">handle projects that are distributed over
+<span class="underline">multiple Git repositories</span></p>
+<p class="left-justified fragment grow highlight-blue rubric">Repo</p>
+<p class="left-justified fragment fade-in"><span class="underline">unifies Git repositories</span>, performs uploads to Gerrit,
+and automates the workflow</p>
+<p class="left-justified fragment grow highlight-blue rubric">Gerrit</p>
+<p class="left-justified fragment fade-in"><span class="underline">code review</span> system for projects that use Git</p>
+<aside class="notes">
+TBD: write down your &quot;Android Tools&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Platform Manifest</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central-repo">https://github.com/lipro-yocto/lpn-central-repo</a>
+<span class="raw-html"></small></span></p>
+<pre><code data-trim data-noescape class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;manifest&gt;
+
+  &lt;default sync-j=&quot;4&quot; revision=&quot;master&quot;/&gt;
+
+  &lt;remote fetch=&quot;https://git.yoctoproject.org/git&quot; name=&quot;yocto&quot;/&gt;
+  &lt;remote fetch=&quot;https://github.com/openembedded&quot; name=&quot;oe&quot;/&gt;
+  &lt;remote fetch=&quot;https://github.com/meta-qt5&quot; name=&quot;qt5&quot;/&gt;
+  &lt;remote fetch=&quot;https://github.com/lipro-yocto&quot; name=&quot;lpy&quot;/&gt;
+
+  &lt;project remote=&quot;yocto&quot; name=&quot;poky&quot; path=&quot;sources/poky&quot;/&gt;
+  &lt;project remote=&quot;yocto&quot; name=&quot;meta-mingw&quot; path=&quot;sources/yocto/meta-mingw&quot;/&gt;
+  &lt;project remote=&quot;oe&quot; name=&quot;meta-openembedded&quot; path=&quot;sources/openembedded&quot;/&gt;
+  &lt;project remote=&quot;qt5&quot; name=&quot;meta-qt5&quot; path=&quot;sources/qt/meta-qt5&quot; /&gt;
+
+  &lt;project remote=&quot;lpy&quot; name=&quot;lpn-central&quot; path=&quot;sources/central&quot;&gt;
+    &lt;copyfile dest=&quot;setup-environment&quot; src=&quot;scripts/setup-environment&quot;/&gt;
+  &lt;/project&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p class="left-justified fragment fade-in"><span class="raw-html"><small></span>
+→ <a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs">https://gerrit.googlesource.com/git-repo/+/master/docs</a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment fade-in"><a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md">Manifest Format</a>,
+<a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/internal-fs-layout.md#dotconfig-layout">Configuration</a>,
+<a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/repo-hooks.md">Hooks</a></p>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h3>Platform Pipeline</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<aside class="notes">
+TBD: write down your &quot;Platform Pipeline&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<img alt="_images/lpn-central-bsp-pipeline.svg" src="_images/lpn-central-bsp-pipeline.svg" /><aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h2>Build System</h2>
+<p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#openembedded-build-system-concepts" title="(in The Yocto Project ® vVersion: Current Development)"><span>OpenEmbedded Build System Concepts</span></a></p>
+<p><span class="raw-html"><small></span>
+In general, the build’s workflow consists of several functional areas.
+<span class="raw-html"></small></span></p>
+<img alt="_images/areas.svg" src="_images/areas.svg" /><aside class="notes">
+TBD: write down your &quot;Build System&quot; notes here ...</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Configuration Area</h3>
+<img alt="_images/user-configuration-area.svg" src="_images/user-configuration-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#user-configuration" title="(in The Yocto Project ® vVersion: Current Development)"><span>User Configuration</span></a></p>
+<p><span class="raw-html"><small></span>
+Setup values you can use to control the build process.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Configuration Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Metadata Area</h3>
+<img alt="_images/metadata-layers-area.svg" src="_images/metadata-layers-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#metadata-machine-configuration-and-policy-configuration" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Metadata Layers</span></a></p>
+<p><span class="raw-html"><small></span>
+Various layers that provide software, machine and <abbr title="distribution">distro</abbr> metadata.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Metadata Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Source Area</h3>
+<img alt="_images/source-files-area.svg" src="_images/source-files-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#sources" title="(in The Yocto Project ® vVersion: Current Development)"><span>Sources</span></a></p>
+<p><span class="raw-html"><small></span>
+Upstream releases, local projects, and <abbr title="Software Configuration Management System">SCMS</abbr>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Source Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Package Area</h3>
+<img alt="_images/package-feeds-area.svg" src="_images/package-feeds-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#package-feeds" title="(in The Yocto Project ® vVersion: Current Development)"><span>Package Feeds</span></a></p>
+<p><span class="raw-html"><small></span>
+Directories containing output packages (RPM, DEB or IPK), which are
+subsequently used in the construction of an image or <abbr title="Software Development Kit">SDK</abbr>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Package Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>BitBake Tool Area</h3>
+<img alt="_images/bitbake-tool-area.svg" src="_images/bitbake-tool-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#bitbake-tool" title="(in The Yocto Project ® vVersion: Current Development)"><span>BitBake Tool</span></a></p>
+<p><span class="raw-html"><small></span>
+Processes under the control of BitBake. This block expands on how BitBake
+fetches source, applies patches, completes compilation, analyzes output
+for package generation, creates and tests packages, generates images and
+generates cross-development tools.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;BitBake Tool Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>Images Area</h3>
+<img alt="_images/images-area.svg" src="_images/images-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#images" title="(in The Yocto Project ® vVersion: Current Development)"><span>Images</span></a></p>
+<p><span class="raw-html"><small></span>
+Images produced by the build system.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Images Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66" data-transition="none">
+<h3>SDK Area</h3>
+<img alt="_images/sdk-area.svg" src="_images/sdk-area.svg" /><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#application-development-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span>Application Development SDK</span></a></p>
+<p><span class="raw-html"><small></span>
+Cross-development tools which are produced with the build system.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Application Development SDK Area&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_images/user-configuration-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>User Configuration</h2>
+<img alt="_images/user-configuration.png" src="_images/user-configuration.png" />
+<p><span class="raw-html"><small></span>
+Through
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#user-configuration" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">user configuration</span></a>
+you can tell BitBake the target architecture for which you are building the
+image, where to store downloaded source and other build properties.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;User Configuration&quot; notes here ...</aside>
+</section>
+<section data-background-image="_images/user-configuration-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><code class="docutils literal notranslate"><span class="pre">bblayers.conf</span></code></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → meta-cedi/conf
+<span class="raw-html"></small></span></p>
+<pre><code data-trim data-noescape class="none">
+CEDI_BBLAYERS_CONF_VERSION = &quot;1&quot;
+
+BBPATH = &quot;${TOPDIR}&quot;
+BSPDIR := &quot;${&#64;os.path.abspath('##OEROOT##/../..')}&quot;
+BBFILES ?= &quot;&quot;
+
+BBLAYERS = &quot; \
+  ${BSPDIR}/sources/poky/meta \
+  ${BSPDIR}/sources/poky/meta-poky \
+  ${BSPDIR}/sources/poky/meta-yocto-bsp \
+  \
+  ${BSPDIR}/sources/yocto/meta-mingw \
+  \
+  ${BSPDIR}/sources/openembedded/meta-oe \
+  ${BSPDIR}/sources/openembedded/meta-python \
+  ${BSPDIR}/sources/openembedded/meta-initramfs \
+  ${BSPDIR}/sources/openembedded/meta-filesystems \
+  ${BSPDIR}/sources/openembedded/meta-networking \
+  ${BSPDIR}/sources/openembedded/meta-multimedia \
+  \
+  ${BSPDIR}/sources/qt/meta-qt5 \
+  \
+  ${BSPDIR}/sources/central/meta \
+  ${BSPDIR}/sources/central/meta-cedi \
+  ${BSPDIR}/sources/central/meta-lpn-bsp \
+&quot;</code></pre>
+<p><span class="raw-html"><small></span>
+The <code class="file docutils literal notranslate"><span class="pre">bblayers.conf</span></code> file tells BitBake what layers you want
+considered during the build.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/user-configuration-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><code class="docutils literal notranslate"><span class="pre">local.conf</span></code></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → meta-cedi/conf
+<span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span>
+The <code class="file docutils literal notranslate"><span class="pre">local.conf</span></code> file provides many basic variables that define
+a build environment. Here is a list of a few:</p>
+<p class="left-justified fragment fade-in"><span class="blue">Target Machine Selection:</span>
+<code class="code docutils literal notranslate"><span class="pre">MACHINE</span> <span class="pre">??=</span> <span class="pre">&quot;qemux86-64&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Target Distribution Selection:</span>
+<code class="code docutils literal notranslate"><span class="pre">DISTRO</span> <span class="pre">?=</span> <span class="pre">&quot;cedi&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Target Packaging Format:</span>
+<code class="code docutils literal notranslate"><span class="pre">PACKAGE_CLASSES</span> <span class="pre">?=</span> <span class="pre">&quot;package_rpm&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Download Directory:</span>
+<code class="code docutils literal notranslate"><span class="pre">DL_DIR</span> <span class="pre">?=</span> <span class="pre">&quot;${TOPDIR}/downloads&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Shared State Cache Directory:</span>
+<code class="code docutils literal notranslate"><span class="pre">SSTATE_DIR</span> <span class="pre">?=</span> <span class="pre">&quot;${TOPDIR}/sstate-cache&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Build Output:</span>
+<code class="code docutils literal notranslate"><span class="pre">TMPDIR</span> <span class="pre">=</span> <span class="pre">&quot;${TOPDIR}/tmp&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Parallelism Options:</span>
+<code class="code docutils literal notranslate"><span class="pre">BB_NUMBER_THREADS</span> <span class="pre">?=</span> <span class="pre">&quot;4&quot;</span></code></p>
+<p class="left-justified fragment fade-in"><span class="blue">Host SDK Machine Selection:</span>
+<code class="code docutils literal notranslate"><span class="pre">SDKMACHINE</span> <span class="pre">?=</span> <span class="pre">&quot;x86_64&quot;</span></code></p>
+<p>The <strong class="command">setup-environment</strong> script have to use to generate the
+content of the <code class="file docutils literal notranslate"><span class="pre">local.conf</span></code> file.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/user-configuration-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><code class="docutils literal notranslate"><span class="pre">setup-environment</span></code></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → scripts
+<span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span>
+The <strong class="command">setup-environment</strong> script provides many basic options that
+setup a build environment with the correct <em class="dfn">User Configuration</em>.
+Here is a short synopsis:
+<span class="raw-html"></small></span></p>
+<pre><code data-trim data-noescape class="bash">
+DISTRO=&quot;cedi&quot; \
+MACHINE=&quot;helium&quot; \
+SDKMACHINE=&quot;x86_64-mingw32&quot; \
+BUILD_DIR=&quot;build-cedi-helium&quot; \
+source setup-environment</code></pre>
+<p><span class="raw-html"><small></span>
+The <strong class="command">setup-environment</strong> calls the <strong class="command">oe-init-build-env</strong> script
+implicitly from the correct place in the Poky <em class="dfn">Source Directory</em>.
+<span class="raw-html"></small></span></p>
+<p>To get a detailed online help use:</p>
+<pre><code data-trim data-noescape class="bash">
+source setup-environment --help</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Metadata Layers</h2>
+<img alt="_images/layer-input-landscape.png" src="_images/layer-input-landscape.png" />
+<p><span class="raw-html"><small></span>
+These
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#metadata-machine-configuration-and-policy-configuration" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">layers provide Metadata</span></a> for the software,
+machine and policy.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Metadata Layers&quot; notes here ...</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Meta Layer Types</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p class="fragment grow highlight-blue"><em class="dfn">Software Layers</em>: <span class="green">Metadata .bb + Patches</span></p>
+<p class="fragment fade-in">user/vendor/community supplied recipe files, patches and append files</p>
+<p class="fragment grow highlight-blue"><em class="dfn">Distribution Layers</em>: <span class="yellow">Policy Configuration</span></p>
+<p class="fragment fade-in">top-level or general policies for <em class="dfn">Images</em> or <em class="dfn">SDKs</em> being built</p>
+<p class="fragment grow highlight-blue"><em class="dfn">BSP Layers</em>: <span class="red">Machine Configuration</span></p>
+<p class="fragment fade-in">specific to a particular target architecture</p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Types&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Meta Layer Stack</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Stack&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<img alt="_images/lpn-central-bsp-layer.svg" src="_images/lpn-central-bsp-layer.svg" /><p><span class="raw-html"><small></span>
+Metadata Layer Priorities (<code class="code docutils literal notranslate"><span class="pre">BBFILE_PRIORITY_LayerName</span></code>) – remember:
+<span class="raw-html"></small></span></p>
+<a class="fragment fade-in reference internal image-reference" href="_images/lpn-central-bsp-pipeline.svg"><img alt="_images/lpn-central-bsp-pipeline.svg" class="fragment fade-in" height="200px" src="_images/lpn-central-bsp-pipeline.svg" /></a>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Meta Layer Machines</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → <span class="red">meta-lpn-bsp/conf/machine</span>
+<span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span>
+The <code class="file docutils literal notranslate"><span class="pre">meta-lpn-bsp</span></code> layer provides machine configurations for all the
+specific evaluation hardware based on QEMU or real target architecture. The
+following target machines are supported:</p>
+<p class="left-justified fragment fade-in"><span class="red">hydrogen:</span>
+QEMU x86 machine based on <code class="code docutils literal notranslate"><span class="pre">qemux86</span></code></p>
+<p class="left-justified fragment fade-in"><span class="red">helium:</span>
+QEMU x86-64 machine based on <code class="code docutils literal notranslate"><span class="pre">qemux86-64</span></code></p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Machines&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="red">hydrogen.conf</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+#&#64;TYPE: Machine
+#&#64;NAME: QEMU x86 machine
+#&#64;DESCRIPTION: Machine configuration for running an x86 system on QEMU (based on qemux86).
+#&#64;MAINTAINER: Stephan Linz &lt;linz&#64;li-pro.net&gt;
+
+require conf/machine/include/qemux86.inc
+require conf/machine/include/lpn-emu.inc</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">qemux86.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# derived from qemux86
+require conf/machine/qemux86.conf
+MACHINEOVERRIDES_prepend = &quot;qemux86:&quot;
+
+# derived this machine back to qemux86 for the Linux kernel
+KMACHINE = &quot;qemux86&quot;</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">lpn-emu.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# is a Li-Pro.Net emulated system
+require conf/machine/include/lpn.inc
+MACHINEOVERRIDES_append = &quot;:lpnemu&quot;</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">lpn.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# is a Li-Pro.Net system
+MACHINEOVERRIDES_append = &quot;:lpn&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="red">helium.conf</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+#&#64;TYPE: Machine
+#&#64;NAME: QEMU x86-64 machine
+#&#64;DESCRIPTION: Machine configuration for running an x86-64 system on QEMU (based on qemux86-64).
+#&#64;MAINTAINER: Stephan Linz &lt;linz&#64;li-pro.net&gt;
+
+require conf/machine/include/qemux86-64.inc
+require conf/machine/include/lpn-emu.inc</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">qemux86-64.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# derived from qemux86-64
+require conf/machine/qemux86-64.conf
+MACHINEOVERRIDES_prepend = &quot;qemux86-64:&quot;
+
+# remap derived machine back to qemux86-64 for the Linux kernel
+KMACHINE = &quot;qemux86-64&quot;</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">lpn-emu.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# is a Li-Pro.Net emulated system
+require conf/machine/include/lpn.inc
+MACHINEOVERRIDES_append = &quot;:lpnemu&quot;</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">lpn.inc</span></code></p>
+<pre><code data-trim data-noescape class="none">
+# is a Li-Pro.Net system
+MACHINEOVERRIDES_append = &quot;:lpn&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Meta Layer Distros</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → <span class="yellow">meta-cedi/conf/distro</span>
+<span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span>
+The <code class="file docutils literal notranslate"><span class="pre">meta-cedi</span></code> layer provides policy configurations for all the
+specific evaluation distributions based on Poky. The following distributions
+are supported:</p>
+<p class="left-justified fragment fade-in"><span class="yellow">cedi:</span>
+Central Distro (Li-Pro.Net Demonstration) based on <code class="code docutils literal notranslate"><span class="pre">poky</span></code></p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Distros&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="yellow">cedi.conf</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+require ${COREBASE}/meta-poky/conf/distro/poky.conf
+
+DISTROOVERRIDES = &quot;poky:${&#64;d.getVar('DISTRO') or ''}&quot;
+
+DISTRO = &quot;cedi&quot;
+DISTRO_NAME = &quot;Central Distro (Li-Pro.Net Demonstration)&quot;
+DISTRO_VERSION_append = &quot;+r1.0&quot;
+DISTRO_CODENAME_append = &quot;-cedi&quot;
+TARGET_VENDOR = &quot;-cedi&quot;
+SDK_VENDOR = &quot;-cedisdk&quot;
+
+MAINTAINER = &quot;Cedi &lt;cedi&#64;li-pro.net&gt;&quot;
+
+LOCALCONF_VERSION = &quot;1&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+# Override poky pre-settings (remove).
+POKY_DEFAULT_DISTRO_FEATURES = &quot;&quot;
+POKY_DEFAULT_EXTRA_RDEPENDS = &quot;&quot;
+POKY_DEFAULT_EXTRA_RRECOMMENDS = &quot;&quot;
+
+# Setup Cedi defaults.
+CEDI_DEFAULT_DISTRO_FEATURES = &quot;largefile opengl ptest multiarch wayland vulkan&quot;
+CEDI_DEFAULT_EXTRA_RDEPENDS = &quot;packagegroup-core-boot&quot;
+CEDI_DEFAULT_EXTRA_RRECOMMENDS = &quot;kernel-module-af-packet&quot;
+
+DISTRO_FEATURES = &quot;${DISTRO_FEATURES_DEFAULT} ${CEDI_DEFAULT_DISTRO_FEATURES}&quot;
+DISTRO_EXTRA_RDEPENDS += &quot; ${CEDI_DEFAULT_EXTRA_RDEPENDS}&quot;
+DISTRO_EXTRA_RRECOMMENDS += &quot; ${CEDI_DEFAULT_EXTRA_RRECOMMENDS}&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+# Use systemd for system initialization
+DISTRO_FEATURES_append = &quot; systemd&quot;
+VIRTUAL-RUNTIME_init_manager = &quot;systemd&quot;
+VIRTUAL-RUNTIME_login_manager = &quot;shadow-base&quot;
+DISTRO_FEATURES_BACKFILL_CONSIDERED += &quot;sysvinit&quot;
+VIRTUAL-RUNTIME_initscripts = &quot;systemd-compat-units&quot;
+
+# Add Cedi sanity bbclass.
+INHERIT += &quot;cedi-sanity&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Meta Layer Images</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central">https://github.com/lipro-yocto/lpn-central</a> → <span class="green">meta/recipes-core/images</span>
+<span class="raw-html"></small></span></p>
+<p><span class="raw-html"><small></span>
+The <code class="file docutils literal notranslate"><span class="pre">meta</span></code> (central core) layer provides recipes and classes for all the
+specific evaluation and demonstration images and package groups based on the
+customized image class <code class="file docutils literal notranslate"><span class="pre">central-image.bbclass</span></code>. The following images are
+supported:</p>
+<p class="left-justified fragment fade-in"><span class="green">central-image-minimal:</span>
+A small image just capable of allowing an Central device to boot.</p>
+<p class="left-justified fragment fade-in"><span class="green">central-dev-image:</span>
+A developer image just capable of allowing an Central device to boot.</p>
+<p class="left-justified fragment fade-in"><span class="green">central-debug-image:</span>
+A debugging image just capable of allowing an Central device to boot.</p>
+<p class="left-justified fragment fade-in"><span class="green">central-image:</span>
+A product image capable of allowing an Central device to boot and provides
+full feature support.</p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Images&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="green">central-image.bb</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+require central-image-base.bb
+
+SUMMARY = &quot;A product image capable of allowing an Central \
+device to boot and provides full feature support.&quot;
+
+DESCRIPTION = &quot;A product image capable of allowing an Central \
+device to boot in graphical mode and provides full feature support.&quot;
+
+LICENSE = &quot;MIT&quot;
+PR = &quot;r0&quot;
+
+IMAGE_FEATURES += &quot; \
+    ${&#64;bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11-base', '', d)} \
+&quot;
+
+inherit central-image</code></pre>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">central-image-base.bb</span></code></p>
+<pre><code data-trim data-noescape class="none">
+SUMMARY = &quot;A console-only image that fully supports the target device \
+hardware provided by Central.&quot;
+
+LICENSE = &quot;MIT&quot;
+PR = &quot;r0&quot;
+
+IMAGE_FEATURES += &quot; \
+    package-management \
+    splash \
+&quot;
+
+inherit central-image</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="blue">central-image.bbclass</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+# Common code for generating Central reference images
+
+LIC_FILES_CHKSUM = &quot;\
+    file://${CENTRALCOREBASE}/LICENSE;md5=4d183b8707e22082e5a8c5ad268e5149 \
+&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+# - qt5-sdk          - Qt5/X11 SDK and demo applications
+# - tools-cross      - tools usable for basic cross development
+FEATURE_PACKAGES_qt5-sdk = &quot;\
+    packagegroup-qt5-toolchain-target \
+    packagegroup-qt5-qtcreator-debug \
+&quot;
+FEATURE_PACKAGES_tools-cross = &quot;&quot;
+# Provides the Central specific features 'qt5-sdk' and 'tools-cross'.</code></pre>
+<pre><code data-trim data-noescape class="none">
+CENTRAL_IMAGE_BASE_INSTALL = '\
+    packagegroup-central-boot \
+    packagegroup-base-central \
+    \
+    ${&#64;bb.utils.contains(&quot;IMAGE_FEATURES&quot;, &quot;tools-cross&quot;, \
+                         &quot;packagegroup-central-tools-cross&quot;, &quot;&quot;, d)} \
+    ${&#64;bb.utils.contains(&quot;IMAGE_FEATURES&quot;, &quot;tools-debug&quot;, \
+                         &quot;packagegroup-central-tools-debug&quot;, &quot;&quot;, d)} \
+    ${&#64;bb.utils.contains(&quot;IMAGE_FEATURES&quot;, &quot;tools-profile&quot;, \
+                         &quot;packagegroup-central-tools-profile&quot;, &quot;&quot;, d)} \
+    ${&#64;bb.utils.contains(&quot;IMAGE_FEATURES&quot;, &quot;tools-testapps&quot;, \
+                         &quot;packagegroup-central-tools-testapps&quot;, &quot;&quot;, d)} \
+    ${&#64;bb.utils.contains(&quot;IMAGE_FEATURES&quot;, &quot;tools-sdk&quot;, \
+                         &quot;packagegroup-central-sdk&quot;, &quot;&quot;, d)} \
+    \
+    ${CENTRAL_IMAGE_EXTRA_INSTALL} \
+    '
+
+CENTRAL_IMAGE_EXTRA_INSTALL ?= &quot;&quot;
+
+CORE_IMAGE_EXTRA_INSTALL += &quot;${CENTRAL_IMAGE_BASE_INSTALL}&quot;
+
+inherit core-image central-image-version</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="blue">central-image-version.bbclass</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+# Common code for generating Central version file
+
+LIC_FILES_CHKSUM = &quot;\
+    file://${CENTRALCOREBASE}/LICENSE;md5=4d183b8707e22082e5a8c5ad268e5149 \
+&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+CENTRAL_VERSION_FILE = &quot;${IMAGE_ROOTFS}${sysconfdir}/central_version&quot;
+
+write_central_version() {
+        cat &gt; ${CENTRAL_VERSION_FILE} &lt;&lt;EOF
+[build information]
+vendor-id=LPN
+manufacturer-name=Li-Pro.Net
+device-variant=${MACHINE}
+purpose=${IMAGE_BASENAME}
+feature=${IMAGE_FEATURES}
+build-number=${BUILD_NUMBER}
+EOF
+}</code></pre>
+<pre><code data-trim data-noescape class="none">
+ROOTFS_POSTPROCESS_COMMAND += &quot;write_central_version;&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="green">packagegroup-central-boot.bb</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+SUMMMARY = &quot;Central Minimal Boot Requirements&quot;
+DESCRIPTION = &quot;The minimal set of packages required to boot a Central system&quot;
+LICENSE = &quot;MIT&quot;
+PR = &quot;r0&quot;
+
+# For backwards compatibility after rename
+RPROVIDES_packagegroup-central-boot = &quot;packagegroup-boot-central&quot;
+RREPLACES_packagegroup-central-boot = &quot;packagegroup-boot-central&quot;
+RCONFLICTS_packagegroup-central-boot = &quot;packagegroup-boot-central&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+# packages which content depend on MACHINE_FEATURES need to be MACHINE_ARCH
+PACKAGE_ARCH = &quot;${MACHINE_ARCH}&quot;
+
+inherit packagegroup
+
+# Set by the machine configuration with packages essential
+# for Central device bootup.
+MACHINE_ESSENTIAL_EXTRA_CENTRAL_RDEPENDS ?= &quot;&quot;
+MACHINE_ESSENTIAL_EXTRA_CENTRAL_RRECOMMENDS ?= &quot;&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+RDEPENDS_${PN} = &quot; \
+    ${MACHINE_ESSENTIAL_EXTRA_CENTRAL_RDEPENDS} \
+&quot;
+
+RRECOMMENDS_${PN} = &quot; \
+    ${MACHINE_ESSENTIAL_EXTRA_CENTRAL_RRECOMMENDS} \
+&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/metadata-layers-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3><span class="green">packagegroup-central-tools-testapps.bb</span></h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<pre><code data-trim data-noescape class="none">
+SUMMMARY = &quot;Central Testing tools/applications&quot;
+DESCRIPTION = &quot;The testing set of packages required for a Central system&quot;
+LICENSE = &quot;MIT&quot;
+PR = &quot;r0&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+inherit packagegroup</code></pre>
+<pre><code data-trim data-noescape class="none">
+# Event device test tools
+EVTOOLS = &quot;evtest&quot;
+
+# Simple memmory access tools
+MEMTOOLS = &quot;devmem2 libuio&quot;
+
+# Simple serial bus tools
+SERBUSTOOLS = &quot;i2c-tools spitools&quot;
+
+# Requires Serial to work
+USE_SERIAL = &quot;picocom serial-forward&quot;</code></pre>
+<pre><code data-trim data-noescape class="none">
+RDEPENDS_${PN} = &quot; \
+    ${EVTOOLS} \
+    ${MEMTOOLS} \
+    ${SERBUSTOOLS} \
+    ${&#64;bb.utils.contains('MACHINE_FEATURES', 'serial', '${USE_SERIAL}', '',d)} \
+&quot;
+
+RRECOMMENDS_${PN} = &quot; \
+&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Platform Manifest&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_images/source-files-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Source Files</h2>
+<img alt="_images/source-input.png" src="_images/source-input.png" />
+<p><span class="raw-html"><small></span>
+In order for the build system to create an image or any target, it must be
+able to access <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#sources" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">source files</span></a>.
+The Yocto Project represents source files over the <em class="dfn">Source Material</em>
+using <em class="dfn">Upstream Project Releases</em>, <em class="dfn">Local Projects</em>, and <em class="dfn">SCMs</em>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Source Files&quot; notes here ...</aside>
+</section>
+<section data-background-image="_images/source-files-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Upstream Project Releases</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<em>(almost all recipes)</em></p>
+<ul class="simple">
+<li class="fragment"><p>exist anywhere in the form of an archived file (e.g. tarball or ZIP file)</p></li>
+<li class="fragment"><p>correspond to individual recipes, <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-PN" title="(in The Yocto Project ® vVersion: Current Development)"><span>PN</span></a> and <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-PV" title="(in The Yocto Project ® vVersion: Current Development)"><span>PV</span></a>
+match with a upstream archive file</p></li>
+<li class="fragment"><p>archive file can be for any released product that can be built using
+a recipe</p></li>
+</ul>
+<p>Example</p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">tslib_1.11.bb</span></code> recipe points to the following XZ compressed
+tarball file:
+<a class="reference external" href="https://github.com/kergoth/tslib/releases/download/1.11/tslib-1.11.tar.xz">https://github.com/kergoth/tslib/releases/download/1.11/tslib-1.11.tar.xz</a></p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Upstream Project Releases&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/source-files-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Local Projects</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<em>(no preference for this)</em></p>
+<ul class="simple">
+<li class="fragment"><p>custom bits of software the user provides</p></li>
+<li class="fragment"><p>these bits reside somewhere local to a project;
+perhaps a directory into which the user checks in items</p></li>
+<li class="fragment"><p>use the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/classes.html#ref-classes-externalsrc" title="(in The Yocto Project ® vVersion: Current Development)"><span>externalsrc.bbclass</span></a> class in recipes
+to include a local projects</p></li>
+</ul>
+<p>Note</p>
+<p>Community does not use local projects! Never seen!
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Local Projects&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/source-files-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Source Code Manager (optional)</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<em>(almost vendor or product recipes)</em></p>
+<ul class="simple">
+<li class="fragment"><p>get source files through an <abbr title="Software Configuration Management System">SCMS</abbr> such as Git or Subversion or Mercurial</p></li>
+<li class="fragment"><p>repository is cloned and/or checked out</p></li>
+</ul>
+<p>Example</p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">meta/conf/layer.conf</span></code> file may tells BitBake how to reach special
+(perhaps hidden) Git, Subversion, or Mercurial servers:
+<span class="raw-html"></small></span></p>
+<pre><code data-trim data-noescape class="none">
+CENTRAL_GIT ?= &quot;git://10.20.30.40/services/git&quot;
+CENTRAL_SVN ?= &quot;svn://10.20.30.40/services/svn&quot;
+CENTRAL_HG ?= &quot;hg://10.20.30.40/services/hg&quot;</code></pre>
+<aside class="notes">
+TBD: write down your &quot;Source Code Manager (optional)&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+<section data-background-image="_images/source-files-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Source Mirror(s)</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<em>(almost all recipes by policy)</em></p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">meta-poky/conf/distro/poky.conf</span></code> file as required by
+the <code class="file docutils literal notranslate"><span class="pre">meta-cedi/conf/distro/cedi.conf</span></code> file provides
+the two kinds of mirrors:
+<span class="raw-html"></small></span></p>
+<p class="fragment grow highlight-blue"><code class="code docutils literal notranslate"><span class="pre">PREMIRRORS</span></code>: the pre-mirrors</p>
+<p class="fragment fade-in"><span class="raw-html"><small></span>
+check before looking <em class="dfn">Upstream Project Releases</em>
+<span class="raw-html"></small></span></p>
+<p class="fragment grow highlight-blue"><code class="code docutils literal notranslate"><span class="pre">MIRRORS</span></code>: the regular mirrors</p>
+<p class="fragment fade-in"><span class="raw-html"><small></span>
+alternative location should the <em class="dfn">Upstream Project Releases</em> not available
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Source Material&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section data-background-image="_images/package-feeds-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Package Feeds</h2>
+<img alt="_images/package-feeds.png" src="_images/package-feeds.png" />
+<p><span class="raw-html"><small></span>
+When the build system generates an image or an SDK, it gets the packages from
+a <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#package-feeds" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">package feed</span></a> area, an
+intermediary step in the build process. Before placing the packages into
+package feeds, the build process validates them.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Package Feeds&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+<section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>BitBake Tool</h2>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="http://git.yoctoproject.org/cgit/cgit.cgi/poky">http://git.yoctoproject.org/cgit/cgit.cgi/poky</a>
+→ <code class="file docutils literal notranslate"><span class="pre">meta/classes/*.bbclass</span></code>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-green"><strong>1. Source Fetching</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-fetch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_fetch</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-unpack" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_unpack</span></a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-green"><strong>2. Patch Application</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-patch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_patch</span></a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-green"><strong>3. Configure / Compile / Install</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-configure" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_configure</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-compile" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_compile</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-install" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_install</span></a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-red"><strong>4. Analysis / Splitting Packages</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-package" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_package</span></a>/<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-packagedata" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">data</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-package-write-deb" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">do_package_write_*</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-populate-sysroot" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_populate_sysroot</span></a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-yellow"><strong>5. Image Generation</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-rootfs" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_rootfs</span></a> →
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-image" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_image</span></a>/<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-image-complete" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">_complete</span></a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment small grow highlight-yellow"><strong>6. SDK Generation</strong>
+<span class="raw-html"><small></span> tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-populate-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_populate_sdk</span></a>/<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-populate-sdk-ext" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">_ext</span></a>
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;BitBake Tool&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+/bitbake-tool/index.rst or revealjs.rsti</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+..............................................................................</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+TBD: write down your &quot;BitBake Tool&quot; notes here ...</aside>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Inherit</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<table class="colwidths-given longtable docutils align-center" style="width: 100%">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>tasks by classes:</p></th>
+<th class="head"><p>cmake</p></th>
+<th class="head"><p>base</p></th>
+<th class="head"><p>package/group</p></th>
+<th class="head"><p>image</p></th>
+<th class="head"><p>populate_sdk_base</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>do_fetch, do_unpack</p></th>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>do_patch</p></th>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>do_configure, do_compile, do_install</p></th>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>do_package/data, do_package_write_*, do_populate_sysroot</p></th>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>do_rootfs, do_image/_complete</p></th>
+<td></td>
+<td></td>
+<td></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>populate_sdk/_ext</p></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p class="left-justified fragment fade-in">X</p></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+TBD: write down your &quot;Inherit&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Fetching</h3>
+<img alt="_images/source-fetching.png" src="_images/source-fetching.png" />
+<p><span class="raw-html"><small></span>
+The first stages of building a recipe are to <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#source-fetching" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">fetch and unpack</span></a> the source code. The
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-fetch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_fetch</span></a> and <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-unpack" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_unpack</span></a> tasks fetch
+the source files and unpack them into the <em class="dfn">Build Directory</em>. BitBake
+uses the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRC_URI</span></a> variable to point to source files regardless
+of their location.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Fetching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Fetching in Recipe</h3>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/meta-lpn-apps">https://github.com/lipro-yocto/meta-lpn-apps</a> (dummy, not yet)
+<span class="raw-html"></small></span></p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">meta-lpn-apps</span></code> layer may provides private (closed) recipes.
+The following related <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRC_URI</span></a> may being used:
+<span class="raw-html"><small></span></p>
+<p class="fragment fade-in"><span class="yellow">lib-utility_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;${CENTRAL_HG};</span></code><code class="docutils literal notranslate"><span class="pre">module=lib_utility;</span></code><code class="docutils literal notranslate"><span class="pre">branch=default;</span></code><code class="docutils literal notranslate"><span class="pre">rev=${SRCREV};</span></code><code class="docutils literal notranslate"><span class="pre">protocol=ssh&quot;</span></code></p>
+<p class="fragment fade-in"><span class="yellow">lib-crypto_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;${CENTRAL_HG};</span></code><code class="docutils literal notranslate"><span class="pre">module=lib_crypto;</span></code><code class="docutils literal notranslate"><span class="pre">branch=default;</span></code><code class="docutils literal notranslate"><span class="pre">rev=${SRCREV};</span></code><code class="docutils literal notranslate"><span class="pre">protocol=ssh&quot;</span></code></p>
+<p class="fragment fade-in"><span class="green">app-mcu-ctrl_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;${CENTRAL_HG};</span></code><code class="docutils literal notranslate"><span class="pre">module=app_mcu_ctrl;</span></code><code class="docutils literal notranslate"><span class="pre">branch=default;</span></code><code class="docutils literal notranslate"><span class="pre">rev=${SRCREV};</span></code><code class="docutils literal notranslate"><span class="pre">protocol=ssh&quot;</span></code></p>
+<p class="fragment fade-in"><span class="blue">boost_1.75.0.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;https://dl.bintray.com/boostorg/release/</span></code><code class="docutils literal notranslate"><span class="pre">${PV}/</span></code><code class="docutils literal notranslate"><span class="pre">source/</span></code><code class="docutils literal notranslate"><span class="pre">${BOOST_P}</span></code><code class="docutils literal notranslate"><span class="pre">.tar.bz2&quot;</span></code></p>
+<p>For private recipes: <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRCREV" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRCREV</span></a> is set to <code class="code docutils literal notranslate"><span class="pre">SRCREV</span> <span class="pre">=</span> <span class="pre">&quot;default&quot;</span></code>
+and <code class="code docutils literal notranslate"><span class="pre">CENTRAL_HG</span></code> should comes from e.g. <code class="file docutils literal notranslate"><span class="pre">meta/conf/layer.conf</span></code>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Fetching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Patching</h3>
+<img alt="_images/patching.png" src="_images/patching.png" />
+<p><span class="raw-html"><small></span>
+Once source code is fetched and unpacked, BitBake <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#patching" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">locates patch files
+and applies them</span></a> to the source
+files. The <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-patch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_patch</span></a> task processes recipes by using the
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRC_URI</span></a> variable to locate applicable patch files. BitBake
+finds and applies multiple patches for a single recipe.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Patching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Patching in Recipe</h3>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="http://git.yoctoproject.org/cgit/cgit.cgi/poky">http://git.yoctoproject.org/cgit/cgit.cgi/poky</a>
+<span class="raw-html"><br /></span>
+<a class="reference external" href="http://cgit.openembedded.org/meta-openembedded">http://cgit.openembedded.org/meta-openembedded</a>
+<span class="raw-html"></small></span></p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">poky/meta</span></code> and <code class="file docutils literal notranslate"><span class="pre">meta-openembedded/meta-oe</span></code> layer provides
+support recipes. The following related <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRC_URI</span></a> being used:
+<span class="raw-html"><small></span></p>
+<p class="fragment fade-in"><span class="blue">boost_1.75.0.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">SRC_URI</span> <span class="pre">+=</span> <span class="pre">&quot;file://boost-CVE-2012-2677.patch</span> <span class="pre">...&quot;</span></code></p>
+<p class="fragment fade-in"><span class="blue">opencv_4.5.0.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">SRC_URI</span> <span class="pre">=</span> <span class="pre">&quot;git://github.com/opencv/opencv.git;name=opencv</span> <span class="pre">...</span> <span class="pre">file://download.patch</span> <span class="pre">...&quot;</span></code></p>
+<p>Files in the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-SRC_URI" title="(in The Yocto Project ® vVersion: Current Development)"><span>SRC_URI</span></a> list variable with the <code class="file docutils literal notranslate"><span class="pre">.patch</span></code>
+or <code class="file docutils literal notranslate"><span class="pre">.diff</span></code> extension are automatically identified as a patch and
+applied if present beside the recipe.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Fetching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Compilation</h3>
+<img alt="_images/configuration-compile-autoreconf.png" src="_images/configuration-compile-autoreconf.png" />
+<p><span class="raw-html"><small></span>
+After source code is patched, BitBake executes tasks that <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#configuration-compilation-and-staging" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">configure
+and compile</span></a> the source code. This step consists of three tasks:
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-configure" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_configure</span></a>, <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-compile" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_compile</span></a> and
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-install" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_install</span></a>. It starts at the earliest after all
+dependencies from the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>DEPENDS</span></a> variable in the recipe
+have been resolved.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Compilation&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Compilation in Recipe</h3>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/meta-lpn-apps">https://github.com/lipro-yocto/meta-lpn-apps</a> (dummy, not yet)
+<span class="raw-html"></small></span></p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">meta-lpn-apps</span></code> layer may provides private (closed) recipes.
+The following related <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-DEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>DEPENDS</span></a> may being used:
+<span class="raw-html"><small></span></p>
+<p class="fragment fade-in"><span class="yellow">lib-utility_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;boost&quot;</span></code></p>
+<p class="fragment fade-in"><span class="yellow">lib-crypto_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;boost</span> <span class="pre">opencv&quot;</span></code></p>
+<p class="fragment fade-in"><span class="green">app-mcu-ctrl_hg.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;boost</span> <span class="pre">opencv</span> <span class="pre">qtbase</span> <span class="pre">qtsvg</span> <span class="pre">lib-utility</span> <span class="pre">lib-crypto&quot;</span></code></p>
+<p class="fragment fade-in"><span class="blue">boost_1.75.0.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;boost-build-native</span> <span class="pre">zlib</span> <span class="pre">bzip2&quot;</span></code></p>
+<p class="fragment fade-in"><span class="blue">opencv_4.5.0.bb</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;libtool</span> <span class="pre">swig-native</span> <span class="pre">bzip2</span> <span class="pre">zlib</span> <span class="pre">glib-2.0</span> <span class="pre">libwebp&quot;</span></code></p>
+<p>For the application: <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-RDEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>RDEPENDS</span></a> may be set to additional
+dependent package names that have to be installed later into targets’
+runtime environment, e.g. <code class="docutils literal notranslate"><span class="pre">RDEPENDS</span> <span class="pre">=</span> <span class="pre">&quot;app-observer-daemon&quot;</span></code>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Fetching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Packaging</h3>
+<img alt="_images/analysis-for-package-splitting.png" src="_images/analysis-for-package-splitting.png" />
+<p><span class="raw-html"><small></span>
+After compilation, the build system <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#package-splitting" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">analyzes the results and splits
+the output into packages</span></a>.
+The <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-package" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_package</span></a> and <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-packagedata" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_packagedata</span></a>
+tasks combine to analyze the files found in the installation directory:
+debugging symbols, looking at shared library dependencies and relationships
+of <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-RDEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>RDEPENDS</span></a> in the recipe.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Packaging&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Packaging in Recipe</h3>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/meta-lpn-apps">https://github.com/lipro-yocto/meta-lpn-apps</a> (dummy, not yet)
+<span class="raw-html"></small></span></p>
+<p>The <code class="file docutils literal notranslate"><span class="pre">meta-lpn-apps</span></code> layer may provides private (closed) recipes.
+The following related <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-RDEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>RDEPENDS</span></a> may being used:
+<span class="raw-html"><small></span></p>
+<p class="fragment fade-in"><span class="green">app-mcu-ctrl</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;i2c-tools&quot;</span></code></p>
+<p class="fragment fade-in"><span class="yellow">packagegroup-lpn-apps-toolchain-target</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;boost-staticdev</span> <span class="pre">opencv-staticdev</span> <span class="pre">lib-utility-staticdev</span> <span class="pre">lib-crypto-staticdev&quot;</span></code></p>
+<p>The following related <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/variables.html#term-RDEPENDS" title="(in The Yocto Project ® vVersion: Current Development)"><span>RDEPENDS</span></a> may being used as policy;
+mostly controlled by common <em class="dfn">Image Features</em>, e.g.
+<code class="docutils literal notranslate"><span class="pre">IMAGE_FEATURES</span> <span class="pre">+=</span> <span class="pre">&quot;tools-testapps&quot;</span></code>:</p>
+<p class="fragment fade-in"><span class="yellow">packagegroup-central-tools-testapps</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;devregs</span> <span class="pre">spitools</span> <span class="pre">v4l-utils&quot;</span></code></p>
+<p class="fragment fade-in"><span class="yellow">hostapd_%</span>:
+<code class="docutils literal notranslate"><span class="pre">&quot;lpn-mcu-ssid&quot;</span></code></p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Fetching&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Image Generation 1/2</h3>
+<img alt="_images/image-generation-1.png" src="_images/image-generation-1.png" />
+<p><span class="raw-html"><small></span>
+Once packages are split and stored in the <em class="dfn">Package Feeds</em>, the build
+system uses BitBake to <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#image-generation" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">generate the root filesystem image</span></a>. The
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-rootfs" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_rootfs</span></a> task creates the root filesystem for an image.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Image Generation 1/2&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Image Generation 2/2</h3>
+<img alt="_images/image-generation-2.png" src="_images/image-generation-2.png" />
+<p><span class="raw-html"><small></span>
+The final stages of the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-rootfs" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_rootfs</span></a> task handle post
+processing, includes creation of a manifest file and optimizations. After
+this, processing begins on the image through the <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-image" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_image</span></a>
+task and dynamically created tasks as needed by the image types; ends with
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-image-complete" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_image_complete</span></a>.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Image Generation 2/2&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+</section>
+<section data-background-image="_images/bitbake-tool-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>SDK Generation</h3>
+<img alt="_images/sdk-generation.png" src="_images/sdk-generation.png" />
+<p><span class="raw-html"><small></span>
+The build system uses BitBake to <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#sdk-generation" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">generate the Software Development
+Kit (SDK) installer script</span></a>
+for both the <em class="dfn">Standard SDK</em> (<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-populate-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_populate_sdk</span></a>) and
+<em class="dfn">Extensible SDK</em> (<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-populate-sdk-ext" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_populate_sdk_ext</span></a>). Like image
+generation, the <abbr title="Software Development Kit">SDK</abbr> script process consists of several stages and depends
+on many variables.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;SDK Generation&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_images/images-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Images</h2>
+<img alt="_images/images.png" src="_images/images.png" />
+<p><span class="raw-html"><small></span>
+The <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#images" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">images</span></a> produced by the
+build system are compressed forms of the root filesystem that are ready
+to boot on a target device. Images are written out to the deploy directory.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Images&quot; notes here ...</aside>
+</section>
+<section data-background-image="_images/images-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Image Types</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+written out to the <em class="dfn">Build Directory</em> inside the
+<code class="file docutils literal notranslate"><span class="pre">tmp/deploy/images/machine/</span></code> folder for the types:</p>
+<p class="fragment grow highlight-blue">bootloaders</p>
+<p class="fragment fade-in">bootloader binary file, if applicable to the target machine</p>
+<p class="fragment grow highlight-blue">kernel-image</p>
+<p class="fragment fade-in">kernel binary file with specifyed naming scheme</p>
+<p class="fragment grow highlight-blue">kernel-modules (legacy purposes and can be suppressed)</p>
+<p class="fragment fade-in">tarball file with all the modules built for a kernel</p>
+<p class="fragment grow highlight-blue">root-filesystem-image</p>
+<p class="fragment fade-in">root filesystem image files for the target machine</p>
+<p class="fragment grow highlight-blue">symlinks</p>
+<p class="fragment fade-in">symbolic link that points to the most recently built file for each machine</p>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Types&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section>
+<section data-background-image="_images/sdk-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h2>Application Devel-SDK</h2>
+<img alt="_images/sdk.png" src="_images/sdk.png" />
+<p><span class="raw-html"><small></span>
+The <a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#application-development-sdk" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">SDK</span></a>
+produced by the build system is the compressed form of a self-extracting
+installer, which consists of a cross-development toolchain, a set of
+libraries and headers and an SDK environment setup script. SDKs are
+written out to the deploy directory.
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Application Development SDK&quot; notes here ...</aside>
+</section>
+<section data-background-image="_images/sdk-area.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>SDK Types</h3>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span>
+written out to the <em class="dfn">Build Directory</em> inside the
+<code class="file docutils literal notranslate"><span class="pre">tmp/deploy/sdk/</span></code> folder for two different types:</p>
+<p class="fragment grow highlight-blue"><em class="dfn">Standard SDK</em>: <strong class="command">bitbake -c populate_sdk imagename</strong></p>
+<p class="fragment fade-in">standard (legacy) SDK <span class="green">w/o any binding into the build system</span></p>
+<ul class="fragment fade-in simple">
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Application Development with Legacy SDK">Yocto Project Wiki: Application Development with Legacy SDK</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/TipsAndTricks/Cmake,Eclipse, and SDKS">Yocto Project Wiki: TipsAndTricks/Cmake,Eclipse, and SDKS</a></p></li>
+</ul>
+<p class="fragment grow highlight-blue"><em class="dfn">Extensible SDK</em>: <strong class="command">bitbake -c populate_sdk_ext imagename</strong></p>
+<p class="fragment fade-in">extensible (next) SDK with <span class="red">complete binding into the build system</span></p>
+<ul class="fragment fade-in simple">
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Application Development with Extensible SDK">Yocto Project Wiki: Application Development with Extensible SDK</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/Extensible SDK">Yocto Project Wiki: Extensible SDK</a></p></li>
+</ul>
+<p>Note</p>
+<p>An <em class="dfn">Extensible SDK</em> requires a shared infrastructure!
+<span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Meta Layer Types&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Final Closer Look</h2>
+<p><span class="raw-html"><small></span>
+The <a class="reference external" href="https://en.wikipedia.org/wiki/Cross compiler#Canadian_Cross">Canadian Cross</a>
+(reduced for host and target only)
+<span class="raw-html"></small></span></p>
+<img alt="_images/lpn-central-bsp-canadian-cross.svg" src="_images/lpn-central-bsp-canadian-cross.svg" /><aside class="notes">
+TBD: write down your &quot;Final Closer Look&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+<section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Read-The-Docs</h2>
+<ul class="simple">
+<li><p>Documentations</p></li>
+<li><p>Presentations</p></li>
+<li><p>Books</p></li>
+</ul>
+<aside class="notes">
+TBD: write down your &quot;Read-The-Docs&quot; notes here ...</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Documentations</h3>
+<ul class="simple">
+<li><p>The project documents: <a class="reference external" href="https://www.yoctoproject.org/documentation">https://www.yoctoproject.org/documentation</a></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Quick Build</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/overview-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Overview and Concepts Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Reference Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/dev-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Development Tasks Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/bsp-guide/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Board Support Package Developer’s Guide</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/kernel-dev/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Linux Kernel Development Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/profile-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Profiling and Tracing Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/test-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Test Environment Manual</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/sdk-manual/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Application Development and the Extensible Software Development Kit (eSDK)</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.yoctoproject.org/bitbake/index.html" title="(in Bitbake vVersion: Current Development)"><span>BitBake User Manual</span></a></p></li>
+</ul>
+</li>
+<li><p>The project classroom: <a class="reference external" href="https://www.yoctoproject.org/learn">https://www.yoctoproject.org/learn</a></p></li>
+<li><p>The project Wiki-pages: <a class="reference external" href="https://wiki.yoctoproject.org/">https://wiki.yoctoproject.org/</a></p>
+<ul>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/YP DevDay Austin 2020">Yocto Project Wiki: YP DevDay Austin 2020</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/DevDay San Diego 2019">Yocto Project Wiki: DevDay San Diego 2019</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/DevDay Portland 2018">Yocto Project Wiki: DevDay Portland 2018</a> and
+<a class="reference external" href="https://wiki.yoctoproject.org/wiki/DevDay Edinburgh 2018">Edinburgh 2018</a></p></li>
+<li><p><a class="reference external" href="https://wiki.yoctoproject.org/wiki/DevDay US 2017">Yocto Project Wiki: DevDay US 2017</a> and
+<a class="reference external" href="https://wiki.yoctoproject.org/wiki/DevDay Prague 2017">Prague 2017</a></p></li>
+</ul>
+</li>
+<li><p>Bootlin (former Free Electrons) Material: <a class="reference external" href="https://bootlin.com/docs/">https://bootlin.com/docs/</a></p>
+<ul>
+<li><p>Training Materials: <a class="reference external" href="https://bootlin.com/doc/training/yocto/">https://bootlin.com/doc/training/yocto/</a></p></li>
+<li><p>Conference Materials: <a class="reference external" href="https://bootlin.com/pub/conferences/">https://bootlin.com/pub/conferences/</a></p></li>
+</ul>
+</li>
+</ul>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Documentations&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Presentations</h3>
+<ul class="simple">
+<li><p><em>Jeffrey Osier-Mixon</em>, <em>Kevin McGrath</em>: <a class="reference external" href="https://www.intel.com/content/dam/www/public/us/en/documents/education/University/yocto-project-and-embedded-os-curriculum.pdf"><strong>Yocto Project and Embedded OS (2015)</strong></a>
+<span id="id3">[<a class="reference internal" href="bibliography.html#id19"><span>OMM15</span></a>]</span></p></li>
+<li><p><em>Rudolf J. Streif</em>: <a class="reference external" href="https://elinux.org/images/a/a8/Getting_Started_with_Embedded_Linux-_Using_the_Yocto_Project_to_Build_your_Own_Custom_Embedded_Linux_Distribution.pdf"><strong>Introduction to the Yocto Project (2015)</strong></a>
+<span id="id4">[<a class="reference internal" href="bibliography.html#id16"><span>Str15</span></a>]</span>
+ 📖  <span id="id5">[<a class="reference internal" href="bibliography.html#id12"><span>Str16</span></a>]</span></p></li>
+<li><p><em>Otavio Salvador</em>: <a class="reference external" href="https://www.slideshare.net/OtavioSalvador/yocto-training-in-english"><strong>Yocto Training : Your next development platform for Embedded Linux (2013)</strong></a>
+<span id="id6">[<a class="reference internal" href="bibliography.html#id17"><span>Sal13</span></a>]</span>
+ 📖  <span id="id7">[<a class="reference internal" href="bibliography.html#id10"><span>SA17</span></a>]</span></p></li>
+<li><p><em>Alex González</em>: <a class="reference external" href="https://www.slideshare.net/alexgonzalezgarcia/introduction-to-yocto"><strong>Introduction to Yocto (2012)</strong></a>
+<span id="id8">[<a class="reference internal" href="bibliography.html#id18"><span>Gon12</span></a>]</span>
+ 📖  <span id="id9">[<a class="reference internal" href="bibliography.html#id8"><span>Gon18</span></a>,<a class="reference internal" href="bibliography.html#id11"><span>VGS16</span></a>]</span></p></li>
+<li><p><em>Mark Hatle</em>, <em>Bruce Ashfield</em>: <a class="reference external" href="https://old.yoctoproject.org/sites/default/files/elc-e_devday_introyocto_2.pdf"><strong>Introduction to the Yocto Project (2012)</strong></a>
+<span id="id10">[<a class="reference internal" href="bibliography.html#id15"><span>HA12</span></a>]</span></p></li>
+<li><p><em>Yi-Hsiu Hsu</em>: <a class="reference external" href="https://www.slideshare.net/YiHsiuHsu/yocto-project-introduction"><strong>Yocto Project Introduction (2015)</strong></a>
+<span id="id11">[<a class="reference internal" href="bibliography.html#id20"><span>Hsu15</span></a>]</span></p></li>
+<li><p><em>Yen-Chin Lee</em>: <a class="reference external" href="https://www.slideshare.net/coldnew/build-your-own-embedded-linux-distributions-by-yocto-project"><strong>Build your own Embedded Linux distributions by Yocto Project (2015)</strong></a>
+<span id="id12">[<a class="reference internal" href="bibliography.html#id21"><span>Lee15</span></a>]</span></p></li>
+<li><p><em>Nicolas Dechesne</em>, <em>Riku Voipio</em>, <em>Trevor Woerner</em>: <a class="reference external" href="https://www.slideshare.net/linaroorg/linaro-open-embeddedworkshopwednesday"><strong>OpenEmbedded and Yocto Introduction (2013)</strong></a>
+<span id="id13">[<a class="reference internal" href="bibliography.html#id22"><span>DVW13</span></a>]</span></p></li>
+<li><p><em>Marcelo A.L. Sanz</em>: <a class="reference external" href="https://www.slideshare.net/marcelolorenzati/yocto-iua-2012"><strong>Yocto Project Open Source Build System and Collaboration Initiative (2012)</strong></a>
+<span id="id14">[<a class="reference internal" href="bibliography.html#id23"><span>San12</span></a>]</span></p></li>
+</ul>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Presentations&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than content, instead edit structure in files:
+revealjs.rsti</aside>
+<p></p>
+<p><span class="raw-html"><small></span></p>
+</section>
+<section data-background-image="_static/yp.svg" data-background-position="top 0px left 43px" data-background-size="256px 256px" data-background-opacity="0.66">
+<h3>Books</h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.yoctoproject.org/learn/books/">https://www.yoctoproject.org/learn/books/</a></p></li>
+<li><p><a class="reference external" href="https://old.yoctoproject.org/blogs/jefro/2016/yocto-project-books">https://old.yoctoproject.org/blogs/jefro/2016/yocto-project-books</a></p></li>
+</ul>
+<hr class="docutils" />
+<table class="colwidths-given longtable docutils align-center" id="id30">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Books about and with Yocto</span></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="raw-html"><small></span> <strong>2016</strong> (480 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://www.pearson.ch/images/big/9780133443240"><img alt="Embedded Linux Systems with the Yocto Project (ISBN: 978-0-13344-324-0)" src="https://www.pearson.ch/images/big/9780133443240" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="http://book.yoctoprojectbook.com/"><em>978-0-13344-324-0</em></a>
+<span class="raw-html"><br /></span> <span id="id15">[<a class="reference internal" href="bibliography.html#id12"><span>Str16</span></a>]</span> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <strong>2017</strong> (162 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://static.packt-cdn.com/products/9781788470469/cover/normal"><img alt="Embedded Linux Development using Yocto Projects - Second Edition (ISBN: 978-1-78847-046-9)" src="https://static.packt-cdn.com/products/9781788470469/cover/normal" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/product/embedded-linux-development-using-yocto-projects-second-edition/9781788470469"><em>978-1-78847-046-9</em></a>
+<span class="raw-html"><br /></span> <span id="id16">[<a class="reference internal" href="bibliography.html#id10"><span>SA17</span></a>]</span> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <strong>2017</strong> (478 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://static.packt-cdn.com/products/9781787283282/cover/normal"><img alt="Mastering Embedded Linux Programming - Second Edition (ISBN: 978-1-78728-328-2)" src="https://static.packt-cdn.com/products/9781787283282/cover/normal" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/product/mastering-embedded-linux-programming-second-edition/9781787283282"><em>978-1-78728-328-2</em></a>
+<span class="raw-html"><br /></span> <span id="id17">[<a class="reference internal" href="bibliography.html#id9"><span>Sim17</span></a>]</span> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <strong>2018</strong> (456 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://static.packt-cdn.com/products/9781788399210/cover/normal"><img alt="Embedded Linux Development Using Yocto Project Cookbook - Second Edition (ISBN: 978-1-78839-921-0)" src="https://static.packt-cdn.com/products/9781788399210/cover/normal" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/product/embedded-linux-development-using-yocto-project-cookbook-second-edition/9781788399210"><em>978-1-78839-921-0</em></a>
+<span class="raw-html"><br /></span> <span id="id18">[<a class="reference internal" href="bibliography.html#id8"><span>Gon18</span></a>]</span> <span class="raw-html"></small></span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="raw-html"><small></span> <strong>2016</strong> (989 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://www.packtpub.com/media/catalog/product/cache/c2dd93b9130e9fabaf187d1326a880fc/c/0/c06108_low_0.jpg"><img alt="Linux: Embedded Development - Learning Path (ISBN: 978-1-78712-445-5)" src="https://www.packtpub.com/media/catalog/product/cache/c2dd93b9130e9fabaf187d1326a880fc/c/0/c06108_low_0.jpg" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/eu/application-development/linux-embedded-development"><em>978-1-78712-445-5</em></a>
+<span class="raw-html"><br /></span> <span id="id19">[<a class="reference internal" href="bibliography.html#id11"><span>VGS16</span></a>]</span> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <em>missing one?</em> <span class="raw-html"><br /></span> <a class="reference internal" href="_images/qm.svg"><img alt="Question Mark" height="150" src="_images/qm.svg" width="115" /></a> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <strong>2016</strong> (214 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://static.packt-cdn.com/products/9781785281952/cover/normal"><img alt="Yocto for Raspberry Pi (ISBN: 978-1-78528-195-2)" src="https://static.packt-cdn.com/products/9781785281952/cover/normal" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/product/yocto-for-raspberry-pi/9781785281952"><em>978-1-78528-195-2</em></a>
+<span class="raw-html"><br /></span> <span id="id20">[<a class="reference internal" href="bibliography.html#id13"><span>TM15</span></a>]</span> <span class="raw-html"></small></span></p></td>
+<td><p><span class="raw-html"><small></span> <strong>2015</strong> (144 pages)
+<span class="raw-html"><br /></span> <a class="reference internal" href="https://static.packt-cdn.com/products/9781785289736/cover/normal"><img alt="Using Yocto Project with BeagleBone Black (ISBN: 978-1-78528-973-6)" src="https://static.packt-cdn.com/products/9781785289736/cover/normal" style="width: 115px; height: 150px;" /></a>
+<span class="raw-html"><br /></span> <a class="reference external" href="https://www.packtpub.com/product/using-yocto-project-with-beaglebone-black/9781785289736"><em>978-1-78528-973-6</em></a>
+<span class="raw-html"><br /></span> <span id="id21">[<a class="reference internal" href="bibliography.html#id14"><span>Sad15</span></a>]</span> <span class="raw-html"></small></span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="raw-html"></small></span></p>
+<aside class="notes">
+TBD: write down your &quot;Books&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than structure, instead edit content in files:
+*.rsti</aside>
+</section>
+</section>
+<section data-background-image="_static/lpn.svg" data-background-position="top 52px left 86px" data-background-size="128px 128px" data-background-opacity="0.33">
+<h2>Thank You</h2>
+<p><span class="raw-html"><small></span> <strong>TODO:</strong> <em>complete chapter</em> <span class="raw-html"></small></span></p>
+<img alt="_images/todo.jpg" src="_images/todo.jpg" />
+<aside class="notes">
+TBD: write down your &quot;Thank You&quot; notes here ...</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+...........................................................................</aside>
+<div class="toctree-wrapper compound">
+</div>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Don't change this file, instead edit content in files:
+glossary/*.rsti</aside>
+<aside class="notes">
+Never add or change more than term replacements (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Glossary Replacements:</aside>
+<aside class="notes">
+Commons:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than term replacements (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Glossary Replacements:</aside>
+<aside class="notes">
+Programming Languages:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than term replacements (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Glossary Replacements:</aside>
+<aside class="notes">
+Technologies:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than term replacements (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Glossary Replacements:</aside>
+<aside class="notes">
+Abbreviations:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Local Abbreviations:</aside>
+<aside class="notes">
+generally</aside>
+<aside class="notes">
+specifically</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than external links (ex. LaTeX formatting).</aside>
+<aside class="notes">
+External Links:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+<aside class="notes">
+Never add or change more than unicode replacements (ex. LaTeX formatting).</aside>
+<aside class="notes">
+Unicodes:</aside>
+<aside class="notes">
+Emojis:</aside>
+<aside class="notes">
+Local variables:
+coding: utf-8
+mode: text
+mode: rst
+End:
+vim: fileencoding=utf-8 filetype=rst :</aside>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs4/dist/reveal.js"></script>
+    
+    
+      <script src="_static/revealjs4/plugin/highlight/highlight.js"></script>
+      <script src="_static/revealjs4/plugin/math/math.js"></script>
+      <script src="_static/revealjs4/plugin/search/search.js"></script>
+      <script src="_static/revealjs4/plugin/zoom/zoom.js"></script>
+      <script src="_static/revealjs4/plugin/themeoverride/themeoverride.js"></script>
+      <script src="_static/revealjs4/plugin/altmode/altmode.js"></script>
+      <script src="_static/revealjs4/plugin/pdfexport/pdfexport.js"></script>
+      <script src="_static/revealjs4/plugin/helpbutton/helpbutton.js"></script>
+      <script src="_static/revealjs4/plugin/menu/menu.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, 
+    {
+        dependencies: [
+            {src: '_static/revealjs4/plugin/notes-pointer/notes-pointer.js', async: true},
+        ],
+
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: 'c/t',
+        rollingLinks: true,
+        previewLinks: true,
+        hide_address_bar: true,
+        view_distance: 3,
+
+        margin: 0.01,
+        minScale: 0.1,
+        maxScale: 1.2,
+
+        theme: 'black',
+        fragments: true,
+
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        background_transition: 'convex',
+
+        helpButtonDisplay: 'first',
+
+        altModeShortcut: 'A',
+
+        altModeConfig: [
+            {
+                theme: 'white',
+                fragments: true,
+            },
+            {
+                theme: 'white',
+                fragments: false,
+            },
+            {
+                theme: 'black',
+                fragments: false,
+            },
+        ],
+
+        pdfExportShortcut: 'P',
+        pdfSeparateFragments: false,
+
+        menu: {
+            openButton: true,
+            keyboard: true,
+            markers: true,
+            numbers: true,
+            themes: false,
+            transitions: false,
+        },
+
+        notes_pointer: {
+            pointer: {
+                size: 24,
+                color: 'rgba(255, 0, 0, 0.66)',
+                key: 'R',
+            },
+            notes: {
+                key: 'S',
+            },
+        },
+    }
+);
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealHighlight,RevealMath,RevealSearch,RevealZoom,ThemeOverride,AltMode,PdfExport,HelpButton,RevealMenu,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

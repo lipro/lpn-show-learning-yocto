@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta content="Sphinx 3.4.3" name="producer" />
+<meta content="Sphinx 3.4.3" name="creator" />
+<meta content="Li-Pro.Net" name="publisher" />
+<meta content="Learning Yocto." name="subject" />
+<meta content="LPN-QMS-SHOW-00000,Learning,Yocto,Bitbake" name="keywords" />
+<meta content="Li-Pro.Net — Documentation" name="author" />
+<meta content="2018‒2021 Li-Pro.Net and individual contributors." name="copyright" />
+<meta content="preliminary (:emphasis:`some mature, much in progress`)" name="docstat" />
+<meta content="LPN-QMS-SHOW-00000" name="docnumb" />
+<meta content="Yocto" name="project" />
+<meta content="Yocto" name="title" />
+<meta content="Learning" name="subtitle" />
+<meta content="0.0.0" name="version" />
+<meta content="0.0.0-75-g2094a49" name="release" />
+<meta content="2094a49d" name="identify" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta content="None" name="topic" />
+    
+  <title>1.1. Example: UI Toolkits &mdash; Learning Yocto</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/underline.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/colors.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2. Collaboration" href="collaboration.html" />
+    <link rel="prev" title="1. Challenge" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Yocto
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Challenge</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Example: UI Toolkits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaboration.html">1.2. Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="market.html">1.3. Market</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vendor.html">1.4. Vendor and Contractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community.html">1.5. Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business.html">1.6. Business</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domain.html">1.7. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intentions/index.html">2. Intentions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decision/index.html">3. Decision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decision/android.html">3.1. Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/baserock.html">3.2. Baserock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/buildroot.html">3.3. Buildroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openembedded.html">3.4. OpenEmbedded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openwrt.html">3.5. OpenWrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/reflection.html">3.6. Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">4. About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/governance.html">4.1. Governance Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/achievement.html">4.2. Achievement and Standing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/offer.html">4.3. Offer and Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/provides.html">4.4. Yocto Project Provides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/community.html">4.5. Yocto Project Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">5. Terms, Concepts, Idioms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest/index.html">6. Git Repo Manifest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-manifest.html">6.1. Platform Manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-pipeline.html">6.2. Platform Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build-system/index.html">7. Build System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/user-configuration.html">7.1. Configuration Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/metadata-layers.html">7.2. Metadata Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/source-files.html">7.3. Source Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/package-feeds.html">7.4. Package Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/bitbake-tool.html">7.5. BitBake Tool Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/images.html">7.6. Images Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/sdk.html">7.7. SDK Area</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-configuration/index.html">8. User Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/bblayers-conf.html">8.1. <code class="docutils literal notranslate"><span class="pre">bblayers.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/local-conf.html">8.2. <code class="docutils literal notranslate"><span class="pre">local.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/setup-environment.html">8.3. <code class="docutils literal notranslate"><span class="pre">setup-environment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata-layers/index.html">9. Metadata Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/types.html">9.1. Meta Layer Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/stack.html">9.2. Meta Layer Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/machines.html">9.3. Meta Layer Machines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/hydrogen-conf.html"><span class="red">hydrogen.conf</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/helium-conf.html"><span class="red">helium.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/distros.html">9.4. Meta Layer Distros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/cedi-conf.html"><span class="yellow">cedi.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/images.html">9.5. Meta Layer Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bb.html"><span class="green">central-image.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bbclass.html"><span class="blue">central-image.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-version-bbclass.html"><span class="blue">central-image-version.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-boot-bb.html"><span class="green">packagegroup-central-boot.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-tools-testapps-bb.html"><span class="green">packagegroup-central-tools-testapps.bb</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../source-files/index.html">10. Source Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/upstream.html">10.1. Upstream Project Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/local.html">10.2. Local Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/scm.html">10.3. Source Code Manager (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/mirrors.html">10.4. Source Mirror(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../package-feeds/index.html">11. Package Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bitbake-tool/index.html">12. BitBake Tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/inherit.html">12.1. Inherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/fetching.html">12.2. Fetching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/fetching.html#fetching-in-recipe">Fetching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/patching.html">12.3. Patching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/patching.html#patching-in-recipe">Patching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/compilation.html">12.4. Compilation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/compilation.html#compilation-in-recipe">Compilation in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/packaging.html">12.5. Packaging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/packaging.html#packaging-in-recipe">Packaging in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/image-generation.html">12.6. Image Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/sdk-generation.html">12.7. SDK Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">13. Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/index.html">14. Application Development SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../final/index.html">15. Final Closer Look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtd/index.html">16. Read-The-Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#documentations">16.1. Documentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#presentations">16.2. Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#books">16.3. Books</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thanks/index.html">17. Thank You</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">General Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/common-terms.html">Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/programming-languages.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/technologies.html">Technologies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acronyms.html">Acronyms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yocto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+
+<div class="rst-content style-external-links">
+
+  <dl class="field-list simple">
+    <dt class="field-odd" style="line-height: unset;">Yocto</dt>
+    <dd class="field-odd" style="line-height: unset;">Learning</dd>
+    <dt class="field-even" style="line-height: unset;">Document Number</dt>
+    <dd class="field-even" style="line-height: unset;">LPN-QMS-SHOW-00000</dd>
+    <dt class="field-odd" style="line-height: unset;">Revision (VCS)</dt>
+    <dd class="field-odd" style="line-height: unset;">0.0.0-75-g2094a49 (2094a49d)</dd>
+  </dl>
+</div>
+    
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">1. </span>Challenge</a> &raquo;</li>
+        
+      <li><span class="section-number">1.1. </span>Example: UI Toolkits</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/challenge/example.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="example-ui-toolkits">
+<h1><span class="section-number">1.1. </span>Example: UI Toolkits<a class="headerlink" href="#example-ui-toolkits" title="Permalink to this headline">¶</a></h1>
+<blockquote class="pull-quote">
+<div><p>–<a class="reference external" href="https://en.wikipedia.org/wiki/Linux#Desktop">English Wikipedia: Linux#Desktop</a></p>
+</div></blockquote>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../_images/Free_and_open-source-software_display_servers_and_UI_toolkits.svg"><img alt="../_images/Free_and_open-source-software_display_servers_and_UI_toolkits.svg" height="237" src="../_images/Free_and_open-source-software_display_servers_and_UI_toolkits.svg" width="518" /></a>
+<p class="caption"><span class="caption-number">Figure 1.2 </span><span class="caption-text">Example: UI Toolkits</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="collaboration.html" class="btn btn-neutral float-right" title="1.2. Collaboration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="1. Challenge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2018‒2021 Li-Pro.Net and individual contributors..
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+  
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

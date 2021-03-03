@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta content="Sphinx 3.4.3" name="producer" />
+<meta content="Sphinx 3.4.3" name="creator" />
+<meta content="Li-Pro.Net" name="publisher" />
+<meta content="Learning Yocto." name="subject" />
+<meta content="LPN-QMS-SHOW-00000,Learning,Yocto,Bitbake" name="keywords" />
+<meta content="Li-Pro.Net — Documentation" name="author" />
+<meta content="2018‒2021 Li-Pro.Net and individual contributors." name="copyright" />
+<meta content="preliminary (:emphasis:`some mature, much in progress`)" name="docstat" />
+<meta content="LPN-QMS-SHOW-00000" name="docnumb" />
+<meta content="Yocto" name="project" />
+<meta content="Yocto" name="title" />
+<meta content="Learning" name="subtitle" />
+<meta content="0.0.0" name="version" />
+<meta content="0.0.0-75-g2094a49" name="release" />
+<meta content="2094a49d" name="identify" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta content="Terms, Concepts, Idioms" name="topic" />
+    
+  <title>5. Terms, Concepts, Idioms &mdash; Learning Yocto</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/underline.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/colors.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Git Repo Manifest" href="../manifest/index.html" />
+    <link rel="prev" title="4.5. Yocto Project Community" href="../about/community.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Yocto
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../challenge/index.html">1. Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/example.html">1.1. Example: UI Toolkits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/collaboration.html">1.2. Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/market.html">1.3. Market</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/vendor.html">1.4. Vendor and Contractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/community.html">1.5. Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/business.html">1.6. Business</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/domain.html">1.7. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intentions/index.html">2. Intentions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decision/index.html">3. Decision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decision/android.html">3.1. Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/baserock.html">3.2. Baserock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/buildroot.html">3.3. Buildroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openembedded.html">3.4. OpenEmbedded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openwrt.html">3.5. OpenWrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/reflection.html">3.6. Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">4. About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/governance.html">4.1. Governance Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/achievement.html">4.2. Achievement and Standing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/offer.html">4.3. Offer and Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/provides.html">4.4. Yocto Project Provides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/community.html">4.5. Yocto Project Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Terms, Concepts, Idioms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest/index.html">6. Git Repo Manifest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-manifest.html">6.1. Platform Manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manifest/platform-pipeline.html">6.2. Platform Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build-system/index.html">7. Build System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/user-configuration.html">7.1. Configuration Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/metadata-layers.html">7.2. Metadata Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/source-files.html">7.3. Source Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/package-feeds.html">7.4. Package Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/bitbake-tool.html">7.5. BitBake Tool Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/images.html">7.6. Images Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/sdk.html">7.7. SDK Area</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-configuration/index.html">8. User Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/bblayers-conf.html">8.1. <code class="docutils literal notranslate"><span class="pre">bblayers.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/local-conf.html">8.2. <code class="docutils literal notranslate"><span class="pre">local.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/setup-environment.html">8.3. <code class="docutils literal notranslate"><span class="pre">setup-environment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata-layers/index.html">9. Metadata Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/types.html">9.1. Meta Layer Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/stack.html">9.2. Meta Layer Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/machines.html">9.3. Meta Layer Machines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/hydrogen-conf.html"><span class="red">hydrogen.conf</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/helium-conf.html"><span class="red">helium.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/distros.html">9.4. Meta Layer Distros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/cedi-conf.html"><span class="yellow">cedi.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/images.html">9.5. Meta Layer Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bb.html"><span class="green">central-image.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bbclass.html"><span class="blue">central-image.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-version-bbclass.html"><span class="blue">central-image-version.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-boot-bb.html"><span class="green">packagegroup-central-boot.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-tools-testapps-bb.html"><span class="green">packagegroup-central-tools-testapps.bb</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../source-files/index.html">10. Source Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/upstream.html">10.1. Upstream Project Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/local.html">10.2. Local Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/scm.html">10.3. Source Code Manager (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/mirrors.html">10.4. Source Mirror(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../package-feeds/index.html">11. Package Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bitbake-tool/index.html">12. BitBake Tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/inherit.html">12.1. Inherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/fetching.html">12.2. Fetching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/fetching.html#fetching-in-recipe">Fetching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/patching.html">12.3. Patching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/patching.html#patching-in-recipe">Patching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/compilation.html">12.4. Compilation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/compilation.html#compilation-in-recipe">Compilation in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/packaging.html">12.5. Packaging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/packaging.html#packaging-in-recipe">Packaging in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/image-generation.html">12.6. Image Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/sdk-generation.html">12.7. SDK Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">13. Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/index.html">14. Application Development SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../final/index.html">15. Final Closer Look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtd/index.html">16. Read-The-Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#documentations">16.1. Documentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#presentations">16.2. Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#books">16.3. Books</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thanks/index.html">17. Thank You</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">General Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/common-terms.html">Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/programming-languages.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/technologies.html">Technologies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acronyms.html">Acronyms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yocto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+
+<div class="rst-content style-external-links">
+
+  <dl class="field-list simple">
+    <dt class="field-odd" style="line-height: unset;">Yocto</dt>
+    <dd class="field-odd" style="line-height: unset;">Learning</dd>
+    <dt class="field-even" style="line-height: unset;">Document Number</dt>
+    <dd class="field-even" style="line-height: unset;">LPN-QMS-SHOW-00000</dd>
+    <dt class="field-odd" style="line-height: unset;">Revision (VCS)</dt>
+    <dd class="field-odd" style="line-height: unset;">0.0.0-75-g2094a49 (2094a49d)</dd>
+  </dl>
+</div>
+    
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>Terms, Concepts, Idioms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/concepts/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="terms-concepts-idioms">
+<h1><span class="section-number">5. </span>Terms, Concepts, Idioms<a class="headerlink" href="#terms-concepts-idioms" title="Permalink to this headline">¶</a></h1>
+<p>Following is a slightly extended list of terms, concepts and definitions
+users new to the Yocto Project development environment might find helpful.
+While some of these terms are universal, the list includes them just in
+such case. A more or less completed version of the list can be found on
+the following website: <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Terms</span></a></p>
+<p class="rubric">Terms overall</p>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Git Repo</strong> (<code class="file docutils literal notranslate"><span class="pre">repo</span></code>):
+The collection manager that Google has built on top of Git to help
+<span class="underline">manage multiple Git repositories</span>, does the uploads to
+Gerrit and automates the Android system image development workflow.
+The <strong class="command">repo</strong> command is an executable <a class="reference internal" href="../_glossary/programming-languages.html#term-Python"><span class="xref std std-term">Python</span></a> script that you
+can put anywhere in your path.
+→ <a class="reference external" href="https://gerrit.googlesource.com/git-repo/">https://gerrit.googlesource.com/git-repo/</a></p></li>
+<li class="fragment"><p><strong>BitBake</strong>:
+The <strong>Task</strong> <span class="underline">executor and scheduler</span> used by the
+<strong>Build System</strong> to build <strong>Images</strong>. The <strong class="command">bitbake</strong>
+command is part of an fancy <a class="reference internal" href="../_glossary/programming-languages.html#term-Python"><span class="xref std std-term">Python</span></a> and Bash environment around the
+<strong>BitBake</strong> project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-BitBake" title="(in The Yocto Project ® vVersion: Current Development)"><span>BitBake</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/bitbake">BitBake</a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bitbake/index.html" title="(in Bitbake vVersion: Current Development)"><span>BitBake User Manual</span></a></p></li>
+<li class="fragment"><p><strong>Metadata</strong>:
+The <span class="underline">files</span> that <strong>BitBake</strong> <span class="underline">parses when
+building</span> an <strong>Images</strong>. In general, <strong>Metadata</strong> provides
+<strong>Recipes</strong>, <strong>Classes</strong> and  <strong>Configuration Files</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Metadata" title="(in The Yocto Project ® vVersion: Current Development)"><span>Metadata</span></a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bitbake/index.html" title="(in Bitbake vVersion: Current Development)"><span>BitBake User Manual</span></a>
+→ <a class="reference external" href="https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-intro.html" title="(in Bitbake vVersion: Current Development)"><span>Overview</span></a>
+→ <a class="reference external" href="https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-intro.html#introduction" title="(in Bitbake vVersion: Current Development)"><span>Introduction</span></a></p></li>
+<li class="fragment"><p><strong>OE-Core</strong>:
+A <span class="underline">core set</span> of <strong>Metadata</strong> originating with <abbr title="OE">OpenEmbedded</abbr>
+that is shared between <abbr title="OpenEmbedded">OE</abbr> and the Yocto Project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-OpenEmbedded-Core-OE-Core" title="(in The Yocto Project ® vVersion: Current Development)"><span>OpenEmbedded-Core (OE-Core)</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/openembedded-core">OE-Core</a>, or
+<a class="reference external" href="https://www.openembedded.org/wiki/OpenEmbedded-Core#Introduction">OE Wikipedia</a></p></li>
+<li class="fragment"><p><strong>Poky</strong>:
+The reference <span class="underline">distribution</span> of the Yocto Project. It contains
+the <strong>Build System</strong> (<strong>BitBake</strong> and <strong>OE-Core</strong>) as
+well as a set of <strong>Metadata</strong> to get you started building your own
+<abbr title="distribution">distro</abbr>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Poky" title="(in The Yocto Project ® vVersion: Current Development)"><span>Poky</span></a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/project-components">Yocto Components and Tools</a>
+→ <a class="reference external" href="https://www.yoctoproject.org/software-item/poky">Poky</a>, or
+<a class="reference external" href="https://www.yoctoproject.org/software-overview/reference-distribution">Yocto Reference Distribution</a></p></li>
+</ol>
+<p class="rubric">Terms internal</p>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Layer</strong>:
+A <span class="underline">collection</span> of <strong>Recipes</strong> <span class="underline">representing
+the core</span>, a <abbr title="BSP">Board Support Package</abbr>, an <span class="underline">application stack</span>, or any other
+<span class="underline">3rd party contributions</span>. <strong>Layers</strong> are hierarchical
+in their ability to override previous specifications.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Layer" title="(in The Yocto Project ® vVersion: Current Development)"><span>Layer</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#layers" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p>
+<ul class="simple">
+<li><p>list of <a class="reference external" href="https://www.yoctoproject.org/software-overview/layers">Yocto Compatible Layers</a></p></li>
+<li><p>list of <a class="reference external" href="https://layers.openembedded.org/layers">OpenEmbedded Contributed Layers</a></p></li>
+</ul>
+</li>
+<li class="fragment"><p><strong>Image</strong>:
+An <span class="underline">artifact</span> of the <strong>BitBake</strong> build process given
+a collection of <strong>Recipes</strong> and related <strong>Metadata</strong>.
+<strong>Images</strong> are the binary output that run on specific target
+architecture.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Image" title="(in The Yocto Project ® vVersion: Current Development)"><span>Image</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#images" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/images.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+<li class="fragment"><p><strong>Package</strong>:
+Refers to a <strong>Recipe</strong>’s <span class="underline">packaged output</span> produced
+by <strong>BitBake</strong> (i.e. a <em>“baked recipe”</em>). A
+<strong>Package</strong> is generally the <span class="underline">compiled binaries</span>
+produced from the <strong>Recipe</strong>’s sources. You <em>“bake”</em>
+any <em>“bin”</em> by running it through <strong>BitBake</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Package" title="(in The Yocto Project ® vVersion: Current Development)"><span>Package</span></a></p></li>
+<li class="fragment"><p><strong>Package Groups</strong>:
+Arbitrary <span class="underline">group of software</span> <strong>Recipes</strong>. You use
+<strong>Package Groups</strong> to hold <strong>Recipes</strong> that, when built,
+<span class="underline">usually accomplish a single</span> <strong>Task</strong>. For example,
+<strong>Package Groups</strong> could contain the <strong>Recipes</strong> for a
+company’s proprietary or value-add software.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Package-Groups" title="(in The Yocto Project ® vVersion: Current Development)"><span>Package Groups</span></a></p></li>
+<li class="fragment"><p><strong>Task</strong>:
+A <span class="underline">unit of execution</span> for <strong>BitBake</strong> (e.g.
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-fetch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_fetch</span></a>, <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-patch" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_patch</span></a>,
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html#ref-tasks-compile" title="(in The Yocto Project ® vVersion: Current Development)"><span>do_compile</span></a>, and so forth).
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Task" title="(in The Yocto Project ® vVersion: Current Development)"><span>Task</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/tasks.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+</ol>
+<p class="rubric">Metadata</p>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Classes</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bbclass</span></code> file extension that provided for
+<span class="underline">logic encapsulation and inheritance</span> so that commonly
+used patterns can be <span class="underline">defined once and then easily used</span>
+in multiple <strong>Recipes</strong>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Classes" title="(in The Yocto Project ® vVersion: Current Development)"><span>Classes</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#classes" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/ref-manual/classes.html" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-doc">Reference</span></a></p></li>
+<li class="fragment"><p><strong>Recipes</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bb</span></code> file extension have a <span class="underline">set of
+instructions</span> for building <strong>Packages</strong> or <strong>Package
+Groups</strong> or <strong>Images</strong> and describes where you get source code,
+which patches to apply, how to configure the source, <span class="underline">how
+to compile</span> it and so on. It also <span class="underline">describe dependencies</span>
+for libraries or for other <strong>Recipes</strong>. <strong>Recipes</strong>
+represent the <span class="underline">logical unit of execution</span>.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Recipe" title="(in The Yocto Project ® vVersion: Current Development)"><span>Recipe</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#recipes" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p></li>
+<li class="fragment"><p><strong>Append Files</strong>:
+Files with the <code class="file docutils literal notranslate"><span class="pre">.bbappend</span></code> file extension that append build
+information to a <strong>Recipe</strong>. The <strong>Build System</strong> respects
+every <strong>Append file</strong> to have a corresponding <strong>Recipe</strong>
+(<code class="file docutils literal notranslate"><span class="pre">.bb</span></code>) file.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Append-Files" title="(in The Yocto Project ® vVersion: Current Development)"><span>Append Files</span></a></p></li>
+<li class="fragment"><p><strong>Configuration Files</strong>:
+Configuration information in various
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Configuration-File" title="(in The Yocto Project ® vVersion: Current Development)"><span>Configuration File</span></a>, or in
+<a class="reference external" href="https://docs.yoctoproject.org/overview-manual/concepts.html#configurations" title="(in The Yocto Project ® vVersion: Current Development)"><span class="xref std std-ref">Concept</span></a></p></li>
+</ol>
+<p class="rubric">Features</p>
+<p><a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Features</span></a> provide a mechanism for:</p>
+<ol class="arabic simple">
+<li class="fragment"><p>working out which <strong>Packages</strong> or <strong>Package Groups</strong> should
+be included in the generated <strong>Image</strong>, typically configured in
+<strong>Image</strong> <strong>Recipes</strong> and their related <strong>Classes</strong>
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-image" title="(in The Yocto Project ® vVersion: Current Development)"><span>Image Features</span></a></p></li>
+<li class="fragment"><p>distributions <strong>Configuration Files</strong> can select which features
+they want to support
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-distro" title="(in The Yocto Project ® vVersion: Current Development)"><span>Distro Features</span></a></p></li>
+<li class="fragment"><p>machine <strong>Configuration Files</strong> specifies the hardware functions
+that will be available for a given machine
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-machine" title="(in The Yocto Project ® vVersion: Current Development)"><span>Machine Features</span></a></p></li>
+<li class="fragment"><p>backward and inter-layer compatibility for special (historical) cases
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html#ref-features-backfill" title="(in The Yocto Project ® vVersion: Current Development)"><span>Feature Backfilling</span></a></p></li>
+</ol>
+<div class="align-center figure" id="features">
+<img alt="../_images/features.svg" src="../_images/features.svg" /><p class="caption"><span class="caption-number">Figure 5.1 </span><span class="caption-text">Yocto Build System <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/features.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Features</span></a> and their interaction</span><a class="headerlink" href="#features" title="Permalink to this image">¶</a></p>
+</div>
+<p class="rubric">Idioms</p>
+<ol class="arabic simple">
+<li class="fragment"><p><strong>Build System</strong>:
+The build system specific to the Yocto Project based on the project
+<strong>Poky</strong>, which uses <strong>BitBake</strong> as the <strong>Task</strong>
+executor.</p></li>
+<li class="fragment"><p><strong>Source Directory</strong>:
+Refers to the directory structure created as a result of creating a
+local copy of the <strong>Poky</strong> and all other Git repositories as
+referred by the <strong>Git Repo</strong> manifest. It contains <strong>BitBake</strong>,
+Documentation, <strong>Metadata</strong> and other files that all support the
+Yocto Project. Consequently, you must have the <strong>Source Directory</strong>
+in place on your development system in order to do any development using
+the Yocto Project.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Source-Directory" title="(in The Yocto Project ® vVersion: Current Development)"><span>Source Directory</span></a></p></li>
+<li class="fragment"><p><strong>Build Directory</strong>:
+This term refers to the area used by the <strong>Build System</strong> for
+downloads, builds and deployments.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Build-Directory" title="(in The Yocto Project ® vVersion: Current Development)"><span>Build Directory</span></a></p></li>
+<li class="fragment"><p><strong>Cross-Development Toolchain</strong>:
+A collection of cross-compilers, linkers, debuggers, libraries and
+utilities that run on one architecture and allow you to develop
+software for a different, or targeted, architecture.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Cross-Development-Toolchain" title="(in The Yocto Project ® vVersion: Current Development)"><span>Cross-Development Toolchain</span></a></p></li>
+<li class="fragment"><p><strong>Board Support Package (BSP)</strong>:
+A group of drivers, definitions, and other components that provide
+support for a specific hardware configuration.
+→ <a class="reference external" href="https://docs.yoctoproject.org/ref-manual/terms.html#term-Board-Support-Package-BSP" title="(in The Yocto Project ® vVersion: Current Development)"><span>Board Support Package (BSP)</span></a>, or
+<a class="reference external" href="https://docs.yoctoproject.org/bsp-guide/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Board Support Package Developer’s Guide</span></a> and <a class="reference external" href="https://docs.yoctoproject.org/kernel-dev/index.html" title="(in The Yocto Project ® vVersion: Current Development)"><span>Yocto Project Linux Kernel Development Manual</span></a></p></li>
+</ol>
+<p class="rubric">Conclusion</p>
+<div class="important admonition">
+<p class="admonition-title">the following applies and is unavoidable</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Git Repo:</strong> determines the code base line</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Layers:</strong> are essential and able to overlay</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Classes:</strong> inheritable but not extensible</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Recipes:</strong> extensible but not inheritable</p>
+<p class="left-justified fragment grow highlight-blue"><strong>Features:</strong> determines the final product</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../manifest/index.html" class="btn btn-neutral float-right" title="6. Git Repo Manifest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../about/community.html" class="btn btn-neutral float-left" title="4.5. Yocto Project Community" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2018‒2021 Li-Pro.Net and individual contributors..
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+  
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

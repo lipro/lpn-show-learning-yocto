@@ -1,0 +1,56 @@
+:topic: |title| |--| |subtitle|
+
+.. _home:
+
+##################
+|subtitle| |title|
+##################
+
+.. revealjs_section::
+   :data-background-image: _static/lpn.svg
+   :data-background-position: top 52px left 86px
+   :data-background-size: 128px 128px
+   :data-background-opacity: 0.33
+
+.. ...........................................................................
+
+.. include:: /revealjs/greeting.rsti
+.. include:: /revealjs/what-for-who.rsti
+.. include:: /revealjs/prerequisites.rsti
+
+.. ...........................................................................
+
+.. include:: /challenge/revealjs.rsti
+.. include:: /intentions/revealjs.rsti
+.. include:: /decision/revealjs.rsti
+.. include:: /about/revealjs.rsti
+.. include:: /concepts/revealjs.rsti
+.. include:: /manifest/revealjs.rsti
+.. include:: /build-system/revealjs.rsti
+.. include:: /user-configuration/revealjs.rsti
+.. include:: /metadata-layers/revealjs.rsti
+.. include:: /source-files/revealjs.rsti
+.. include:: /package-feeds/revealjs.rsti
+.. include:: /bitbake-tool/revealjs.rsti
+.. include:: /images/revealjs.rsti
+.. include:: /sdk/revealjs.rsti
+.. include:: /final/revealjs.rsti
+.. include:: /rtd/revealjs.rsti
+.. include:: /thanks/revealjs.rsti
+
+.. ...........................................................................
+
+.. toctree::
+   :caption: Lists and References
+   :titlesonly:
+   :hidden:
+
+   glossary
+   bibliography
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

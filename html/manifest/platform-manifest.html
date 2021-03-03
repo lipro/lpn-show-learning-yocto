@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta content="Sphinx 3.4.3" name="producer" />
+<meta content="Sphinx 3.4.3" name="creator" />
+<meta content="Li-Pro.Net" name="publisher" />
+<meta content="Learning Yocto." name="subject" />
+<meta content="LPN-QMS-SHOW-00000,Learning,Yocto,Bitbake" name="keywords" />
+<meta content="Li-Pro.Net — Documentation" name="author" />
+<meta content="2018‒2021 Li-Pro.Net and individual contributors." name="copyright" />
+<meta content="preliminary (:emphasis:`some mature, much in progress`)" name="docstat" />
+<meta content="LPN-QMS-SHOW-00000" name="docnumb" />
+<meta content="Yocto" name="project" />
+<meta content="Yocto" name="title" />
+<meta content="Learning" name="subtitle" />
+<meta content="0.0.0" name="version" />
+<meta content="0.0.0-75-g2094a49" name="release" />
+<meta content="2094a49d" name="identify" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <meta content="None" name="topic" />
+    
+  <title>6.1. Platform Manifest &mdash; Learning Yocto</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/underline.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/colors.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.2. Platform Pipeline" href="platform-pipeline.html" />
+    <link rel="prev" title="6. Git Repo Manifest" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Yocto
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../challenge/index.html">1. Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/example.html">1.1. Example: UI Toolkits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/collaboration.html">1.2. Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/market.html">1.3. Market</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/vendor.html">1.4. Vendor and Contractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/community.html">1.5. Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/business.html">1.6. Business</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../challenge/domain.html">1.7. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intentions/index.html">2. Intentions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decision/index.html">3. Decision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../decision/android.html">3.1. Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/baserock.html">3.2. Baserock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/buildroot.html">3.3. Buildroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openembedded.html">3.4. OpenEmbedded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/openwrt.html">3.5. OpenWrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decision/reflection.html">3.6. Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">4. About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/governance.html">4.1. Governance Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/achievement.html">4.2. Achievement and Standing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/offer.html">4.3. Offer and Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/provides.html">4.4. Yocto Project Provides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/community.html">4.5. Yocto Project Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">5. Terms, Concepts, Idioms</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Git Repo Manifest</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Platform Manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform-pipeline.html">6.2. Platform Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build-system/index.html">7. Build System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/user-configuration.html">7.1. Configuration Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/metadata-layers.html">7.2. Metadata Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/source-files.html">7.3. Source Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/package-feeds.html">7.4. Package Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/bitbake-tool.html">7.5. BitBake Tool Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/images.html">7.6. Images Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build-system/sdk.html">7.7. SDK Area</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-configuration/index.html">8. User Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/bblayers-conf.html">8.1. <code class="docutils literal notranslate"><span class="pre">bblayers.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/local-conf.html">8.2. <code class="docutils literal notranslate"><span class="pre">local.conf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-configuration/setup-environment.html">8.3. <code class="docutils literal notranslate"><span class="pre">setup-environment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata-layers/index.html">9. Metadata Layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/types.html">9.1. Meta Layer Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/stack.html">9.2. Meta Layer Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/machines.html">9.3. Meta Layer Machines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/hydrogen-conf.html"><span class="red">hydrogen.conf</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/helium-conf.html"><span class="red">helium.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/distros.html">9.4. Meta Layer Distros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/cedi-conf.html"><span class="yellow">cedi.conf</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metadata-layers/images.html">9.5. Meta Layer Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bb.html"><span class="green">central-image.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-bbclass.html"><span class="blue">central-image.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/central-image-version-bbclass.html"><span class="blue">central-image-version.bbclass</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-boot-bb.html"><span class="green">packagegroup-central-boot.bb</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metadata-layers/packagegroup-central-tools-testapps-bb.html"><span class="green">packagegroup-central-tools-testapps.bb</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../source-files/index.html">10. Source Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/upstream.html">10.1. Upstream Project Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/local.html">10.2. Local Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/scm.html">10.3. Source Code Manager (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source-files/mirrors.html">10.4. Source Mirror(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../package-feeds/index.html">11. Package Feeds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bitbake-tool/index.html">12. BitBake Tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/inherit.html">12.1. Inherit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/fetching.html">12.2. Fetching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/fetching.html#fetching-in-recipe">Fetching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/patching.html">12.3. Patching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/patching.html#patching-in-recipe">Patching in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/compilation.html">12.4. Compilation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/compilation.html#compilation-in-recipe">Compilation in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/packaging.html">12.5. Packaging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bitbake-tool/packaging.html#packaging-in-recipe">Packaging in Recipe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/image-generation.html">12.6. Image Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitbake-tool/sdk-generation.html">12.7. SDK Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">13. Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/index.html">14. Application Development SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../final/index.html">15. Final Closer Look</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtd/index.html">16. Read-The-Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#documentations">16.1. Documentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#presentations">16.2. Presentations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtd/index.html#books">16.3. Books</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thanks/index.html">17. Thank You</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">General Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/common-terms.html">Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/programming-languages.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_glossary/technologies.html">Technologies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acronyms.html">Acronyms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Yocto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+
+<div class="rst-content style-external-links">
+
+  <dl class="field-list simple">
+    <dt class="field-odd" style="line-height: unset;">Yocto</dt>
+    <dd class="field-odd" style="line-height: unset;">Learning</dd>
+    <dt class="field-even" style="line-height: unset;">Document Number</dt>
+    <dd class="field-even" style="line-height: unset;">LPN-QMS-SHOW-00000</dd>
+    <dt class="field-odd" style="line-height: unset;">Revision (VCS)</dt>
+    <dd class="field-odd" style="line-height: unset;">0.0.0-75-g2094a49 (2094a49d)</dd>
+  </dl>
+</div>
+    
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">6. </span>Git Repo Manifest</a> &raquo;</li>
+        
+      <li><span class="section-number">6.1. </span>Platform Manifest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/manifest/platform-manifest.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p></p>
+<div class="section" id="platform-manifest">
+<h1><span class="section-number">6.1. </span>Platform Manifest<a class="headerlink" href="#platform-manifest" title="Permalink to this headline">¶</a></h1>
+<p>This section contains direct excerpts and quotes from publicly accessible
+documentation: <a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md">Manifest Format</a> — © 2008–2021 Google LLC.</p>
+<p><span class="raw-html"><small></span>
+<a class="reference external" href="https://github.com/lipro-yocto/lpn-central-repo">https://github.com/lipro-yocto/lpn-central-repo</a>
+<span class="raw-html"></small></span></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;manifest&gt;</span>
+
+  <span class="nt">&lt;default</span> <span class="na">sync-j=</span><span class="s">&quot;4&quot;</span> <span class="na">revision=</span><span class="s">&quot;master&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;remote</span> <span class="na">fetch=</span><span class="s">&quot;https://git.yoctoproject.org/git&quot;</span> <span class="na">name=</span><span class="s">&quot;yocto&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;remote</span> <span class="na">fetch=</span><span class="s">&quot;https://github.com/openembedded&quot;</span> <span class="na">name=</span><span class="s">&quot;oe&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;remote</span> <span class="na">fetch=</span><span class="s">&quot;https://github.com/meta-qt5&quot;</span> <span class="na">name=</span><span class="s">&quot;qt5&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;remote</span> <span class="na">fetch=</span><span class="s">&quot;https://github.com/lipro-yocto&quot;</span> <span class="na">name=</span><span class="s">&quot;lpy&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">remote=</span><span class="s">&quot;yocto&quot;</span> <span class="na">name=</span><span class="s">&quot;poky&quot;</span> <span class="na">path=</span><span class="s">&quot;sources/poky&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;project</span> <span class="na">remote=</span><span class="s">&quot;yocto&quot;</span> <span class="na">name=</span><span class="s">&quot;meta-mingw&quot;</span> <span class="na">path=</span><span class="s">&quot;sources/yocto/meta-mingw&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;project</span> <span class="na">remote=</span><span class="s">&quot;oe&quot;</span> <span class="na">name=</span><span class="s">&quot;meta-openembedded&quot;</span> <span class="na">path=</span><span class="s">&quot;sources/openembedded&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;project</span> <span class="na">remote=</span><span class="s">&quot;qt5&quot;</span> <span class="na">name=</span><span class="s">&quot;meta-qt5&quot;</span> <span class="na">path=</span><span class="s">&quot;sources/qt/meta-qt5&quot;</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">remote=</span><span class="s">&quot;lpy&quot;</span> <span class="na">name=</span><span class="s">&quot;lpn-central&quot;</span> <span class="na">path=</span><span class="s">&quot;sources/central&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;copyfile</span> <span class="na">dest=</span><span class="s">&quot;setup-environment&quot;</span> <span class="na">src=</span><span class="s">&quot;scripts/setup-environment&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/project&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span>
+</pre></div>
+</div>
+<p class="left-justified fragment fade-in"><span class="raw-html"><small></span>
+→ <a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs">https://gerrit.googlesource.com/git-repo/+/master/docs</a>
+<span class="raw-html"></small></span></p>
+<p class="left-justified fragment fade-in"><a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md">Manifest Format</a>,
+<a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/internal-fs-layout.md#dotconfig-layout">Configuration</a>,
+<a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/master/docs/repo-hooks.md">Hooks</a></p>
+<p class="rubric">Element <em class="dfn">manifest</em></p>
+<p>The root element of the file.</p>
+<p class="rubric">Element <em class="dfn">include</em></p>
+<p>This element provides the capability of including another manifest file into
+the originating manifest. Normal rules apply for the target manifest to include – it must be a usable manifest on its own.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">name</em></dt>
+<dd class="field-odd"><p>The name of the manifest file to include, specified relative to the manifest
+repository’s root.</p>
+</dd>
+</dl>
+<p class="rubric">Element <em class="dfn">default</em></p>
+<p>At most one default element may be specified. Its remote and revision
+attributes are used when a project element does not specify its own
+remote or revision attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">remote</em></dt>
+<dd class="field-odd"><p>See <em class="dfn">project</em> → <em class="dfn">remote</em>. Name of a previously
+defined remote element. Project elements lacking a remote attribute of
+their own will use this remote.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">revision</em></dt>
+<dd class="field-odd"><p>See <em class="dfn">remote</em> → <em class="dfn">revision</em>. Project elements lacking
+their own revision attribute will use this revision.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">sync-j</em></dt>
+<dd class="field-odd"><p>Number of parallel jobs to use when synching.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">sync-s</em></dt>
+<dd class="field-odd"><p>Set to true to also sync sub-projects (Git submodules).</p>
+</dd>
+</dl>
+<p class="rubric">Element <em class="dfn">remote</em></p>
+<p>One or more remote elements may be specified. Each remote element specifies
+a Git URL shared by one or more projects and (optionally) the Gerrit review
+server those projects upload changes through.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">name</em></dt>
+<dd class="field-odd"><p>A short name unique to this manifest file. The name specified here is
+used as the remote name in each project’s .git/config, and is therefore
+automatically available to commands like <strong class="command">git fetch</strong>,
+<strong class="command">git remote</strong>, <strong class="command">git pull</strong> and <strong class="command">git push</strong>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">alias</em></dt>
+<dd class="field-odd"><p>The alias, if specified, is used to override <em class="dfn">name</em> to be
+set as the remote name in each project’s <code class="file docutils literal notranslate"><span class="pre">.git/config</span></code>. Its value
+can be duplicated while attribute name has to be unique in the manifest
+file. This helps each project to be able to have same remote name which
+actually points to different remote URL.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">fetch</em></dt>
+<dd class="field-odd"><p>The Git URL prefix for all projects which use this remote. Each
+project’s name is appended to this prefix to form the actual URL
+used to clone the project.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">pushurl</em></dt>
+<dd class="field-odd"><p>The Git “push” URL prefix for all projects which use this remote. Each
+project’s name is appended to this prefix to form the actual URL used
+to <strong class="command">git push</strong> the project. This attribute is optional; if not
+specified then <strong class="command">git push</strong> will use the same URL as the
+<em class="dfn">fetch</em> attribute.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">review</em></dt>
+<dd class="field-odd"><p>Hostname of the Gerrit server where reviews are uploaded to by
+<strong class="command">repo upload</strong>. This attribute is optional; if not specified
+then <strong class="command">repo upload</strong> will not function.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">revision</em></dt>
+<dd class="field-odd"><p>Name of a Git branch or specific reference (e.g. <code class="file docutils literal notranslate"><span class="pre">master</span></code> or
+<code class="file docutils literal notranslate"><span class="pre">refs/heads/master</span></code>, and also possible <code class="file docutils literal notranslate"><span class="pre">refs/tags/1.0.0</span></code>).
+Tags and/or explicit SHA-1s should work in theory, but have not been
+extensively tested. Remotes with their own revision will override the
+<em class="dfn">default</em> → <em class="dfn">revision</em>.</p>
+</dd>
+</dl>
+<p class="rubric">Element <em class="dfn">project</em></p>
+<p>One or more project elements may be specified. Each element describes
+a single Git repository to be cloned into the repo client workspace. You
+may specify Git submodules by creating a nested project. Git submodules
+will be automatically recognized and inherit their parent’s attributes,
+but those may be overridden by an explicitly specified project element.</p>
+<dl class="field-list">
+<dt class="field-odd">Attribute <em class="dfn">name</em></dt>
+<dd class="field-odd"><p>A unique name for this project. The project‘s name is appended onto its
+remote’s <em class="dfn">fetch</em> URL to generate the actual URL to configure
+the Git remote with. The URL gets formed as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>${remote_fetch}/${project_name}.git
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">path</em></dt>
+<dd class="field-odd"><p>An optional path relative to the top directory of the repo client where
+the Git working directory for this project should be placed. If not
+supplied the project <em class="dfn">name</em> is used. If the project has
+a parent element, its path will be prefixed by the parent’s.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">remote</em></dt>
+<dd class="field-odd"><p>Name of a previously defined <em class="dfn">remote</em> element. If not supplied the
+remote given by the <em class="dfn">default</em> element is used.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">revision</em></dt>
+<dd class="field-odd"><p>Name of the Git branch the manifest wants to track for this project.
+See <em class="dfn">remote</em> → <em class="dfn">revision</em>. If not supplied the
+revision given by the <em class="dfn">remote</em> element is used if applicable, else
+the <em class="dfn">default</em> element is used.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">sync-s</em></dt>
+<dd class="field-odd"><p>Set to true to also sync sub-projects (Git submodules).</p>
+</dd>
+</dl>
+<p class="rubric">Element <em class="dfn">copyfile</em></p>
+<p>Zero or more copyfile elements may be specified as children of a <em class="dfn">project</em>
+element. Each element describes a source-destination-pair of files; the
+<em class="dfn">src</em> file will be copied to the <em class="dfn">dest</em> place
+during <strong class="command">repo sync</strong> command.</p>
+<p>Copying from paths outside of the project or to paths outside of the repo
+client is not allowed. Directories or symlinks are not allowed. Intermediate
+paths must not be symlinks either.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">src</em></dt>
+<dd class="field-odd"><p>The source file; is project relative and must be a file.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute <em class="dfn">dest</em></dt>
+<dd class="field-odd"><p>The destination file; is relative to the top of the tree and must be
+a file. Parent directories will be automatically created if missing.</p>
+</dd>
+</dl>
+<p class="rubric">Element <em class="dfn">linkfile</em></p>
+<p>It’s just like <em class="dfn">copyfile</em> and runs at the same time as <em class="dfn">copyfile</em>
+but instead of copying it creates a symlink.</p>
+<p>The symlink is created at <em class="dfn">dest</em> (relative to the top of the
+tree) and points to the path specified by <em class="dfn">src</em> which is a
+path in the project. Parent directories of <em class="dfn">dest</em> will be
+automatically created if missing. The symlink target may be a file or
+directory, but it may not point outside of the repo client.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="platform-pipeline.html" class="btn btn-neutral float-right" title="6.2. Platform Pipeline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="6. Git Repo Manifest" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2018‒2021 Li-Pro.Net and individual contributors..
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+  
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
