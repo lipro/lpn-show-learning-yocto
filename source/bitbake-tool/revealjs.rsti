@@ -15,6 +15,21 @@ BitBake Tool
 
 .. TBD: write down your "BitBake Tool" notes here ...
 
+:raw-html:`<small>`
+
+Inherit
+-------
+
+.. revealjs_section::
+   :data-background-image: _images/bitbake-tool-area.svg
+   :data-background-position: top 0px left 43px
+   :data-background-size: 256px 256px
+   :data-background-opacity: 0.66
+
+.. include:: /bitbake-tool/inherit.rsti
+
+:raw-html:`</small>`
+
 .. include:: /bitbake-tool/fetching.rsti
 .. include:: /bitbake-tool/fetching-details.rsti
 .. include:: /bitbake-tool/patching.rsti

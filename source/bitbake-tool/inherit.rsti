@@ -1,0 +1,90 @@
+.. Never add or change more than content, instead edit structure in files:
+   revealjs.rsti
+
+.. tabularcolumns:: L{40mm}|C{18mm}C{18mm}C{20mm}C{18mm}C{30mm}
+.. list-table::
+   :class: longtable
+   :align: center
+   :width: 100 %
+   :widths: 40 18 18 20 18 30
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - tasks by classes:
+     - cmake
+     - base
+     - package/group
+     - image
+     - populate_sdk_base
+   * - do_fetch, do_unpack
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+     -
+     -
+   * - do_patch
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+     -
+     -
+   * - do_configure, do_compile, do_install
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+     -
+     -
+   * - do_package/data, do_package_write_*, do_populate_sysroot
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+     -
+   * - do_rootfs, do_image/_complete
+     -
+     -
+     -
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+     -
+   * - populate_sdk/_ext
+     -
+     -
+     -
+     -
+     - .. rst-class:: left-justified fragment fade-in
+
+          X
+
+.. TBD: write down your "Inherit" notes here ...
+
+.. spelling::
+
+   cmake
+   sdk
+   sysroot
+   rootfs
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

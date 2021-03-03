@@ -24,6 +24,7 @@ consists of several functional stages:
 .. toctree::
    :hidden:
 
+   inherit
    fetching
    patching
    compilation
